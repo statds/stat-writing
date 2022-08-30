@@ -48,7 +48,7 @@ applied problem. See, for example, @price2021effects; @caplan2019dental.
 
 When sensitivity analysis is desired for the applications, one can have a
 section on simulation studies. See, for example, @jiao2022cyberattack;
-li2021uncertainty.
+@li2021uncertainty.
 
 
 Some applied papers can involve novel methodology development that is motivated
@@ -70,7 +70,7 @@ of problems arising in different domains. A commonly seen structure is:
 + Discussion/Conclusions.
 
 
-Here are some examples: @li2022regularized; @lau2021bias.
+Here are some examples: @li2022regularized; @lau2022bias.
 
 
 
