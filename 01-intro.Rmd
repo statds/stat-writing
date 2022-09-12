@@ -69,6 +69,13 @@ of problems arising in different domains. A commonly seen structure is:
 + Illustrations (with real applications)
 + Discussion/Conclusions.
 
+The simulations section is often needed for methods papers. Any method has
+assumptions. Any reasonably good method should work as expected when the
+assumptions hold. It would be even better if it remains working when some of the
+assumptions are violated. Simulation studies can be designed to check whether
+the proposed estimators are unbiased and more efficient than competing
+estimators; whether the proposed tests retains their sizes and are more powerful
+than competing tests.
 
 Here are some examples: @li2022regularized; @lau2022bias.
 
