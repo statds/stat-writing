@@ -1,0 +1,58 @@
+# Using the Right Tools for Writing
+
+Many people use MS Word when it comes to writing. MS Word and actually the whole
+MS Office suite Not withholding the importance
+of the invention of MS Office, it is not the right tool to write statistical
+papers. Writing a statistical paper using MS Word would be as interesting as
+running a statistical data analysis using MS Excel. Simply put, MS Office is
+great for office staff to do routine office tasks. For professional writing, you
+need to be aware of the professional tools and invest time to learn them.
+
+
+The right, high-quality, professional typesetting system is LaTeX. It separates
+the appearance of a document from its content. There are many different
+professionally looking appearances one can choose or design. Authors can focus
+on getting the content right.  The document has `.tex` extension, and can be
+edited by your favorite editor. The final output of the document can have
+different formats, the most popular of which is `pdf`, which stands for portable
+document format. It can be opened on any platform (computer operating system).
+
+
+The source `.tex` file is a plain text file. Just like source code of any
+programming language, a plain text file allows version control, which makes
+tracking and managing the source easy and professional. The most popular version
+control tool today is `git`. 
+
+
+## Git for Version Control
+
+Many tutorials are available in different formats. Here is a [YouTube video
+``Git and GitHub for Beginners --- Crash
+Course''](https://www.youtube.com/watch?v=USjZcfj8yxE).
+The video also covers GitHub, a cloud service for Git. Other similar services
+are, for example, [bitbucket](bitbucket.org), [GitLab](gitlab.com). A cloud
+service gives you a cloud back up of your work and makes collaboration with
+co-workers easy.
+
+
+Here is a collection of [online Git exersices](https://gitexercises.fracz.com)
+that I used for Git training in other courses that I taught.
+
+
+Tips on using Git:
+
++ Make frequent small commits instead of rare large commits.
++ Make commit messages informative and meaningful.
++ Name your files/folders by some reasonable convention. Lower cases are better
+  than upper cases.
++ Keep the repo clean by not tracking generated files.
++ Creat a `.gitignore` file for better output from `git status`.
+
+
+## LaTeX for Typesetting
+
+Use [Anthony Zeimbekakis' thesis as a template](https://github.com/azeimbekakis/KS-Test-Thesis).
+
+### Use R Markdown as a Frontend
+
+Here is [a template from the UConn Data Science Lab](https://statds.org/template/).
