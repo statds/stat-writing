@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Introduction | Statistical Writing</title>
+  <meta name="description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Introduction | Statistical Writing" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introduction | Statistical Writing" />
+  
+  <meta name="twitter:description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Jun Yan" />
+
+
+<meta name="date" content="2022-09-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="using-the-right-tools-for-writing.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistical Writing</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#applied-papers"><i class="fa fa-check"></i><b>2.1</b> Applied papers</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#methods-papers"><i class="fa fa-check"></i><b>2.2</b> Methods papers</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html"><i class="fa fa-check"></i><b>3</b> Using the Right Tools for Writing</a><ul>
+<li class="chapter" data-level="3.1" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#git-for-version-control"><i class="fa fa-check"></i><b>3.1</b> Git for Version Control</a></li>
+<li class="chapter" data-level="3.2" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#latex-for-typesetting"><i class="fa fa-check"></i><b>3.2</b> LaTeX for Typesetting</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#use-r-markdown-as-a-frontend"><i class="fa fa-check"></i><b>3.2.1</b> Use R Markdown as a Frontend</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Writing</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 2</span> Introduction<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>What does a statistical paper looks like? As all scientific papers, it should
+have some commonly expected structures which include components such as title,
+abstract, keywords, introduction, methods, results, discussion,
+acknowledgements, references, appendix, and supplement. Due to the
+specificity of the statistical discipline and application areas, however,
+statistical papers could look quite different one from another.</p>
+<p>There are different types of statistical papers. A theory paper would look
+similar to a paper in mathematics, with statement of the problem, presentation
+of some theorems, and technical proofs. Such papers are not covered by here. We
+focus on two types of statistical papers: application papers and method papers.
+Application papers focus on a specific application problem in a certain domain
+where the research discoveries depend on applications of existing or novel
+statistical methods. Method papers, on the other hand, aim to provide a general
+methodological solution to a class of applied problems. Often times, methods
+paper have a theoretical component, for example, the establishment of the
+asymptotic properties of a new estimator. An applied paper in statistics could
+be a method paper in the domain of the problem it solves.</p>
+<p>An author should always keep the target audience in mind when writing. There are
+many statistical journals on the wide spectrum for applied to theoretical
+papers. Each one has its own aims and scope, with different target
+readerships. Writings such as customary statistical reports that are not
+intended for journal publications also have target readerships. Regardless of
+the audience, any scientific paper should be convincing and concise. You need to
+show the readers that your work is important, valid, and useful. You don’t want
+to waste the time of any readers.</p>
+<div id="applied-papers" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.1</span> Applied papers<a href="intro.html#applied-papers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>An applied paper has a widely accepted structure:</p>
+<ul>
+<li>Introduction</li>
+<li>Data description</li>
+<li>Methods</li>
+<li>Results</li>
+<li>Discussion</li>
+</ul>
+<p>An applied paper can be applying existing statistical methods to solve an
+applied problem. See, for example, <span class="citation">Price and Yan (<a href="#ref-price2021effects" role="doc-biblioref">2021</a>)</span>; <span class="citation">Caplan et al. (<a href="#ref-caplan2019dental" role="doc-biblioref">2019</a>)</span>.</p>
+<p>When sensitivity analysis is desired for the applications, one can have a
+section on simulation studies. See, for example, <span class="citation">Jiao et al. (<a href="#ref-jiao2022cyberattack" role="doc-biblioref">2022</a>)</span>;
+<span class="citation">Li et al. (<a href="#ref-li2021uncertainty" role="doc-biblioref">2021</a>)</span>.</p>
+<p>Some applied papers can involve novel methodology development that is motivated
+by an applied problem. In such cases, simulation studies become necessary, where
+you validate your methods with simulated data so you can check your estimator
+with the truth. Such check is not feasible when analyzing real data.
+See, for example, <span class="citation">Jiao, Hu, and Yan (<a href="#ref-jiao2021bayesian" role="doc-biblioref">2021</a>)</span>; <span class="citation">Hu et al. (<a href="#ref-hu2021moving" role="doc-biblioref">2021</a>)</span>.</p>
+</div>
+<div id="methods-papers" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.2</span> Methods papers<a href="intro.html#methods-papers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A methods paper focuses on a novel method that is applicable to a general class
+of problems arising in different domains. A commonly seen structure is:</p>
+<ul>
+<li>Introduction</li>
+<li>Methods (e.g., estimation, hypothesis tests, diagnosis)</li>
+<li>Properties</li>
+<li>Simulations</li>
+<li>Illustrations (with real applications)</li>
+<li>Discussion/Conclusions.</li>
+</ul>
+<p>The simulations section is often needed for methods papers. Any method has
+assumptions. Any reasonably good method should work as expected when the
+assumptions hold. It would be even better if it remains working when some of the
+assumptions are violated. Simulation studies can be designed to check whether
+the proposed estimators are unbiased and more efficient than competing
+estimators; whether the proposed tests retains their sizes and are more powerful
+than competing tests.</p>
+<p>Here are some examples: <span class="citation">Li et al. (<a href="#ref-li2022regularized" role="doc-biblioref">n.d.</a>)</span>; <span class="citation">Lau and Yan (<a href="#ref-lau2022bias" role="doc-biblioref">2022</a>)</span>.</p>
+<!-- You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods). -->
+<!-- Figures and tables with captions will be placed in `figure` and `table` environments, respectively. -->
+<!-- ```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'} -->
+<!-- par(mar = c(4, 4, .1, .1)) -->
+<!-- plot(pressure, type = 'b', pch = 19) -->
+<!-- ``` -->
+<!-- Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab). -->
+<!-- ```{r nice-tab, tidy=FALSE} -->
+<!-- knitr::kable( -->
+<!--   head(iris, 20), caption = 'Here is a nice table!', -->
+<!--   booktabs = TRUE -->
+<!-- ) -->
+<!-- ``` -->
+<!-- You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015]. -->
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references">
+<div id="ref-caplan2019dental">
+<p>Caplan, D J, Y Li, W Wang, S Kang, L Marchini, HJ Cowen, and J Yan. 2019. “Dental Restoration Longevity Among Geriatric and Special Needs Patients.” <em>JDR Clinical &amp; Translational Research</em> 4 (1): 41–48. <a href="https://doi.org/10.1177/2380084418799083">https://doi.org/10.1177/2380084418799083</a>.</p>
+</div>
+<div id="ref-hu2021moving">
+<p>Hu, Chaoran, Mark Elbroch, Thomas Meyer, Vladimir Pozdnyakov, and Jun Yan. 2021. “Moving-Resting Process with Measurement Error in Animal Movement Modeling.” <em>Methods in Ecology and Evolution</em> 12 (11): 2221–33. <a href="https://doi.org/10.1111/2041-210X.13694">https://doi.org/10.1111/2041-210X.13694</a>.</p>
+</div>
+<div id="ref-jiao2021bayesian">
+<p>Jiao, Jieying, Guanyu Hu, and Jun Yan. 2021. “A Bayesian Marked Spatial Point Processes Model for Basketball Shot Chart.” <em>Journal of Quantitative Analysis in Sports</em> 17 (2): 77–90. <a href="https://doi.org/10.1515/jqas-2019-0106">https://doi.org/10.1515/jqas-2019-0106</a>.</p>
+</div>
+<div id="ref-jiao2022cyberattack">
+<p>Jiao, J., Z. Tang, M. Yue, P. Zhang, and J. Yan. 2022. “Cyberattack-Resilient Load Forecasting with Adaptive Robust Regression.” <em>International Journal of Forecasting</em> 38 (3): 910–19. <a href="https://doi.org/10.1016/j.ijforecast.2021.06.009">https://doi.org/10.1016/j.ijforecast.2021.06.009</a>.</p>
+</div>
+<div id="ref-lau2022bias">
+<p>Lau, Abby Y. Z., and Jun Yan. 2022. “Bias Analysis of Generalized Estimating Equations Under Measurement Error and Practical Bias Correction.” <em>Stat</em> 11 (1): e418. <a href="https://doi.org/10.1002/sta4.418">https://doi.org/10.1002/sta4.418</a>.</p>
+</div>
+<div id="ref-li2021uncertainty">
+<p>Li, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. 2021. “Uncertainty in Optimal Fingerprinting Is Underestimated.” <em>Environmental Research Letters</em> 16 (8): 084043. <a href="https://doi.org/10.1088/1748-9326/ac14ee">https://doi.org/10.1088/1748-9326/ac14ee</a>.</p>
+</div>
+<div id="ref-li2022regularized">
+<p>Li, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. n.d. “Regularized Fingerprinting in Detection and Attribution of Climate Change with Weight Matrix Optimizing the Efficiency in Scaling Factor Estimation.” <em>Annals of Applied Statistics</em>.</p>
+</div>
+<div id="ref-price2021effects">
+<p>Price, Michael, and Jun Yan. 2021. “The Effects of the NBA COVID Bubble on the NBA Playoffs: A Case Study for Home-Court Advantage.” <em>American Journal of Undergraduate Research</em> 18(4): 3–15.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="using-the-right-tools-for-writing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["stat-writing.pdf", "stat-writing.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
