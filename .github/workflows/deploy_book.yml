@@ -11,7 +11,7 @@ name: bookdown
 
 jobs:
   bookdown:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     # Only restrict concurrency for non-PR jobs
     concurrency:
       group: pkgdown-${{ github.event_name != 'pull_request' || github.run_id }}
@@ -36,7 +36,9 @@ jobs:
           restore-keys: bookdown-
 
       - name: Build site
-        run: bookdown::render_book("index.Rmd", quiet = TRUE)
+        run: |
+          install.packages(c("rmarkdown", "bookdown"))
+          bookdown::render_book("index.Rmd", quiet = TRUE)
         shell: Rscript {0}
 
       - name: Deploy to GitHub pages 🚀
