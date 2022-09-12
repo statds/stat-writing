@@ -49,25 +49,24 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -87,7 +86,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -120,6 +119,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -138,13 +159,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#applied-papers"><i class="fa fa-check"></i><b>2.1</b> Applied papers</a></li>
 <li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#methods-papers"><i class="fa fa-check"></i><b>2.2</b> Methods papers</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html"><i class="fa fa-check"></i><b>3</b> Using the Right Tools for Writing</a><ul>
+<li class="chapter" data-level="3" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html"><i class="fa fa-check"></i><b>3</b> Using the Right Tools for Writing</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#git-for-version-control"><i class="fa fa-check"></i><b>3.1</b> Git for Version Control</a></li>
-<li class="chapter" data-level="3.2" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#latex-for-typesetting"><i class="fa fa-check"></i><b>3.2</b> LaTeX for Typesetting</a><ul>
+<li class="chapter" data-level="3.2" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#latex-for-typesetting"><i class="fa fa-check"></i><b>3.2</b> LaTeX for Typesetting</a>
+<ul>
 <li class="chapter" data-level="3.2.1" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#use-r-markdown-as-a-frontend"><i class="fa fa-check"></i><b>3.2.1</b> Use R Markdown as a Frontend</a></li>
 </ul></li>
 </ul></li>
@@ -174,13 +198,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="author"><em>Jun Yan</em></p>
 <p class="date"><em>2022-09-12</em></p>
 </div>
-<div id="prerequisites" class="section level1 hasAnchor">
+<div id="prerequisites" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Prerequisites<a href="index.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
 <p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
+<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or the development version</span></span>
+<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
 <p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 <p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>.</p>
 

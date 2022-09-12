@@ -49,25 +49,24 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -87,7 +86,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -120,6 +119,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -138,13 +159,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#applied-papers"><i class="fa fa-check"></i><b>2.1</b> Applied papers</a></li>
 <li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#methods-papers"><i class="fa fa-check"></i><b>2.2</b> Methods papers</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html"><i class="fa fa-check"></i><b>3</b> Using the Right Tools for Writing</a><ul>
+<li class="chapter" data-level="3" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html"><i class="fa fa-check"></i><b>3</b> Using the Right Tools for Writing</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#git-for-version-control"><i class="fa fa-check"></i><b>3.1</b> Git for Version Control</a></li>
-<li class="chapter" data-level="3.2" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#latex-for-typesetting"><i class="fa fa-check"></i><b>3.2</b> LaTeX for Typesetting</a><ul>
+<li class="chapter" data-level="3.2" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#latex-for-typesetting"><i class="fa fa-check"></i><b>3.2</b> LaTeX for Typesetting</a>
+<ul>
 <li class="chapter" data-level="3.2.1" data-path="using-the-right-tools-for-writing.html"><a href="using-the-right-tools-for-writing.html#use-r-markdown-as-a-frontend"><i class="fa fa-check"></i><b>3.2.1</b> Use R Markdown as a Frontend</a></li>
 </ul></li>
 </ul></li>
@@ -169,7 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1 hasAnchor">
+<div id="intro" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Introduction<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>What does a statistical paper looks like? As all scientific papers, it should
 have some commonly expected structures which include components such as title,
@@ -196,7 +220,7 @@ intended for journal publications also have target readerships. Regardless of
 the audience, any scientific paper should be convincing and concise. You need to
 show the readers that your work is important, valid, and useful. You don’t want
 to waste the time of any readers.</p>
-<div id="applied-papers" class="section level2 hasAnchor">
+<div id="applied-papers" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Applied papers<a href="intro.html#applied-papers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>An applied paper has a widely accepted structure:</p>
 <ul>
@@ -209,15 +233,15 @@ to waste the time of any readers.</p>
 <p>An applied paper can be applying existing statistical methods to solve an
 applied problem. See, for example, <span class="citation">Price and Yan (<a href="#ref-price2021effects" role="doc-biblioref">2021</a>)</span>; <span class="citation">Caplan et al. (<a href="#ref-caplan2019dental" role="doc-biblioref">2019</a>)</span>.</p>
 <p>When sensitivity analysis is desired for the applications, one can have a
-section on simulation studies. See, for example, <span class="citation">Jiao et al. (<a href="#ref-jiao2022cyberattack" role="doc-biblioref">2022</a>)</span>;
+section on simulation studies. See, for example, <span class="citation">J. Jiao et al. (<a href="#ref-jiao2022cyberattack" role="doc-biblioref">2022</a>)</span>;
 <span class="citation">Li et al. (<a href="#ref-li2021uncertainty" role="doc-biblioref">2021</a>)</span>.</p>
 <p>Some applied papers can involve novel methodology development that is motivated
 by an applied problem. In such cases, simulation studies become necessary, where
 you validate your methods with simulated data so you can check your estimator
 with the truth. Such check is not feasible when analyzing real data.
-See, for example, <span class="citation">Jiao, Hu, and Yan (<a href="#ref-jiao2021bayesian" role="doc-biblioref">2021</a>)</span>; <span class="citation">Hu et al. (<a href="#ref-hu2021moving" role="doc-biblioref">2021</a>)</span>.</p>
+See, for example, <span class="citation">Jieying Jiao, Hu, and Yan (<a href="#ref-jiao2021bayesian" role="doc-biblioref">2021</a>)</span>; <span class="citation">Hu et al. (<a href="#ref-hu2021moving" role="doc-biblioref">2021</a>)</span>.</p>
 </div>
-<div id="methods-papers" class="section level2 hasAnchor">
+<div id="methods-papers" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Methods papers<a href="intro.html#methods-papers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A methods paper focuses on a novel method that is applicable to a general class
 of problems arising in different domains. A commonly seen structure is:</p>
@@ -236,7 +260,7 @@ assumptions are violated. Simulation studies can be designed to check whether
 the proposed estimators are unbiased and more efficient than competing
 estimators; whether the proposed tests retains their sizes and are more powerful
 than competing tests.</p>
-<p>Here are some examples: <span class="citation">Li et al. (<a href="#ref-li2022regularized" role="doc-biblioref">n.d.</a>)</span>; <span class="citation">Lau and Yan (<a href="#ref-lau2022bias" role="doc-biblioref">2022</a>)</span>.</p>
+<p>Here are some examples: <span class="citation">Li et al. (<a href="#ref-li2022regularized" role="doc-biblioref">2022+</a>)</span>; <span class="citation">Lau and Yan (<a href="#ref-lau2022bias" role="doc-biblioref">2022</a>)</span>.</p>
 <!-- You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods). -->
 <!-- Figures and tables with captions will be placed in `figure` and `table` environments, respectively. -->
 <!-- ```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'} -->
@@ -255,30 +279,30 @@ than competing tests.</p>
 </div>
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references">
-<div id="ref-caplan2019dental">
-<p>Caplan, D J, Y Li, W Wang, S Kang, L Marchini, HJ Cowen, and J Yan. 2019. “Dental Restoration Longevity Among Geriatric and Special Needs Patients.” <em>JDR Clinical &amp; Translational Research</em> 4 (1): 41–48. <a href="https://doi.org/10.1177/2380084418799083">https://doi.org/10.1177/2380084418799083</a>.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-caplan2019dental" class="csl-entry">
+Caplan, D J, Y Li, W Wang, S Kang, L Marchini, HJ Cowen, and J Yan. 2019. <span>“Dental Restoration Longevity Among Geriatric and Special Needs Patients.”</span> <em>JDR Clinical &amp; Translational Research</em> 4 (1): 41–48. <a href="https://doi.org/10.1177/2380084418799083">https://doi.org/10.1177/2380084418799083</a>.
 </div>
-<div id="ref-hu2021moving">
-<p>Hu, Chaoran, Mark Elbroch, Thomas Meyer, Vladimir Pozdnyakov, and Jun Yan. 2021. “Moving-Resting Process with Measurement Error in Animal Movement Modeling.” <em>Methods in Ecology and Evolution</em> 12 (11): 2221–33. <a href="https://doi.org/10.1111/2041-210X.13694">https://doi.org/10.1111/2041-210X.13694</a>.</p>
+<div id="ref-hu2021moving" class="csl-entry">
+Hu, Chaoran, Mark Elbroch, Thomas Meyer, Vladimir Pozdnyakov, and Jun Yan. 2021. <span>“Moving-Resting Process with Measurement Error in Animal Movement Modeling.”</span> <em>Methods in Ecology and Evolution</em> 12 (11): 2221–33. <a href="https://doi.org/10.1111/2041-210X.13694">https://doi.org/10.1111/2041-210X.13694</a>.
 </div>
-<div id="ref-jiao2021bayesian">
-<p>Jiao, Jieying, Guanyu Hu, and Jun Yan. 2021. “A Bayesian Marked Spatial Point Processes Model for Basketball Shot Chart.” <em>Journal of Quantitative Analysis in Sports</em> 17 (2): 77–90. <a href="https://doi.org/10.1515/jqas-2019-0106">https://doi.org/10.1515/jqas-2019-0106</a>.</p>
+<div id="ref-jiao2021bayesian" class="csl-entry">
+Jiao, Jieying, Guanyu Hu, and Jun Yan. 2021. <span>“A <span>B</span>ayesian Marked Spatial Point Processes Model for Basketball Shot Chart.”</span> <em>Journal of Quantitative Analysis in Sports</em> 17 (2): 77–90. <a href="https://doi.org/10.1515/jqas-2019-0106">https://doi.org/10.1515/jqas-2019-0106</a>.
 </div>
-<div id="ref-jiao2022cyberattack">
-<p>Jiao, J., Z. Tang, M. Yue, P. Zhang, and J. Yan. 2022. “Cyberattack-Resilient Load Forecasting with Adaptive Robust Regression.” <em>International Journal of Forecasting</em> 38 (3): 910–19. <a href="https://doi.org/10.1016/j.ijforecast.2021.06.009">https://doi.org/10.1016/j.ijforecast.2021.06.009</a>.</p>
+<div id="ref-jiao2022cyberattack" class="csl-entry">
+Jiao, J., Z. Tang, M. Yue, P. Zhang, and J. Yan. 2022. <span>“Cyberattack-Resilient Load Forecasting with Adaptive Robust Regression.”</span> <em>International Journal of Forecasting</em> 38 (3): 910–19. <a href="https://doi.org/10.1016/j.ijforecast.2021.06.009">https://doi.org/10.1016/j.ijforecast.2021.06.009</a>.
 </div>
-<div id="ref-lau2022bias">
-<p>Lau, Abby Y. Z., and Jun Yan. 2022. “Bias Analysis of Generalized Estimating Equations Under Measurement Error and Practical Bias Correction.” <em>Stat</em> 11 (1): e418. <a href="https://doi.org/10.1002/sta4.418">https://doi.org/10.1002/sta4.418</a>.</p>
+<div id="ref-lau2022bias" class="csl-entry">
+Lau, Abby Y. Z., and Jun Yan. 2022. <span>“Bias Analysis of Generalized Estimating Equations Under Measurement Error and Practical Bias Correction.”</span> <em>Stat</em> 11 (1): e418. <a href="https://doi.org/10.1002/sta4.418">https://doi.org/10.1002/sta4.418</a>.
 </div>
-<div id="ref-li2021uncertainty">
-<p>Li, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. 2021. “Uncertainty in Optimal Fingerprinting Is Underestimated.” <em>Environmental Research Letters</em> 16 (8): 084043. <a href="https://doi.org/10.1088/1748-9326/ac14ee">https://doi.org/10.1088/1748-9326/ac14ee</a>.</p>
+<div id="ref-li2022regularized" class="csl-entry">
+Li, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. 2022+. <span>“Regularized Fingerprinting in Detection and Attribution of Climate Change with Weight Matrix Optimizing the Efficiency in Scaling Factor Estimation.”</span> <em>Annals of Applied Statistics</em>, 2022+.
 </div>
-<div id="ref-li2022regularized">
-<p>Li, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. n.d. “Regularized Fingerprinting in Detection and Attribution of Climate Change with Weight Matrix Optimizing the Efficiency in Scaling Factor Estimation.” <em>Annals of Applied Statistics</em>.</p>
+<div id="ref-li2021uncertainty" class="csl-entry">
+———. 2021. <span>“Uncertainty in Optimal Fingerprinting Is Underestimated.”</span> <em>Environmental Research Letters</em> 16 (8): 084043. <a href="https://doi.org/10.1088/1748-9326/ac14ee">https://doi.org/10.1088/1748-9326/ac14ee</a>.
 </div>
-<div id="ref-price2021effects">
-<p>Price, Michael, and Jun Yan. 2021. “The Effects of the NBA COVID Bubble on the NBA Playoffs: A Case Study for Home-Court Advantage.” <em>American Journal of Undergraduate Research</em> 18(4): 3–15.</p>
+<div id="ref-price2021effects" class="csl-entry">
+Price, Michael, and Jun Yan. 2021. <span>“The Effects of the <span>NBA</span> <span>COVID</span> Bubble on the <span>NBA</span> Playoffs: <span>A</span> Case Study for Home-Court Advantage.”</span> <em>American Journal of Undergraduate Research</em> 18(4): 3–15.
 </div>
 </div>
             </section>
