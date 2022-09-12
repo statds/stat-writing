@@ -19,8 +19,7 @@ jobs:
 
       - name: Install r packages for blogdown
         run: |
-          Rscript -e 'install.packages(c("remotes", "rmarkdown"))' \
-                  -e 'install.packages("blogdown")'
+          Rscript -e 'install.packages(c("bookdown", "rmarkdown"))'
   
       # - name: Install system dependencies
       #   if: runner.os == 'Linux'
