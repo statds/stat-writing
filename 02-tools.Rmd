@@ -28,7 +28,8 @@ control tool today is `git`.
 
 Many tutorials are available in different formats. Here is a [YouTube video
 ``Git and GitHub for Beginners --- Crash
-Course''](https://www.youtube.com/watch?v=USjZcfj8yxE).
+Course''](https://www.youtube.com/watch?v=RGOj5yH7evk)
+<!-- https://www.youtube.com/watch?v=USjZcfj8yxE). -->
 The video also covers GitHub, a cloud service for Git. Other similar services
 are, for example, [bitbucket](bitbucket.org), [GitLab](gitlab.com). A cloud
 service gives you a cloud back up of your work and makes collaboration with
