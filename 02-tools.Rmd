@@ -44,16 +44,68 @@ Tips on using Git:
 
 + Make frequent small commits instead of rare large commits.
 + Make commit messages informative and meaningful.
-+ Name your files/folders by some reasonable convention. Lower cases are better
-  than upper cases.
++ Name your files/folders by some reasonable convention. 
+    - Lower cases are better than upper cases.
+    - No blanks in file/folder names.
 + Keep the repo clean by not tracking generated files.
 + Creat a `.gitignore` file for better output from `git status`.
++ Keep the linewidth of sources to under 80.
 
 
 ## LaTeX for Typesetting
 
 Use [Anthony Zeimbekakis' thesis as a template](https://github.com/azeimbekakis/KS-Test-Thesis).
 
-### Use R Markdown as a Frontend
+A \LaTeX\ source file has extension name `.tex`. It is a plain text file that can
+be edited by any text editor. It can be tracked easily for differences between
+any two versions. Different document classes are predefined such as `letter`,
+`article`, `report`, and `book`. Customized document classes can be defined once
+you know more about \LaTeX. We focus on `article` here.
+
+
+### A beginner's template
+
+For the product to look like a paper, we need to have title, author, abstract,
+sections, and references. Let us start from a very basic template.
+
+
+Tips on getting started.
+
++ Keep the preamble minimally necessary.
++ Set up geometry with the `geometry` package.
++ No manually controlling spaces.
++ Read the [\LaTeX\ symbol
+  tables](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols)
+  frequently.
+
+
+### Math equations
+
+For serious math typesetting, use packages `amsmath`, `amsthm`, and others.
+
+
+### Tables
+
+If you are manually typing a \LaTeX\ table source, think if you can generate the
+source. There are multiple R packages that can generate the tex source from a
+given dataset. See package `xtable` for example.
+
+### Figures
+
+Use vector graphs, not raster graphs (unless you have to, e.g.,
+screenshots). Save the code that generates the figures so the figures can be
+improved easily.
+
+### References
+
+Combination of bibtex and latex to generate the reference list. Non-referenced
+references are not to be cited. All referenced references are to be listed.
+
+
+### Cross-referencing
+
+Define a label for each object and refer to it by its label. 
+
+## Using R Markdown as a Frontend
 
 Here is [a template from the UConn Data Science Lab](https://statds.org/template/).
