@@ -5,4 +5,10 @@ methods-papers
 using-the-right-tools-for-writing
 git-for-version-control
 latex-for-typesetting
-use-r-markdown-as-a-frontend
+a-beginners-template
+math-equations
+tables
+figures
+references
+cross-referencing
+using-r-markdown-as-a-frontend
