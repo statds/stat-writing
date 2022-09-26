@@ -42,6 +42,7 @@ that I used for Git training in other courses that I taught.
 
 Tips on using Git:
 
++ Use the command line interface instead of the web interface (e.g., upload on GitHub)
 + Make frequent small commits instead of rare large commits.
 + Make commit messages informative and meaningful.
 + Name your files/folders by some reasonable convention. 
@@ -49,14 +50,14 @@ Tips on using Git:
     - No blanks in file/folder names.
 + Keep the repo clean by not tracking generated files.
 + Creat a `.gitignore` file for better output from `git status`.
-+ Keep the linewidth of sources to under 80.
++ Keep the linewidth of sources to under 80 for better `git diff` view.
 
 
 ## LaTeX for Typesetting
 
 Use [Anthony Zeimbekakis' thesis as a template](https://github.com/azeimbekakis/KS-Test-Thesis).
 
-A \LaTeX\ source file has extension name `.tex`. It is a plain text file that can
+A LaTeX source file has extension name `.tex`. It is a plain text file that can
 be edited by any text editor. It can be tracked easily for differences between
 any two versions. Different document classes are predefined such as `letter`,
 `article`, `report`, and `book`. Customized document classes can be defined once
@@ -69,26 +70,62 @@ For the product to look like a paper, we need to have title, author, abstract,
 sections, and references. Let us start from a very basic template.
 
 
-Tips on getting started.
+Tips on getting started with LaTeX.
 
++ Read the compiling log and fix the errors/warnings.
++ Google the error/warning messages usually helps.
 + Keep the preamble minimally necessary.
 + Set up geometry with the `geometry` package.
 + No manually controlling spaces.
-+ Read the [\LaTeX\ symbol
++ Read the [LaTeX symbol
   tables](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols)
   frequently.
++ Keep line widths under 80 characters.
++ Separate paragraphs by double blank likes.
 
 
 ### Math equations
 
 For serious math typesetting, use packages `amsmath`, `amsthm`, and others.
 
+Tips on using math:
+
++ Add spaces between symbols for better readability in sources.
++ No fractions (`\frac`) inline math.
++ No breaking inline maths into different lines in tex sources.
++ No labeling equations that are not referenced to.
++ Keep fonts consistent for the same notations (e.g., $n$ not n;
+  AIC not $AIC$).
++ Use appropriate sizes for parenthesis.
++ Use predefined math functions (e.g, $\exp$ not $exp$; $\Pr$ not $P$).
++ Use `\allowdisplaybreak` to allow page breaks in aligned equations.
++ Referencing with `\eqref` instead of `(\ref)`.
++ Use `\dd` for differentiation orperator (available from package `physics`).
++ Punctuate equations as they always are part of sentences.
++ No breaking long equations arbitrarily in tex source; use short lines and add
+  sufficient spaces to make the sources more readable.
++ Align at appropriate places in multiline equations.
 
 ### Tables
 
-If you are manually typing a \LaTeX\ table source, think if you can generate the
+If you are manually typing a LaTeX table source, think if you can generate the
 source. There are multiple R packages that can generate the tex source from a
 given dataset. See package `xtable` for example.
+
+Tips on professional LaTeX tables:
+
++ Make it self-contained with an informative caption.
++ Avoid vertical lines.
++ Put negative signs in math mode.
++ Use better top, middle, and bottom rules from package `booktabs`. 
++ Allow hierarchy by `cmidrule()`.
++ Do not change font size for tables. Change table layout to fit instead of
+  re-sizing it.
++ Right adjust numbers with decimal places.
+  
+
+See [Small Guide to Making Nice Tables by Markus
+P\"u{}schel](https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf)
 
 ### Figures
 
@@ -96,15 +133,69 @@ Use vector graphs, not raster graphs (unless you have to, e.g.,
 screenshots). Save the code that generates the figures so the figures can be
 improved easily.
 
+Tipis on LaTeX figures:
+
++ Use latex package `graphicx`.
++ For line plots with different groups, use different line pattern to
+  distinguish them, not only color, so that readers can tell the difference when
+  printing them out. Same for different dots on plots.
++ Use colorblind friendly colors (especially avoid red/green)
++ Keep the right aspect ratio when necessary (e.g., basketball court; map;
+  pp-plot).
++ Remove extra margins.
++ Keep the ratio when resizing (e.g., `width = \textwidth`)
++ Name the figure files appropriately.
+
+
 ### References
 
-Combination of bibtex and latex to generate the reference list. Non-referenced
-references are not to be cited. All referenced references are to be listed.
+Combination of BibTeX and LaTeX to generate the reference list. Non-referenced
+references are not to be cited. All referenced references are to be listed. The
+nice feature is made possible by the package `natbib`.  We need to collect
+references in BibTeX format and same them in a bib database (`.bib`) file. The
+display styles of the references are controlled by bib style (`.bst`)
+files. Many journals have their own bib style files for downloading. One can
+construct a customized bib style easily with the help of `custom-bib`.
+
+
+In general, to compile a tex file with bibtex references into a pdf document,
+one needs to run `pdflatex` first,  then `bibtex`, and then `pdflatex` twice to
+get the references correct. A simpler solution is `latexmk -pdf`. In my
+practice, I always have a `Makefile` and use `make` to smartly automate the
+compiling process. See, for example, Anthony's thesis repo.
+
+
+Tips on preparing BibTeX databases:
+
++ Devise a good naming convention for references keys and stick to it.
++ Keep the bib database sorted and formatted tidy. (No repeated entries.)
++ Title: Capitalize initials of notional words (not form words).
++ Use Google Scholar to get the bibtex source of a reference, but be sure to 
+__quality control__ the google output for missing fields and errors.
++ Protect capitalization of words with special meanings in curly braces.
+   (e.g., `{B}ayesian`, `{M}arkov Chain {M}onte {C}arlo`)
++ Protect captilization of initial words after a colon in titles.
++ Book needs to have publisher and address fields.
++ For preprints, always check if they have been published recently.
++ Use the `note` field to show information that should always be shown,
++ Double hyphen between pages numbers.
++ All references without page numbers or volume number should be checked.
 
 
 ### Cross-referencing
 
 Define a label for each object and refer to it by its label. 
+
+Tips on cross-referencing:
+
++ Devise a good naming convention for labels and stick to it.
++ Use different labels for different types of objects (e.g, `eq:` for equations
+  `sec:` for sections, `tab:` for tables, `fig:` for figures, `alg:` for
+  algorithms, etc.)
++ Watch warnings from compiling logs for undefined labels or multiply defined
+  labels and fix them.
++ Use package `xr` for cross-document referencing.
+
 
 ## Using R Markdown as a Frontend
 
