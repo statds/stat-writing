@@ -344,6 +344,15 @@ references in BibTeX format and same them in a bib database (<code>.bib</code>) 
 display styles of the references are controlled by bib style (<code>.bst</code>)
 files. Many journals have their own bib style files for downloading. One can
 construct a customized bib style easily with the help of <code>custom-bib</code>.</p>
+<p>A reference is cited in the manuscript through their keys by <code>\citep{}</code> for
+parenthetical citations or <code>\citet{}</code> for textual citations. Variations
+<code>\citep*{}</code> and <code>\citet*{}</code> prints all authors. Sometimes, <code>\citeauthor{}</code>
+and <code>\citeyear{}</code> can be useful when only author(s) or year is needed.
+The key of the cited references is put in the parentheses.</p>
+<p>For <code>\citep{}</code>, multiple keys can be put in the same parentheses for citing
+multiple references. Two optional arguments are allowed to <code>\citep[][]{}</code>.
+For example, <code>\citep[see, e.g.,][p. 26]{}</code> could be useful when a specific page
+(or section/chapter) is being referenced as an example,</p>
 <p>In general, to compile a tex file with bibtex references into a pdf document,
 one needs to run <code>pdflatex</code> first, then <code>bibtex</code>, and then <code>pdflatex</code> twice to
 get the references correct. A simpler solution is <code>latexmk -pdf</code>. In my
