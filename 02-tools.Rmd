@@ -64,6 +64,8 @@ any two versions. Different document classes are predefined such as `letter`,
 you know more about \LaTeX. We focus on `article` here.
 
 
+The instructions in this section are practiced in a [demo repo](https://github.com/jun-yan/writing-demo).
+
 ### A beginner's template
 
 For the product to look like a paper, we need to have title, author, abstract,
