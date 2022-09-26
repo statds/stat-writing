@@ -233,6 +233,7 @@ co-workers easy.</p>
 that I used for Git training in other courses that I taught.</p>
 <p>Tips on using Git:</p>
 <ul>
+<li>Use the command line interface instead of the web interface (e.g., upload on GitHub)</li>
 <li>Make frequent small commits instead of rare large commits.</li>
 <li>Make commit messages informative and meaningful.</li>
 <li>Name your files/folders by some reasonable convention.
@@ -242,13 +243,13 @@ that I used for Git training in other courses that I taught.</p>
 </ul></li>
 <li>Keep the repo clean by not tracking generated files.</li>
 <li>Creat a <code>.gitignore</code> file for better output from <code>git status</code>.</li>
-<li>Keep the linewidth of sources to under 80.</li>
+<li>Keep the linewidth of sources to under 80 for better <code>git diff</code> view.</li>
 </ul>
 </div>
 <div id="latex-for-typesetting" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> LaTeX for Typesetting<a href="using-the-right-tools-for-writing.html#latex-for-typesetting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Use <a href="https://github.com/azeimbekakis/KS-Test-Thesis">Anthony Zeimbekakis’ thesis as a template</a>.</p>
-<p>A  source file has extension name <code>.tex</code>. It is a plain text file that can
+<p>A LaTeX source file has extension name <code>.tex</code>. It is a plain text file that can
 be edited by any text editor. It can be tracked easily for differences between
 any two versions. Different document classes are predefined such as <code>letter</code>,
 <code>article</code>, <code>report</code>, and <code>book</code>. Customized document classes can be defined once
@@ -257,40 +258,124 @@ you know more about . We focus on <code>article</code> here.</p>
 <h3><span class="header-section-number">3.2.1</span> A beginner’s template<a href="using-the-right-tools-for-writing.html#a-beginners-template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For the product to look like a paper, we need to have title, author, abstract,
 sections, and references. Let us start from a very basic template.</p>
-<p>Tips on getting started.</p>
+<p>Tips on getting started with LaTeX.</p>
 <ul>
+<li>Read the compiling log and fix the errors/warnings.</li>
+<li>Google the error/warning messages usually helps.</li>
 <li>Keep the preamble minimally necessary.</li>
 <li>Set up geometry with the <code>geometry</code> package.</li>
 <li>No manually controlling spaces.</li>
-<li>Read the <a href="https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols"> symbol
+<li>Read the <a href="https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols">LaTeX symbol
 tables</a>
 frequently.</li>
+<li>Keep line widths under 80 characters.</li>
+<li>Separate paragraphs by double blank likes.</li>
 </ul>
 </div>
 <div id="math-equations" class="section level3 hasAnchor" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Math equations<a href="using-the-right-tools-for-writing.html#math-equations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For serious math typesetting, use packages <code>amsmath</code>, <code>amsthm</code>, and others.</p>
+<p>Tips on using math:</p>
+<ul>
+<li>Add spaces between symbols for better readability in sources.</li>
+<li>No fractions (<code>\frac</code>) inline math.</li>
+<li>No breaking inline maths into different lines in tex sources.</li>
+<li>No labeling equations that are not referenced to.</li>
+<li>Keep fonts consistent for the same notations (e.g., <span class="math inline">\(n\)</span> not n;
+AIC not <span class="math inline">\(AIC\)</span>).</li>
+<li>Use appropriate sizes for parenthesis.</li>
+<li>Use predefined math functions (e.g, <span class="math inline">\(\exp\)</span> not <span class="math inline">\(exp\)</span>; <span class="math inline">\(\Pr\)</span> not <span class="math inline">\(P\)</span>).</li>
+<li>Use <code>\allowdisplaybreak</code> to allow page breaks in aligned equations.</li>
+<li>Referencing with <code>\eqref</code> instead of <code>(\ref)</code>.</li>
+<li>Use <code>\dd</code> for differentiation orperator (available from package <code>physics</code>).</li>
+<li>Punctuate equations as they always are part of sentences.</li>
+<li>No breaking long equations arbitrarily in tex source; use short lines and add
+sufficient spaces to make the sources more readable.</li>
+<li>Align at appropriate places in multiline equations.</li>
+</ul>
 </div>
 <div id="tables" class="section level3 hasAnchor" number="3.2.3">
 <h3><span class="header-section-number">3.2.3</span> Tables<a href="using-the-right-tools-for-writing.html#tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If you are manually typing a  table source, think if you can generate the
+<p>If you are manually typing a LaTeX table source, think if you can generate the
 source. There are multiple R packages that can generate the tex source from a
 given dataset. See package <code>xtable</code> for example.</p>
+<p>Tips on professional LaTeX tables:</p>
+<ul>
+<li>Make it self-contained with an informative caption.</li>
+<li>Avoid vertical lines.</li>
+<li>Put negative signs in math mode.</li>
+<li>Use better top, middle, and bottom rules from package <code>booktabs</code>.</li>
+<li>Allow hierarchy by <code>cmidrule()</code>.</li>
+<li>Do not change font size for tables. Change table layout to fit instead of
+re-sizing it.</li>
+<li>Right adjust numbers with decimal places.</li>
+</ul>
+<p>See <a href="https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf">Small Guide to Making Nice Tables by Markus
+P"u{}schel</a></p>
 </div>
 <div id="figures" class="section level3 hasAnchor" number="3.2.4">
 <h3><span class="header-section-number">3.2.4</span> Figures<a href="using-the-right-tools-for-writing.html#figures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Use vector graphs, not raster graphs (unless you have to, e.g.,
 screenshots). Save the code that generates the figures so the figures can be
 improved easily.</p>
+<p>Tipis on LaTeX figures:</p>
+<ul>
+<li>Use latex package <code>graphicx</code>.</li>
+<li>For line plots with different groups, use different line pattern to
+distinguish them, not only color, so that readers can tell the difference when
+printing them out. Same for different dots on plots.</li>
+<li>Use colorblind friendly colors (especially avoid red/green)</li>
+<li>Keep the right aspect ratio when necessary (e.g., basketball court; map;
+pp-plot).</li>
+<li>Remove extra margins.</li>
+<li>Keep the ratio when resizing (e.g., <code>width = \textwidth</code>)</li>
+<li>Name the figure files appropriately.</li>
+</ul>
 </div>
 <div id="references" class="section level3 hasAnchor" number="3.2.5">
 <h3><span class="header-section-number">3.2.5</span> References<a href="using-the-right-tools-for-writing.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Combination of bibtex and latex to generate the reference list. Non-referenced
-references are not to be cited. All referenced references are to be listed.</p>
+<p>Combination of BibTeX and LaTeX to generate the reference list. Non-referenced
+references are not to be cited. All referenced references are to be listed. The
+nice feature is made possible by the package <code>natbib</code>. We need to collect
+references in BibTeX format and same them in a bib database (<code>.bib</code>) file. The
+display styles of the references are controlled by bib style (<code>.bst</code>)
+files. Many journals have their own bib style files for downloading. One can
+construct a customized bib style easily with the help of <code>custom-bib</code>.</p>
+<p>In general, to compile a tex file with bibtex references into a pdf document,
+one needs to run <code>pdflatex</code> first, then <code>bibtex</code>, and then <code>pdflatex</code> twice to
+get the references correct. A simpler solution is <code>latexmk -pdf</code>. In my
+practice, I always have a <code>Makefile</code> and use <code>make</code> to smartly automate the
+compiling process. See, for example, Anthony’s thesis repo.</p>
+<p>Tips on preparing BibTeX databases:</p>
+<ul>
+<li>Devise a good naming convention for references keys and stick to it.</li>
+<li>Keep the bib database sorted and formatted tidy. (No repeated entries.)</li>
+<li>Title: Capitalize initials of notional words (not form words).</li>
+<li>Use Google Scholar to get the bibtex source of a reference, but be sure to
+<strong>quality control</strong> the google output for missing fields and errors.</li>
+<li>Protect capitalization of words with special meanings in curly braces.
+(e.g., <code>{B}ayesian</code>, <code>{M}arkov Chain {M}onte {C}arlo</code>)</li>
+<li>Protect captilization of initial words after a colon in titles.</li>
+<li>Book needs to have publisher and address fields.</li>
+<li>For preprints, always check if they have been published recently.</li>
+<li>Use the <code>note</code> field to show information that should always be shown,</li>
+<li>Double hyphen between pages numbers.</li>
+<li>All references without page numbers or volume number should be checked.</li>
+</ul>
 </div>
 <div id="cross-referencing" class="section level3 hasAnchor" number="3.2.6">
 <h3><span class="header-section-number">3.2.6</span> Cross-referencing<a href="using-the-right-tools-for-writing.html#cross-referencing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Define a label for each object and refer to it by its label.</p>
+<p>Tips on cross-referencing:</p>
+<ul>
+<li>Devise a good naming convention for labels and stick to it.</li>
+<li>Use different labels for different types of objects (e.g, <code>eq:</code> for equations
+<code>sec:</code> for sections, <code>tab:</code> for tables, <code>fig:</code> for figures, <code>alg:</code> for
+algorithms, etc.)</li>
+<li>Watch warnings from compiling logs for undefined labels or multiply defined
+labels and fix them.</li>
+<li>Use package <code>xr</code> for cross-document referencing.</li>
+</ul>
 </div>
 </div>
 <div id="using-r-markdown-as-a-frontend" class="section level2 hasAnchor" number="3.3">
