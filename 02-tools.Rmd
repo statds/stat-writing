@@ -162,6 +162,19 @@ files. Many journals have their own bib style files for downloading. One can
 construct a customized bib style easily with the help of `custom-bib`.
 
 
+A reference is cited in the manuscript through their keys by `\citep{}` for
+parenthetical citations or `\citet{}` for textual citations.  Variations
+`\citep*{}` and `\citet*{}` prints all authors. Sometimes, `\citeauthor{}`
+and `\citeyear{}` can be useful when only author(s) or year is needed.
+The key of the cited references is put in the parentheses. 
+
+
+For `\citep{}`, multiple keys can be put in the same parentheses for citing
+multiple references. Two optional arguments are allowed to `\citep[][]{}`.
+For example, `\citep[see, e.g.,][p. 26]{}` could be useful when a specific page
+ (or section/chapter) is being referenced as an example,
+
+
 In general, to compile a tex file with bibtex references into a pdf document,
 one needs to run `pdflatex` first,  then `bibtex`, and then `pdflatex` twice to
 get the references correct. A simpler solution is `latexmk -pdf`. In my
