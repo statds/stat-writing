@@ -59,7 +59,7 @@ The following components are expected in your proposal.
   choose to apply any specific statistical methods, please mention and cite
   them. Please be consistent here with your research hypothesis. Write a line
   regarding how the methods would help in investigating the research hypothesis.
-+ Suppositions and Implications. What do you expect to find and why
++ Discussion: What do you expect to find and why
   do you feel so? Any ways your work can corroborate or challenge existing
   results or assumptions? What are the potential impacts of your work? What if
   the investigation is not what you expect?
