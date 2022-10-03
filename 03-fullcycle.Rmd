@@ -1,0 +1,63 @@
+# Getting Started
+
+## Full Cycle of a Statistical Research Project
+Like any research project, a statistical research project starts with an
+interesting idea, goes through a full cycle of brainstorming, planning with the
+right design/methods, investigation with the simulation studies/data analyses,
+iteration as nesessary, and summarizing through writing/revision.
+
+
+1. Find a topic of interest. The topic should interests you, something about
+   which you already know something about or can find out more. The topic should
+   also be something that is within your capacity restricted by your skillsets
+   and time. Check the literature to see what works have been available on it or
+   related topics. In short, the topic should be reasonably interesting and
+   doable. You can get ideas for research by 
+    + attending siminars;
+    + reading journals, books, magazines, and newspapers;
+    + consulting;
+    + collaboration.
+1. Initial planning. After you have identified an topic, you need to narrow down
+   on the specific research questions that you want to answer, what data will be
+   used, and what methods are appropriate.
+    + Form a hypothesis, design a study, conduct the study, make notes.
+    + Collect data and find some existing data.
+    + Decide on appropriate statistical methods.
+    + Make a tentative outline to guide writing.
+1. Statistical investigation. 
+    + Perform data analysis.
+    + Summarize substantive findings.
+    + Investigate the performance of proposed methods via simulations.
+1. Iterate between planning and investigation.
+1. Revise and proofread. Revising and writing are two separate processes.
+    + Check organization --- reorganize paragraphs and add transitions where necessary.
+    + Make sure all researched information is documented (reproducibility).
+    + Rework introduction and conclusion.
+    + Work on sentences --- check spelling, punctuation, word choice, etc.
+    + Read out loud to check for flow.
+    + Find a friend to review.
+
+
+## Writing a Research Proposal
+
+A research proposal is piece of writing that details exactly what you plan to do
+in a research project.
+
+
+The following components are expected in your proposal.
++ Introduction: introducing the topic and why you have chosen this topic (3--5
+  lines). Mention briefly the current related research and cite relevant works.
++ Research question(s): Formulate a research question or hypothesis in the
+  chosen topic. Describe briefly why you select such a question or hypothesis
+  and its importance in the field (cite sources).
++ Data description: Describe your data set (for instance: sampling scheme,
+  number of observations, number of variables, variables of interest, nature of
+  the variables) and the source of your data set if it is not collected by
+  yourself.
++ Plan of action: Describe briefly (5-7 lines) your plan of action. If you
+  choose to apply any specific statistical methods, please mention and cite
+  them. Please be consistent here with your research hypothesis. Write a line
+  regarding how the methods would help in investigating the research hypothesis.
++ Intuitions, expectations, and backup plan. What do you expect to find and why
+  do you feel so? What if the investigation is not what you expect?
+
