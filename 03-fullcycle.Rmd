@@ -45,6 +45,7 @@ in a research project.
 
 
 The following components are expected in your proposal.
+
 + Introduction: Introducing the topic and why you have chosen this topic (3--5
   lines). Mention briefly the current related research and cite relevant works.
 + Specific aims: Formulate a research question or hypothesis in the
