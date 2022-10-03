@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Introduction | Statistical Writing</title>
+  <title>Chapter 4 Getting Started | Statistical Writing</title>
   <meta name="description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Introduction | Statistical Writing" />
+  <meta property="og:title" content="Chapter 4 Getting Started | Statistical Writing" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Introduction | Statistical Writing" />
+  <meta name="twitter:title" content="Chapter 4 Getting Started | Statistical Writing" />
   
   <meta name="twitter:description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="using-the-right-tools-for-writing.html"/>
+<link rel="prev" href="using-the-right-tools-for-writing.html"/>
+<link rel="next" href="references-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -204,116 +204,75 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Introduction<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>What does a statistical paper looks like? As all scientific papers, it should
-have some commonly expected structures which include components such as title,
-abstract, keywords, introduction, methods, results, discussion,
-acknowledgements, references, appendix, and supplement. Due to the
-specificity of the statistical discipline and application areas, however,
-statistical papers could look quite different one from another.</p>
-<p>There are different types of statistical papers. A theory paper would look
-similar to a paper in mathematics, with statement of the problem, presentation
-of some theorems, and technical proofs. Such papers are not covered by here. We
-focus on two types of statistical papers: application papers and method papers.
-Application papers focus on a specific application problem in a certain domain
-where the research discoveries depend on applications of existing or novel
-statistical methods. Method papers, on the other hand, aim to provide a general
-methodological solution to a class of applied problems. Often times, methods
-paper have a theoretical component, for example, the establishment of the
-asymptotic properties of a new estimator. An applied paper in statistics could
-be a method paper in the domain of the problem it solves.</p>
-<p>An author should always keep the target audience in mind when writing. There are
-many statistical journals on the wide spectrum for applied to theoretical
-papers. Each one has its own aims and scope, with different target
-readerships. Writings such as customary statistical reports that are not
-intended for journal publications also have target readerships. Regardless of
-the audience, any scientific paper should be convincing and concise. You need to
-show the readers that your work is important, valid, and useful. You don’t want
-to waste the time of any readers.</p>
-<div id="applied-papers" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Applied papers<a href="intro.html#applied-papers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>An applied paper has a widely accepted structure:</p>
+<div id="getting-started" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Getting Started<a href="getting-started.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="full-cycle-of-a-statistical-research-project" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Full Cycle of a Statistical Research Project<a href="getting-started.html#full-cycle-of-a-statistical-research-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Like any research project, a statistical research project starts with an
+interesting idea, goes through a full cycle of brainstorming, planning with the
+right design/methods, investigation with the simulation studies/data analyses,
+iteration as nesessary, and summarizing through writing/revision.</p>
+<ol style="list-style-type: decimal">
+<li>Find a topic of interest. The topic should interests you, something about
+which you already know something about or can find out more. The topic should
+also be something that is within your capacity restricted by your skillsets
+and time. Check the literature to see what works have been available on it or
+related topics. In short, the topic should be reasonably interesting and
+doable. You can get ideas for research by
 <ul>
-<li>Introduction</li>
-<li>Data description</li>
-<li>Methods</li>
-<li>Results</li>
-<li>Discussion</li>
-</ul>
-<p>An applied paper can be applying existing statistical methods to solve an
-applied problem. See, for example, <span class="citation">Price and Yan (<a href="#ref-price2021effects" role="doc-biblioref">2021</a>)</span>; <span class="citation">Caplan et al. (<a href="#ref-caplan2019dental" role="doc-biblioref">2019</a>)</span>.</p>
-<p>When sensitivity analysis is desired for the applications, one can have a
-section on simulation studies. See, for example, <span class="citation">J. Jiao et al. (<a href="#ref-jiao2022cyberattack" role="doc-biblioref">2022</a>)</span>;
-<span class="citation">Li et al. (<a href="#ref-li2021uncertainty" role="doc-biblioref">2021</a>)</span>.</p>
-<p>Some applied papers can involve novel methodology development that is motivated
-by an applied problem. In such cases, simulation studies become necessary, where
-you validate your methods with simulated data so you can check your estimator
-with the truth. Such check is not feasible when analyzing real data.
-See, for example, <span class="citation">Jieying Jiao, Hu, and Yan (<a href="#ref-jiao2021bayesian" role="doc-biblioref">2021</a>)</span>; <span class="citation">Hu et al. (<a href="#ref-hu2021moving" role="doc-biblioref">2021</a>)</span>.</p>
+<li>attending siminars;</li>
+<li>reading journals, books, magazines, and newspapers;</li>
+<li>consulting;</li>
+<li>collaboration.</li>
+</ul></li>
+<li>Initial planning. After you have identified an topic, you need to narrow down
+on the specific research questions that you want to answer, what data will be
+used, and what methods are appropriate.
+<ul>
+<li>Form a hypothesis, design a study, conduct the study, make notes.</li>
+<li>Collect data and find some existing data.</li>
+<li>Decide on appropriate statistical methods.</li>
+<li>Make a tentative outline to guide writing.</li>
+</ul></li>
+<li>Statistical investigation.
+<ul>
+<li>Perform data analysis.</li>
+<li>Summarize substantive findings.</li>
+<li>Investigate the performance of proposed methods via simulations.</li>
+</ul></li>
+<li>Iterate between planning and investigation.</li>
+<li>Revise and proofread. Revising and writing are two separate processes.
+<ul>
+<li>Check organization — reorganize paragraphs and add transitions where necessary.</li>
+<li>Make sure all researched information is documented (reproducibility).</li>
+<li>Rework introduction and conclusion.</li>
+<li>Work on sentences — check spelling, punctuation, word choice, etc.</li>
+<li>Read out loud to check for flow.</li>
+<li>Find a friend to review.</li>
+</ul></li>
+</ol>
 </div>
-<div id="methods-papers" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Methods papers<a href="intro.html#methods-papers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A methods paper focuses on a novel method that is applicable to a general class
-of problems arising in different domains. A commonly seen structure is:</p>
-<ul>
-<li>Introduction</li>
-<li>Methods (e.g., estimation, hypothesis tests, diagnosis)</li>
-<li>Properties</li>
-<li>Simulations</li>
-<li>Illustrations (with real applications)</li>
-<li>Discussion/Conclusions.</li>
-</ul>
-<p>The simulations section is often needed for methods papers. Any method has
-assumptions. Any reasonably good method should work as expected when the
-assumptions hold. It would be even better if it remains working when some of the
-assumptions are violated. Simulation studies can be designed to check whether
-the proposed estimators are unbiased and more efficient than competing
-estimators; whether the proposed tests retains their sizes and are more powerful
-than competing tests.</p>
-<p>Here are some examples: <span class="citation">Li et al. (<a href="#ref-li2022regularized" role="doc-biblioref">2022+</a>)</span>; <span class="citation">Lau and Yan (<a href="#ref-lau2022bias" role="doc-biblioref">2022</a>)</span>.</p>
-<!-- You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods). -->
-<!-- Figures and tables with captions will be placed in `figure` and `table` environments, respectively. -->
-<!-- ```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'} -->
-<!-- par(mar = c(4, 4, .1, .1)) -->
-<!-- plot(pressure, type = 'b', pch = 19) -->
-<!-- ``` -->
-<!-- Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab). -->
-<!-- ```{r nice-tab, tidy=FALSE} -->
-<!-- knitr::kable( -->
-<!--   head(iris, 20), caption = 'Here is a nice table!', -->
-<!--   booktabs = TRUE -->
-<!-- ) -->
-<!-- ``` -->
-<!-- You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015]. -->
+<div id="writing-a-research-proposal" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Writing a Research Proposal<a href="getting-started.html#writing-a-research-proposal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A research proposal is piece of writing that details exactly what you plan to do
+in a research project.</p>
+<p>The following components are expected in your proposal.
++ Introduction: introducing the topic and why you have chosen this topic (3–5
+lines). Mention briefly the current related research and cite relevant works.
++ Research question(s): Formulate a research question or hypothesis in the
+chosen topic. Describe briefly why you select such a question or hypothesis
+and its importance in the field (cite sources).
++ Data description: Describe your data set (for instance: sampling scheme,
+number of observations, number of variables, variables of interest, nature of
+the variables) and the source of your data set if it is not collected by
+yourself.
++ Plan of action: Describe briefly (5-7 lines) your plan of action. If you
+choose to apply any specific statistical methods, please mention and cite
+them. Please be consistent here with your research hypothesis. Write a line
+regarding how the methods would help in investigating the research hypothesis.
++ Intuitions, expectations, and backup plan. What do you expect to find and why
+do you feel so? What if the investigation is not what you expect?</p>
 
-</div>
-</div>
-<h3>References<a href="references-1.html#references-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-caplan2019dental" class="csl-entry">
-Caplan, D J, Y Li, W Wang, S Kang, L Marchini, HJ Cowen, and J Yan. 2019. <span>“Dental Restoration Longevity Among Geriatric and Special Needs Patients.”</span> <em>JDR Clinical &amp; Translational Research</em> 4 (1): 41–48. <a href="https://doi.org/10.1177/2380084418799083">https://doi.org/10.1177/2380084418799083</a>.
-</div>
-<div id="ref-hu2021moving" class="csl-entry">
-Hu, Chaoran, Mark Elbroch, Thomas Meyer, Vladimir Pozdnyakov, and Jun Yan. 2021. <span>“Moving-Resting Process with Measurement Error in Animal Movement Modeling.”</span> <em>Methods in Ecology and Evolution</em> 12 (11): 2221–33. <a href="https://doi.org/10.1111/2041-210X.13694">https://doi.org/10.1111/2041-210X.13694</a>.
-</div>
-<div id="ref-jiao2021bayesian" class="csl-entry">
-Jiao, Jieying, Guanyu Hu, and Jun Yan. 2021. <span>“A <span>B</span>ayesian Marked Spatial Point Processes Model for Basketball Shot Chart.”</span> <em>Journal of Quantitative Analysis in Sports</em> 17 (2): 77–90. <a href="https://doi.org/10.1515/jqas-2019-0106">https://doi.org/10.1515/jqas-2019-0106</a>.
-</div>
-<div id="ref-jiao2022cyberattack" class="csl-entry">
-Jiao, J., Z. Tang, M. Yue, P. Zhang, and J. Yan. 2022. <span>“Cyberattack-Resilient Load Forecasting with Adaptive Robust Regression.”</span> <em>International Journal of Forecasting</em> 38 (3): 910–19. <a href="https://doi.org/10.1016/j.ijforecast.2021.06.009">https://doi.org/10.1016/j.ijforecast.2021.06.009</a>.
-</div>
-<div id="ref-lau2022bias" class="csl-entry">
-Lau, Abby Y. Z., and Jun Yan. 2022. <span>“Bias Analysis of Generalized Estimating Equations Under Measurement Error and Practical Bias Correction.”</span> <em>Stat</em> 11 (1): e418. <a href="https://doi.org/10.1002/sta4.418">https://doi.org/10.1002/sta4.418</a>.
-</div>
-<div id="ref-li2022regularized" class="csl-entry">
-Li, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. 2022+. <span>“Regularized Fingerprinting in Detection and Attribution of Climate Change with Weight Matrix Optimizing the Efficiency in Scaling Factor Estimation.”</span> <em>Annals of Applied Statistics</em>, 2022+.
-</div>
-<div id="ref-li2021uncertainty" class="csl-entry">
-———. 2021. <span>“Uncertainty in Optimal Fingerprinting Is Underestimated.”</span> <em>Environmental Research Letters</em> 16 (8): 084043. <a href="https://doi.org/10.1088/1748-9326/ac14ee">https://doi.org/10.1088/1748-9326/ac14ee</a>.
-</div>
-<div id="ref-price2021effects" class="csl-entry">
-Price, Michael, and Jun Yan. 2021. <span>“The Effects of the <span>NBA</span> <span>COVID</span> Bubble on the <span>NBA</span> Playoffs: <span>A</span> Case Study for Home-Court Advantage.”</span> <em>American Journal of Undergraduate Research</em> 18(4): 3–15.
 </div>
 </div>
             </section>
@@ -321,8 +280,8 @@ Price, Michael, and Jun Yan. 2021. <span>“The Effects of the <span>NBA</span> 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="using-the-right-tools-for-writing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="using-the-right-tools-for-writing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -353,7 +312,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-intro.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-fullcycle.Rmd",
 "text": "Edit"
 },
 "history": {
