@@ -15,3 +15,8 @@ using-r-markdown-as-a-frontend
 getting-started
 full-cycle-of-a-statistical-research-project
 writing-a-research-proposal
+how-to-write-specific-sections
+title
+abstract
+keywords
+introduction
