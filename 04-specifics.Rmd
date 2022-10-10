@@ -1,0 +1,78 @@
+# How to Write Specific Sections
+
+
+## Title
+
+Title is the most read part of an article. @hariston2003successful suggest that
+the title of a research paper should accomplish four goals:
+
++ predict the content of the research paper;
++ be interesting to the reader;
++ reflect the tone of the writing;
++ contain important keywords (that makes it easier to be found from keywords
+  search).
+  
+The title of a paper is usually determined when the paper is close to
+completion. To come up with a good title, list some key phrases that you would
+like to have, and be creative in forming a good title consisting most of them.
+Here are some tipcs.
+
++ Be informative by including these aspects: topic, method(s), data, and
+  results.
++ Consider adding a subtitle to give more specifics about the paper.
++ Use appropriate critical keywords to increase the discoverability of the
+  paper.
++ Follow the requirements from the instructors or journals.
++ Keep it as concise as possible.
+
+## Abstract
+
+(Come back later)
+
+## Keywords
+Keywords are words in addition to those in the title that attract search
+queries. Including the most relevant keywords helps other researchers find
+your paper.
+
+
++ No need to repeat anything in the title already. 
++ List them in alphabetical order.
++ Contain words and phrases that suggest what the topic is about. 
+
+## Introduction
+
+The introduction section is always the first section of a paper. Some journals
+may not call it introduction but requires a section that serves the same
+purposes. The introduction section guide the readers from a general subject area
+to the narrow topic of the paper. It should answer three questions:
+
++ Why does it matter?
++ What have been done?
++ What are new?
+
+That is, the introduction sections need to explain the impotance of the topic of
+the paper, provide the background of the research work, and highlight the
+contributions of the work. At the end of the introduction, a roadmap, or an
+outline of the paper is useful in helping the readers navigating through the
+following sections.
+
+An introduction often contain the following items.
+
++ An overview of the topic. Start with a general overview of your topic and
+  narrow it to the specific subject you are addressing. Then, mention
+  questions or concerns you had about the case. Explain why they are important
+  and needs to be addressed right now.
++ Existing works. Introduction is the place to review other conclusions on your
+  topic. The literature review should be thorough, including both old and recent
+  ones. It should you that you are aware of prior research. It also introduces
+  past findings to those who might not have that expertise. A gap need to be
+  identified from the importance of the topic and the current status of the
+  literature, which is the rationale for your work.
++ Contributions. This is a thesis statement, which summarizes the the
+  contributions of your work to the existing literature, and answer the "what
+  are new" question.
++ A roadmap. A brief summary of what each section does in the paper concludes
+  the introduction.
+  
+  
+
