@@ -20,3 +20,8 @@ title
 abstract
 keywords
 introduction
+data
+methods
+simulation
+application
+discussion
