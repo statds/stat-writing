@@ -92,7 +92,9 @@ For serious math typesetting, use packages `amsmath`, `amsthm`, and others.
 
 Tips on using math:
 
++ Punctuate equations as they always are part of sentences.
 + Add spaces between symbols for better readability in sources.
++ No starting a sentence with a math symbol; rephrase to avoid it.
 + No fractions (`\frac`) inline math.
 + No breaking inline maths into different lines in tex sources.
 + No labeling equations that are not referenced to.
@@ -103,10 +105,10 @@ Tips on using math:
 + Use `\allowdisplaybreak` to allow page breaks in aligned equations.
 + Referencing with `\eqref` instead of `(\ref)`.
 + Use `\dd` for differentiation orperator (available from package `physics`).
-+ Punctuate equations as they always are part of sentences.
 + No breaking long equations arbitrarily in tex source; use short lines and add
   sufficient spaces to make the sources more readable.
 + Align at appropriate places in multiline equations.
+
 
 ### Tables
 

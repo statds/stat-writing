@@ -3,7 +3,7 @@
 
 ## Title
 
-Title is the most read part of an article. @hariston2003successful suggest that
+Title is the most read part of an article. @hairston2003successful suggest that
 the title of a research paper should accomplish four goals:
 
 + predict the content of the research paper;
@@ -22,12 +22,32 @@ Here are some tipcs.
 + Consider adding a subtitle to give more specifics about the paper.
 + Use appropriate critical keywords to increase the discoverability of the
   paper.
-+ Follow the requirements from the instructors or journals.
++ Follow the requirements from the instructions or journals.
 + Keep it as concise as possible.
 
 ## Abstract
 
-(Come back later)
+@marron1999effective recommended the following:
+
+
+> Abstract material needs to be carefully chosen. A balance between the
+> twin goals of brevity and maximal information content should again be
+> carefully sought. There is room for more detail than in the title, but not
+> enough room for all ideas covered in the paper. Make sure each ``high point"
+> is included. The paper will have a better chance in the review process if it
+> is made clear what is done, and why it is important, since this will
+> immediately capture the interest of the reviewer.
+
+>     Any recommendations for length here must be more case dependent. Longer
+> papers will usually need longer abstracts. However, something between 4
+> and 10 sentences is reasonable for most situations.
+
+
+>     Mathematical notation is rarely useful in the abstract. Sometimes notation is
+> introduced in an abstract, and then not used at all! Even when notation is
+> used in the abstract, the point can usually be conveyed more efficienly in
+> words alone.
+
 
 ## Keywords
 Keywords are words in addition to those in the title that attract search
@@ -74,5 +94,65 @@ An introduction often contain the following items.
 + A roadmap. A brief summary of what each section does in the paper concludes
   the introduction.
   
-  
 
+## Data
+
+The data section should provide all the details that are relevant for the
+research project.
+
++ Who collected the data (source)?
++ How was the data collected? Sampling frame? Sampling approach?
++ What period or range does the data cover?
++ Why does the data helps answer the research question?
++ What exploratory analyses are done (descriptives, visualication, etc.)?
+
+
+## Methods
+
+Notations are much easier to digest if the reader first understands the main
+idea at an intuitive level.
+
++ What are the observed data?
++ What are the models?
++ What are the parameters to be estimated?
++ How are the point estimators obtained?
++ How are the uncertainty (standard errors) of the point estimators assessed?
++ How are the variance of the point estimator estimated?
++ How are the null distribution of the testing statistics established?
++ Clearly state the assumptions and claims of theoretical results.
+
+## Simulation
+
+ADEMP [@morris2019using]:
+
++ Aims
++ Data generating mechanism
++ Estimand/target of analysis
++ Methods
++ Performance measures
+
+Coding and Execution
+
+Analysis
+
+Reporting
+
+## Application
+
++ When summarizing from tables/figures, paint the big picture, rather than
+  reiterating all of the little details.
++ Llink the evidence back to the substantive topic
+
+
+
+## Discussion
+
++ A summary, again, of the contributions of the research. 
+@miller2006how: 
+Having presented the individual pieces of evidence, an investigator must
+summarize how that evidence, taken together, support the conclusoin of the
+investigation. Statisticians should explain how the statistical evidence answers
+the question posed at the beginning of the paper, following standard
+expository writing guidelines to writing an analytic essay.
+
++ Limitations and future directions.
