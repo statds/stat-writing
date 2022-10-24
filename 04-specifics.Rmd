@@ -1,5 +1,4 @@
-# How to Write Specific Sections
-
+# Writing Specific Sections
 
 ## Title
 
@@ -29,7 +28,6 @@ Here are some tipcs.
 
 @marron1999effective recommended the following:
 
-
 > Abstract material needs to be carefully chosen. A balance between the
 > twin goals of brevity and maximal information content should again be
 > carefully sought. There is room for more detail than in the title, but not
@@ -42,12 +40,18 @@ Here are some tipcs.
 > papers will usually need longer abstracts. However, something between 4
 > and 10 sentences is reasonable for most situations.
 
-
 >     Mathematical notation is rarely useful in the abstract. Sometimes notation is
 > introduced in an abstract, and then not used at all! Even when notation is
 > used in the abstract, the point can usually be conveyed more efficienly in
 > words alone.
 
+Tips:
++ An opening sentence to establish the importance of the subject of the paper.
++ Identify a gap in the literature to set up the background of the paper.
++ Highlight the novelty/contributions of the paper.
++ For application papers, allude to new discoveries and their impacts.
++ For method papers, outline the essence of the methodology, evidence from
+  numerical studies supporting the methods.
 
 ## Keywords
 Keywords are words in addition to those in the title that attract search
@@ -133,26 +137,45 @@ ADEMP [@morris2019using]:
 
 Coding and Execution
 
-Analysis
-
-Reporting
+Analysis/Discussion: with tables and figures.
++ For each table/figure, write down the bullet points to convey to the readers.
++ Group the bulletin points in blocks and put the blocks in a logical order.
++ Within each block, put the bullet points in the right logical order.
 
 ## Application
 
++ Report the statistical analyses in tables/figures.
 + When summarizing from tables/figures, paint the big picture, rather than
   reiterating all of the little details.
-+ Llink the evidence back to the substantive topic
-
++ Discussions to link the analyses back to the substantive topic [@miller2006how]:
+> Having presented the individual pieces of evidence, an investigator must
+> summarize how that evidence, taken together, support the conclusoin of the
+> investigation. Statisticians should explain how the statistical evidence answers
+> the question posed at the beginning of the paper, following standard
+> expository writing guidelines to writing an analytic essay.
 
 
 ## Discussion
 
 + A summary, again, of the contributions of the research. 
-@miller2006how: 
-Having presented the individual pieces of evidence, an investigator must
-summarize how that evidence, taken together, support the conclusoin of the
-investigation. Statisticians should explain how the statistical evidence answers
-the question posed at the beginning of the paper, following standard
-expository writing guidelines to writing an analytic essay.
++ Limitations of the current study
++ Future directions.
 
-+ Limitations and future directions.
+## Appendix
+
++ Technical details (e.g., proofs, algorithms) that would otherwise break the
+  flow of the main text.
++ Data source details.
+
+## References
+
++ Every reference cited in the paper should appear here.
++ References not cited should not appear here.
++ All are automatically taken care of by BibTeX.
++ Styles are controlled by bib style (`.bst` file).
+
+## Online Supplement
+
++ Computer code
++ Data
++ Additional simulation results
