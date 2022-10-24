@@ -36,16 +36,17 @@ Here are some tipcs.
 > is made clear what is done, and why it is important, since this will
 > immediately capture the interest of the reviewer.
 
->     Any recommendations for length here must be more case dependent. Longer
+> Any recommendations for length here must be more case dependent. Longer
 > papers will usually need longer abstracts. However, something between 4
 > and 10 sentences is reasonable for most situations.
 
->     Mathematical notation is rarely useful in the abstract. Sometimes notation is
+> Mathematical notation is rarely useful in the abstract. Sometimes notation is
 > introduced in an abstract, and then not used at all! Even when notation is
 > used in the abstract, the point can usually be conveyed more efficienly in
 > words alone.
 
 Tips:
+
 + An opening sentence to establish the importance of the subject of the paper.
 + Identify a gap in the literature to set up the background of the paper.
 + Highlight the novelty/contributions of the paper.
@@ -147,7 +148,9 @@ Analysis/Discussion: with tables and figures.
 + Report the statistical analyses in tables/figures.
 + When summarizing from tables/figures, paint the big picture, rather than
   reiterating all of the little details.
-+ Discussions to link the analyses back to the substantive topic [@miller2006how]:
++ Discussions to link the analyses back to the substantive topic
+  [@miller2015chicago]:
+  
 > Having presented the individual pieces of evidence, an investigator must
 > summarize how that evidence, taken together, support the conclusoin of the
 > investigation. Statisticians should explain how the statistical evidence answers
