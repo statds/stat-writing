@@ -15,7 +15,7 @@ using-r-markdown-as-a-frontend
 getting-started
 full-cycle-of-a-statistical-research-project
 writing-a-research-proposal
-how-to-write-specific-sections
+writing-specific-sections
 title
 abstract
 keywords
@@ -25,3 +25,6 @@ methods
 simulation
 application
 discussion
+appendix
+references-1
+online-supplement
