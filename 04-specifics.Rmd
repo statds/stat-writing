@@ -139,6 +139,7 @@ ADEMP [@morris2019using]:
 Coding and Execution
 
 Analysis/Discussion: with tables and figures.
+
 + For each table/figure, write down the bullet points to convey to the readers.
 + Group the bulletin points in blocks and put the blocks in a logical order.
 + Within each block, put the bullet points in the right logical order.
