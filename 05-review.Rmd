@@ -1,0 +1,37 @@
+# Review a Paper
+
+Reviewing is the other side of the same coin as writing. It is an important
+skill and service for the scientific community. A good writer anticipates
+comments from possible reviewers and address them in writing. A critical review
+helps make an manuscript much stronger.
+
+
+In this writing course, we are writing statistical projects. Here is a check
+list adapted from <https://www.science.org/content/article/how-review-paper>.
+
++ Are the background literature and study rationale clearly articulated?
++ Do the hypotheses follow logically from previous work?
++ Are the methods robust and well controlled?
++ Are the reported analyses appropriate? 
++ Are the assumptions of the statistical methods satisfied?
++ Is the presentation of results clear and accessible? 
++ To what extent does the Discussion place the findings in a wider context and
+  achieve a balance between interpretation and useful speculation versus tedious
+  waffling?
+
+
+To write a reviewer's report, here is a template.
+
++ A summary of the what the paper is about and how you feel about its solidity.
++ List the major concerns in detail about the paper eluded in the summary.
++ Go through the specific points that are not clearly presented or need to be
+  improved, in the order they appeared in the paper.
++ Finally, a list of really minor stuff (misprints, notation abuse, etc.).
+
+
+Tips:
+
++ Be as constructive as possible.
++ Avoid rude or disparaging remarks.
++ Back up major criticisms.
++ Make the review useful for the editor as well as for the authors.
