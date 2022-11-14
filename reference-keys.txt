@@ -28,3 +28,4 @@ discussion
 appendix
 references-1
 online-supplement
+review-a-paper
