@@ -9,14 +9,20 @@ routine office documentary tasks. For professional writing, one need to be aware
 of the professional tools and invest time to master them.
 
 
-The right, high-quality, professional typesetting system is LaTeX. It separates
-the appearance of a document from its content. There are many different
-professionally looking appearances one can choose or design. Authors can focus
-on getting the content right.  The document has `.tex` extension, and can be
-edited by your favorite editor. The final output of the document can have
+The right, high-quality, professional typesetting system is \LaTeX. \LaTeX is a
+typesetting language that makes it easier and cleaner to write documents 
+involving extensive mathematical content. It is the standard in Statistics, 
+Mathematics, Physics, Chemistry and other disciplines that require many 
+mathematical formulas. 
+It separates the appearance of a document from its content. This allows authors 
+to be able to focus on writing the content without having to worry about 
+its appearance until the end. There are many different
+professionally looking appearances one can choose or design, allowing for easy 
+adaptation to different formats and styles. 
+The document has `.tex` extension, and can be
+edited by your favorite text editor. The final output of the document can have
 different formats, the most popular of which is `pdf`, which stands for portable
 document format. It can be opened on any platform (computer operating system).
-
 
 The source `.tex` file is a plain text file. Just like source code of any
 programming language, a plain text file allows version control, which makes
@@ -57,10 +63,11 @@ Tips on using Git:
 
 Use [Anthony Zeimbekakis' thesis as a template](https://github.com/azeimbekakis/KS-Test-Thesis).
 
-A LaTeX source file has extension name `.tex`. It is a plain text file that can
+A \LaTeX source file has extension name `.tex`. It is a plain text file that can
 be edited by any text editor. It can be tracked easily for differences between
 any two versions. Different document classes are predefined such as `letter`,
-`article`, `report`, and `book`. Customized document classes can be defined once
+`article`, `report`, `beamer` (for presentations), and `book`. Customized 
+document classes can be defined once
 you know more about \LaTeX. We focus on `article` here.
 
 
@@ -72,7 +79,7 @@ For the product to look like a paper, we need to have title, author, abstract,
 sections, and references. Let us start from a very basic template.
 
 
-Tips on getting started with LaTeX.
+Tips on getting started with \LaTeX.
 
 + Read the compiling log and fix the errors/warnings.
 + Google the error/warning messages usually helps.
@@ -101,10 +108,12 @@ Tips on using math:
 + Keep fonts consistent for the same notations (e.g., $n$ not n;
   AIC not $AIC$).
 + Use appropriate sizes for parenthesis.
++ When multiple parentheses are needed in mathematical expressions, use the 
+following ordering unless the journal specifies otherwise $[\{(\mbox{math here})\}].$
 + Use predefined math functions (e.g, $\exp$ not $exp$; $\Pr$ not $P$).
 + Use `\allowdisplaybreak` to allow page breaks in aligned equations.
 + Referencing with `\eqref` instead of `(\ref)`.
-+ Use `\dd` for differentiation orperator (available from package `physics`).
++ Use `\dd` for differentiation operator (available from package `physics`).
 + No breaking long equations arbitrarily in tex source; use short lines and add
   sufficient spaces to make the sources more readable.
 + Align at appropriate places in multiline equations.
@@ -112,14 +121,16 @@ Tips on using math:
 
 ### Tables
 
-If you are manually typing a LaTeX table source, think if you can generate the
+If you are manually typing a \LaTeX table source, think if you can generate the
 source. There are multiple R packages that can generate the tex source from a
 given dataset. See package `xtable` for example.
 
-Tips on professional LaTeX tables:
+Tips on professional \LaTeX tables:
 
 + Use `tbp` for floating locations; avoid `h`.
 + Make it self-contained with an informative caption.
++ Captions should be located above the table unless the journal specifies 
+  otherwise.
 + Avoid vertical lines.
 + Put negative signs in math mode.
 + Use better top, middle, and bottom rules from package `booktabs`. 
@@ -130,7 +141,7 @@ Tips on professional LaTeX tables:
   
 
 See [Small Guide to Making Nice Tables by Markus
-P\"u{}schel](https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf)
+P{\"u}schel](https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf)
 
 ### Figures
 
@@ -138,10 +149,13 @@ Use vector graphs, not raster graphs (unless you have to, e.g.,
 screenshots). Save the code that generates the figures so the figures can be
 improved easily.
 
-Tipis on LaTeX figures:
+Tips on \LaTeX figures:
 
 + Use `tbp` for floating locations; avoid `h`.
 + Use latex package `graphicx`.
++ Make it self-contained with an informative caption.
++ Captions should be located below the table unless the journal specifies 
+  otherwise.
 + For line plots with different groups, use different line pattern to
   distinguish them, not only color, so that readers can tell the difference when
   printing them out. Same for different dots on plots.
@@ -155,17 +169,21 @@ Tipis on LaTeX figures:
 
 ### References
 
-Combination of BibTeX and LaTeX to generate the reference list. Non-referenced
-references are not to be cited. All referenced references are to be listed. The
+BibTeX is a reference management tool for formatting lists of references that 
+can be used together with the \LaTeX to generate a reference list. 
+Non-referenced
+references are not to be cited. All referenced references are to be listed. This
 nice feature is made possible by the package `natbib`.  We need to collect
-references in BibTeX format and same them in a bib database (`.bib`) file. The
+references in BibTeX format and save them in a bib database (`.bib`) file. The
 display styles of the references are controlled by bib style (`.bst`)
-files. Many journals have their own bib style files for downloading. One can
-construct a customized bib style easily with the help of `custom-bib`.
+files. Many journals have their own bib style files available for download. One 
+can construct a customized bib style easily with the help of `custom-bib`.
 
 
 A reference is cited in the manuscript through their keys by `\citep{}` for
-parenthetical citations or `\citet{}` for textual citations.  Variations
+parenthetical citations or `\citet{}` for textual citations, where the key is
+placed inside the curly brackets. The key is used to cite or cross-reference the 
+bibliographic entry in a `.tex` document. Variations
 `\citep*{}` and `\citet*{}` prints all authors. Sometimes, `\citeauthor{}`
 and `\citeyear{}` can be useful when only author(s) or year is needed.
 The key of the cited references is put in the parentheses. 
@@ -186,18 +204,18 @@ compiling process. See, for example, Anthony's thesis repo.
 
 Tips on preparing BibTeX databases:
 
-+ Devise a good naming convention for references keys and stick to it.
++ Devise a good naming convention for reference keys and stick to it.
 + Keep the bib database sorted and formatted tidy. (No repeated entries.)
-+ Title: Capitalize initials of notional words (not form words).
++ Title: Capitalize first letters of notional words (not form words).
 + Use Google Scholar to get the bibtex source of a reference, but be sure to 
 __quality control__ the google output for missing fields and errors.
 + Protect capitalization of words with special meanings in curly braces.
    (e.g., `{B}ayesian`, `{M}arkov Chain {M}onte {C}arlo`)
-+ Protect captilization of initial words after a colon in titles.
-+ Book needs to have publisher and address fields.
++ Protect capitalization of initial words after a colon in titles.
++ Books need to have publisher and address fields.
 + For preprints, always check if they have been published recently.
 + Use the `note` field to show information that should always be shown,
-+ Double hyphen between pages numbers.
++ Use double hyphen between pages numbers.
 + All references without page numbers or volume number should be checked.
 
 
@@ -208,12 +226,14 @@ Define a label for each object and refer to it by its label.
 Tips on cross-referencing:
 
 + Devise a good naming convention for labels and stick to it.
-+ Use different labels for different types of objects (e.g, `eq:` for equations
-  `sec:` for sections, `tab:` for tables, `fig:` for figures, `alg:` for
-  algorithms, etc.)
++ Use different label prefixes for different types of objects (e.g, `eq:` for 
+  equations, `sec:` for sections, `tab:` for tables, `fig:` for figures, `alg:` 
+  for algorithms, etc.)
++ Labels within the source(s) for a single document must be unique.
 + Watch warnings from compiling logs for undefined labels or multiply defined
   labels and fix them.
-+ Use package `xr` for cross-document referencing.
++ Use package `xr` for cross-document referencing (and labels must be unique 
+  across documents).
 
 
 ## Using R Markdown as a Frontend
