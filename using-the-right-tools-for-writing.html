@@ -229,11 +229,18 @@ paper using MS Word would be as interesting as running a statistical data
 analysis using MS Excel. Simply put, MS Office is great for office staff to do
 routine office documentary tasks. For professional writing, one need to be aware
 of the professional tools and invest time to master them.</p>
-<p>The right, high-quality, professional typesetting system is LaTeX. It separates
-the appearance of a document from its content. There are many different
-professionally looking appearances one can choose or design. Authors can focus
-on getting the content right. The document has <code>.tex</code> extension, and can be
-edited by your favorite editor. The final output of the document can have
+<p>The right, high-quality, professional typesetting system is . is a
+typesetting language that makes it easier and cleaner to write documents
+involving extensive mathematical content. It is the standard in Statistics,
+Mathematics, Physics, Chemistry and other disciplines that require many
+mathematical formulas.
+It separates the appearance of a document from its content. This allows authors
+to be able to focus on writing the content without having to worry about
+its appearance until the end. There are many different
+professionally looking appearances one can choose or design, allowing for easy
+adaptation to different formats and styles.
+The document has <code>.tex</code> extension, and can be
+edited by your favorite text editor. The final output of the document can have
 different formats, the most popular of which is <code>pdf</code>, which stands for portable
 document format. It can be opened on any platform (computer operating system).</p>
 <p>The source <code>.tex</code> file is a plain text file. Just like source code of any
@@ -270,17 +277,18 @@ that I used for Git training in other courses that I taught.</p>
 <div id="latex-for-typesetting" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> LaTeX for Typesetting<a href="using-the-right-tools-for-writing.html#latex-for-typesetting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Use <a href="https://github.com/azeimbekakis/KS-Test-Thesis">Anthony Zeimbekakis’ thesis as a template</a>.</p>
-<p>A LaTeX source file has extension name <code>.tex</code>. It is a plain text file that can
+<p>A source file has extension name <code>.tex</code>. It is a plain text file that can
 be edited by any text editor. It can be tracked easily for differences between
 any two versions. Different document classes are predefined such as <code>letter</code>,
-<code>article</code>, <code>report</code>, and <code>book</code>. Customized document classes can be defined once
+<code>article</code>, <code>report</code>, <code>beamer</code> (for presentations), and <code>book</code>. Customized
+document classes can be defined once
 you know more about . We focus on <code>article</code> here.</p>
 <p>The instructions in this section are practiced in a <a href="https://github.com/jun-yan/writing-demo">demo repo</a>.</p>
 <div id="a-beginners-template" class="section level3 hasAnchor" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> A beginner’s template<a href="using-the-right-tools-for-writing.html#a-beginners-template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For the product to look like a paper, we need to have title, author, abstract,
 sections, and references. Let us start from a very basic template.</p>
-<p>Tips on getting started with LaTeX.</p>
+<p>Tips on getting started with .</p>
 <ul>
 <li>Read the compiling log and fix the errors/warnings.</li>
 <li>Google the error/warning messages usually helps.</li>
@@ -308,10 +316,12 @@ frequently.</li>
 <li>Keep fonts consistent for the same notations (e.g., <span class="math inline">\(n\)</span> not n;
 AIC not <span class="math inline">\(AIC\)</span>).</li>
 <li>Use appropriate sizes for parenthesis.</li>
+<li>When multiple parentheses are needed in mathematical expressions, use the
+following ordering unless the journal specifies otherwise <span class="math inline">\([\{(\mbox{math here})\}].\)</span></li>
 <li>Use predefined math functions (e.g, <span class="math inline">\(\exp\)</span> not <span class="math inline">\(exp\)</span>; <span class="math inline">\(\Pr\)</span> not <span class="math inline">\(P\)</span>).</li>
 <li>Use <code>\allowdisplaybreak</code> to allow page breaks in aligned equations.</li>
 <li>Referencing with <code>\eqref</code> instead of <code>(\ref)</code>.</li>
-<li>Use <code>\dd</code> for differentiation orperator (available from package <code>physics</code>).</li>
+<li>Use <code>\dd</code> for differentiation operator (available from package <code>physics</code>).</li>
 <li>No breaking long equations arbitrarily in tex source; use short lines and add
 sufficient spaces to make the sources more readable.</li>
 <li>Align at appropriate places in multiline equations.</li>
@@ -319,13 +329,15 @@ sufficient spaces to make the sources more readable.</li>
 </div>
 <div id="tables" class="section level3 hasAnchor" number="3.2.3">
 <h3><span class="header-section-number">3.2.3</span> Tables<a href="using-the-right-tools-for-writing.html#tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If you are manually typing a LaTeX table source, think if you can generate the
+<p>If you are manually typing a table source, think if you can generate the
 source. There are multiple R packages that can generate the tex source from a
 given dataset. See package <code>xtable</code> for example.</p>
-<p>Tips on professional LaTeX tables:</p>
+<p>Tips on professional tables:</p>
 <ul>
 <li>Use <code>tbp</code> for floating locations; avoid <code>h</code>.</li>
 <li>Make it self-contained with an informative caption.</li>
+<li>Captions should be located above the table unless the journal specifies
+otherwise.</li>
 <li>Avoid vertical lines.</li>
 <li>Put negative signs in math mode.</li>
 <li>Use better top, middle, and bottom rules from package <code>booktabs</code>.</li>
@@ -335,17 +347,20 @@ re-sizing it.</li>
 <li>Right adjust numbers with decimal places.</li>
 </ul>
 <p>See <a href="https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf">Small Guide to Making Nice Tables by Markus
-P"u{}schel</a></p>
+P{"u}schel</a></p>
 </div>
 <div id="figures" class="section level3 hasAnchor" number="3.2.4">
 <h3><span class="header-section-number">3.2.4</span> Figures<a href="using-the-right-tools-for-writing.html#figures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Use vector graphs, not raster graphs (unless you have to, e.g.,
 screenshots). Save the code that generates the figures so the figures can be
 improved easily.</p>
-<p>Tipis on LaTeX figures:</p>
+<p>Tips on figures:</p>
 <ul>
 <li>Use <code>tbp</code> for floating locations; avoid <code>h</code>.</li>
 <li>Use latex package <code>graphicx</code>.</li>
+<li>Make it self-contained with an informative caption.</li>
+<li>Captions should be located below the table unless the journal specifies
+otherwise.</li>
 <li>For line plots with different groups, use different line pattern to
 distinguish them, not only color, so that readers can tell the difference when
 printing them out. Same for different dots on plots.</li>
@@ -359,15 +374,19 @@ pp-plot).</li>
 </div>
 <div id="references" class="section level3 hasAnchor" number="3.2.5">
 <h3><span class="header-section-number">3.2.5</span> References<a href="using-the-right-tools-for-writing.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Combination of BibTeX and LaTeX to generate the reference list. Non-referenced
-references are not to be cited. All referenced references are to be listed. The
+<p>BibTeX is a reference management tool for formatting lists of references that
+can be used together with the to generate a reference list.
+Non-referenced
+references are not to be cited. All referenced references are to be listed. This
 nice feature is made possible by the package <code>natbib</code>. We need to collect
-references in BibTeX format and same them in a bib database (<code>.bib</code>) file. The
+references in BibTeX format and save them in a bib database (<code>.bib</code>) file. The
 display styles of the references are controlled by bib style (<code>.bst</code>)
-files. Many journals have their own bib style files for downloading. One can
-construct a customized bib style easily with the help of <code>custom-bib</code>.</p>
+files. Many journals have their own bib style files available for download. One
+can construct a customized bib style easily with the help of <code>custom-bib</code>.</p>
 <p>A reference is cited in the manuscript through their keys by <code>\citep{}</code> for
-parenthetical citations or <code>\citet{}</code> for textual citations. Variations
+parenthetical citations or <code>\citet{}</code> for textual citations, where the key is
+placed inside the curly brackets. The key is used to cite or cross-reference the
+bibliographic entry in a <code>.tex</code> document. Variations
 <code>\citep*{}</code> and <code>\citet*{}</code> prints all authors. Sometimes, <code>\citeauthor{}</code>
 and <code>\citeyear{}</code> can be useful when only author(s) or year is needed.
 The key of the cited references is put in the parentheses.</p>
@@ -382,18 +401,18 @@ practice, I always have a <code>Makefile</code> and use <code>make</code> to sma
 compiling process. See, for example, Anthony’s thesis repo.</p>
 <p>Tips on preparing BibTeX databases:</p>
 <ul>
-<li>Devise a good naming convention for references keys and stick to it.</li>
+<li>Devise a good naming convention for reference keys and stick to it.</li>
 <li>Keep the bib database sorted and formatted tidy. (No repeated entries.)</li>
-<li>Title: Capitalize initials of notional words (not form words).</li>
+<li>Title: Capitalize first letters of notional words (not form words).</li>
 <li>Use Google Scholar to get the bibtex source of a reference, but be sure to
 <strong>quality control</strong> the google output for missing fields and errors.</li>
 <li>Protect capitalization of words with special meanings in curly braces.
 (e.g., <code>{B}ayesian</code>, <code>{M}arkov Chain {M}onte {C}arlo</code>)</li>
-<li>Protect captilization of initial words after a colon in titles.</li>
-<li>Book needs to have publisher and address fields.</li>
+<li>Protect capitalization of initial words after a colon in titles.</li>
+<li>Books need to have publisher and address fields.</li>
 <li>For preprints, always check if they have been published recently.</li>
 <li>Use the <code>note</code> field to show information that should always be shown,</li>
-<li>Double hyphen between pages numbers.</li>
+<li>Use double hyphen between pages numbers.</li>
 <li>All references without page numbers or volume number should be checked.</li>
 </ul>
 </div>
@@ -403,12 +422,14 @@ compiling process. See, for example, Anthony’s thesis repo.</p>
 <p>Tips on cross-referencing:</p>
 <ul>
 <li>Devise a good naming convention for labels and stick to it.</li>
-<li>Use different labels for different types of objects (e.g, <code>eq:</code> for equations
-<code>sec:</code> for sections, <code>tab:</code> for tables, <code>fig:</code> for figures, <code>alg:</code> for
-algorithms, etc.)</li>
+<li>Use different label prefixes for different types of objects (e.g, <code>eq:</code> for
+equations, <code>sec:</code> for sections, <code>tab:</code> for tables, <code>fig:</code> for figures, <code>alg:</code>
+for algorithms, etc.)</li>
+<li>Labels within the source(s) for a single document must be unique.</li>
 <li>Watch warnings from compiling logs for undefined labels or multiply defined
 labels and fix them.</li>
-<li>Use package <code>xr</code> for cross-document referencing.</li>
+<li>Use package <code>xr</code> for cross-document referencing (and labels must be unique
+across documents).</li>
 </ul>
 </div>
 </div>
