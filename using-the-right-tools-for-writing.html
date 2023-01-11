@@ -23,7 +23,7 @@
 <meta name="author" content="Jun Yan" />
 
 
-<meta name="date" content="2023-01-09" />
+<meta name="date" content="2023-01-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -291,15 +291,14 @@ sections, and references. Let us start from a very basic template.</p>
 <p>Tips on getting started with .</p>
 <ul>
 <li>Read the compiling log and fix the errors/warnings.</li>
-<li>Google the error/warning messages usually helps.</li>
-<li>Keep the preamble minimally necessary.</li>
-<li>Set up geometry with the <code>geometry</code> package.</li>
+<li>Googling the error/warning messages usually helps.</li>
+<li>Limit the preamble to include only what is necessary.</li>
+<li>Set up document margins with the <code>geometry</code> package.</li>
 <li>No manually controlling spaces.</li>
-<li>Read the <a href="https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols">LaTeX symbol
-tables</a>
-frequently.</li>
-<li>Keep line widths under 80 characters.</li>
-<li>Separate paragraphs by double blank likes.</li>
+<li>Familiarize yourself with <a href="https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols">LaTeX symbol
+tables</a>.</li>
+<li>Keep line widths under 80 characters in source files.</li>
+<li>Separate paragraphs in source files by double blank lines.</li>
 </ul>
 </div>
 <div id="math-equations" class="section level3 hasAnchor" number="3.2.2">
@@ -310,17 +309,17 @@ frequently.</li>
 <li>Punctuate equations as they always are part of sentences.</li>
 <li>Add spaces between symbols for better readability in sources.</li>
 <li>No starting a sentence with a math symbol; rephrase to avoid it.</li>
-<li>No fractions (<code>\frac</code>) inline math.</li>
-<li>No breaking inline maths into different lines in tex sources.</li>
-<li>No labeling equations that are not referenced to.</li>
+<li>No fractions (<code>\frac</code>) inline math expressions.</li>
+<li>No breaking inline math expressions into different lines in tex sources.</li>
+<li>No labeling equations that are not referenced.</li>
+<li>Referencw labeled equations with <code>\eqref</code> instead of <code>(\ref)</code>.</li>
 <li>Keep fonts consistent for the same notations (e.g., <span class="math inline">\(n\)</span> not n;
 AIC not <span class="math inline">\(AIC\)</span>).</li>
-<li>Use appropriate sizes for parenthesis.</li>
+<li>Use appropriate sizes for parentheses.</li>
 <li>When multiple parentheses are needed in mathematical expressions, use the
 following ordering unless the journal specifies otherwise <span class="math inline">\([\{(\mbox{math here})\}].\)</span></li>
 <li>Use predefined math functions (e.g, <span class="math inline">\(\exp\)</span> not <span class="math inline">\(exp\)</span>; <span class="math inline">\(\Pr\)</span> not <span class="math inline">\(P\)</span>).</li>
 <li>Use <code>\allowdisplaybreak</code> to allow page breaks in aligned equations.</li>
-<li>Referencing with <code>\eqref</code> instead of <code>(\ref)</code>.</li>
 <li>Use <code>\dd</code> for differentiation operator (available from package <code>physics</code>).</li>
 <li>No breaking long equations arbitrarily in tex source; use short lines and add
 sufficient spaces to make the sources more readable.</li>
@@ -345,6 +344,9 @@ otherwise.</li>
 <li>Do not change font size for tables. Change table layout to fit instead of
 re-sizing it.</li>
 <li>Right adjust numbers with decimal places.</li>
+<li>Use consistent number of decimal places within a column or row of same types
+of measurements.</li>
+<li>Avoid having many leading 0’s in decimal entries.</li>
 </ul>
 <p>See <a href="https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf">Small Guide to Making Nice Tables by Markus
 P{"u}schel</a></p>
@@ -362,9 +364,9 @@ improved easily.</p>
 <li>Captions should be located below the table unless the journal specifies
 otherwise.</li>
 <li>For line plots with different groups, use different line pattern to
-distinguish them, not only color, so that readers can tell the difference when
-printing them out. Same for different dots on plots.</li>
-<li>Use colorblind friendly colors (especially avoid red/green)</li>
+distinguish them, not only color, so that readers can tell the difference if
+printed in black/white. Same for different dots (symbols) on plots.</li>
+<li>Use colorblind friendly colors (especially avoid red/green).</li>
 <li>Keep the right aspect ratio when necessary (e.g., basketball court; map;
 pp-plot).</li>
 <li>Remove extra margins.</li>
@@ -375,7 +377,7 @@ pp-plot).</li>
 <div id="references" class="section level3 hasAnchor" number="3.2.5">
 <h3><span class="header-section-number">3.2.5</span> References<a href="using-the-right-tools-for-writing.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>BibTeX is a reference management tool for formatting lists of references that
-can be used together with the to generate a reference list.
+can be used together with to generate a reference list.
 Non-referenced
 references are not to be cited. All referenced references are to be listed. This
 nice feature is made possible by the package <code>natbib</code>. We need to collect
@@ -383,17 +385,20 @@ references in BibTeX format and save them in a bib database (<code>.bib</code>) 
 display styles of the references are controlled by bib style (<code>.bst</code>)
 files. Many journals have their own bib style files available for download. One
 can construct a customized bib style easily with the help of <code>custom-bib</code>.</p>
-<p>A reference is cited in the manuscript through their keys by <code>\citep{}</code> for
+<p>An alternative to BibTeX and <code>natbib</code> is <code>biblatex</code>. Most journals, however, use
+BibTeX and <code>natbib</code>, so we focus on that here.</p>
+<p>A reference is cited in the manuscript through its key by <code>\citep{}</code> for
 parenthetical citations or <code>\citet{}</code> for textual citations, where the key is
 placed inside the curly brackets. The key is used to cite or cross-reference the
 bibliographic entry in a <code>.tex</code> document. Variations
 <code>\citep*{}</code> and <code>\citet*{}</code> prints all authors. Sometimes, <code>\citeauthor{}</code>
 and <code>\citeyear{}</code> can be useful when only author(s) or year is needed.
 The key of the cited references is put in the parentheses.</p>
-<p>For <code>\citep{}</code>, multiple keys can be put in the same parentheses for citing
+<p>For <code>\citep{}</code>, multiple keys separated by commas can be put in the same
+parentheses for citing
 multiple references. Two optional arguments are allowed to <code>\citep[][]{}</code>.
 For example, <code>\citep[see, e.g.,][p. 26]{}</code> could be useful when a specific page
-(or section/chapter) is being referenced as an example,</p>
+(or section/chapter) is being referenced as an example.</p>
 <p>In general, to compile a tex file with bibtex references into a pdf document,
 one needs to run <code>pdflatex</code> first, then <code>bibtex</code>, and then <code>pdflatex</code> twice to
 get the references correct. A simpler solution is <code>latexmk -pdf</code>. In my
