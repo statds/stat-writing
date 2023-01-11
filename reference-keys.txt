@@ -24,8 +24,10 @@ data
 methods
 simulation
 application
-discussion
+discussion-and-conclusion
 appendix
 references-1
 online-supplement
+general-tips
+general-tips-use-of-english
 review-a-paper
