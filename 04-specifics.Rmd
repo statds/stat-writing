@@ -2,7 +2,10 @@
 
 ## Title
 
-Title is the most read part of an article. @hairston2003successful suggest that
+The title is the most read part of an article, and influences whether a reader 
+is interested in reading the manuscript.
+@hairston2003successful suggest 
+that
 the title of a research paper should accomplish four goals:
 
 + predict the content of the research paper;
@@ -13,8 +16,8 @@ the title of a research paper should accomplish four goals:
   
 The title of a paper is usually determined when the paper is close to
 completion. To come up with a good title, list some key phrases that you would
-like to have, and be creative in forming a good title consisting most of them.
-Here are some tipcs.
+like to have, and be creative in forming a good title that consists of most of 
+them. Here are some tips.
 
 + Be informative by including these aspects: topic, method(s), data, and
   results.
@@ -42,17 +45,21 @@ Here are some tipcs.
 
 > Mathematical notation is rarely useful in the abstract. Sometimes notation is
 > introduced in an abstract, and then not used at all! Even when notation is
-> used in the abstract, the point can usually be conveyed more efficienly in
+> used in the abstract, the point can usually be conveyed more efficiently in
 > words alone.
 
 Tips:
 
-+ An opening sentence to establish the importance of the subject of the paper.
++ Open with a sentence to establish the importance of the subject of the paper.
 + Identify a gap in the literature to set up the background of the paper.
 + Highlight the novelty/contributions of the paper.
 + For application papers, allude to new discoveries and their impacts.
-+ For method papers, outline the essence of the methodology, evidence from
-  numerical studies supporting the methods.
++ For method papers, outline the essence of the methodology, and evidence from
+  theoretical and numerical studies supporting the methods.
++ It must make sense when read in isolation for those who only read the 
+  abstract, and must also provide a clear and accurate summary of the manuscript
+  for readers who read the entire manuscript [@zeiger2000writing].  
++ Should not include citations.
 
 ## Keywords
 Keywords are words in addition to those in the title that attract search
@@ -67,37 +74,50 @@ your paper.
 ## Introduction
 
 The introduction section is always the first section of a paper. Some journals
-may not call it introduction but requires a section that serves the same
-purposes. The introduction section guide the readers from a general subject area
-to the narrow topic of the paper. It should answer three questions:
+may not call it introduction but require a section that serves the same
+purpose. The purpose of the introduction is to stimulate the reader’s interest 
+and to provide background information which is pertinent to the study 
+[@jenkins1995write]. The introduction section guides the readers from a general 
+subject 
+area to the narrow topic of the paper. It should answer three questions:
 
 + Why does it matter?
-+ What have been done?
-+ What are new?
++ What has already been done?
++ What is new?
 
-That is, the introduction sections need to explain the impotance of the topic of
+That is, the introduction sections need to explain the importance of the topic 
+of
 the paper, provide the background of the research work, and highlight the
 contributions of the work. At the end of the introduction, a roadmap, or an
-outline of the paper is useful in helping the readers navigating through the
+outline of the paper is useful in helping the readers navigate through the
 following sections.
 
-An introduction often contain the following items.
+The introduction is typically outlined at the very beginning of the writing
+process, but completed towards the end after the other sections have been 
+written.   Do NOT wait to perform the literature review until 
+last, however!  This should to happen *before* the research is undertaken to 
+ensure you are not duplicating something that has already been done!
+
+An introduction often contains the following items.
 
 + An overview of the topic. Start with a general overview of your topic and
   narrow it to the specific subject you are addressing. Then, mention
   questions or concerns you had about the case. Explain why they are important
-  and needs to be addressed right now.
-+ Existing works. Introduction is the place to review other conclusions on your
+  and why it needs to be addressed right now.
++ Existing works. The introduction is the place to review other conclusions on 
+  your
   topic. The literature review should be thorough, including both old and recent
-  ones. It should you that you are aware of prior research. It also introduces
-  past findings to those who might not have that expertise. A gap need to be
+  works. It should show that you are aware of prior research. It also introduces
+  past findings to those who might not have that expertise. 
++ A gap needs to be
   identified from the importance of the topic and the current status of the
-  literature, which is the rationale for your work.
+  literature, which is the rationale for your work. Why are existing methods not
+  sufficient?  What are elements of an attractive solution?
 + Contributions. This is a thesis statement, which summarizes the the
-  contributions of your work to the existing literature, and answer the "what
-  are new" question.
-+ A roadmap. A brief summary of what each section does in the paper concludes
-  the introduction.
+  contributions of your work to the existing literature, and answers the "what
+  is new" question.
++ A roadmap. A brief summary of what each section does in the paper. This 
+  concludes the introduction.
   
 
 ## Data
@@ -108,21 +128,22 @@ research project.
 + Who collected the data (source)?
 + How was the data collected? Sampling frame? Sampling approach?
 + What period or range does the data cover?
-+ Why does the data helps answer the research question?
-+ What exploratory analyses are done (descriptives, visualication, etc.)?
++ Why does the data help answer the research question?
++ What exploratory analyses are done (descriptives, visualization, etc.)?
 
 
 ## Methods
 
-Notations are much easier to digest if the reader first understands the main
+Notation is much easier to digest if the reader first understands the main
 idea at an intuitive level.
 
++ Establish notation.
 + What are the observed data?
 + What are the models?
 + What are the parameters to be estimated?
 + How are the point estimators obtained?
 + How are the uncertainty (standard errors) of the point estimators assessed?
-+ How are the variance of the point estimator estimated?
++ How are the variances of the point estimators estimated?
 + How are the null distribution of the testing statistics established?
 + Clearly state the assumptions and claims of theoretical results.
 
@@ -138,11 +159,14 @@ ADEMP [@morris2019using]:
 
 Coding and Execution
 
-Analysis/Discussion: with tables and figures.
+Analysis/Discussion: with tables and figures.  May be included in a Results 
+section.
 
 + For each table/figure, write down the bullet points to convey to the readers.
-+ Group the bulletin points in blocks and put the blocks in a logical order.
++ Group the bullet points in blocks and put the blocks in a logical order.
 + Within each block, put the bullet points in the right logical order.
++ Some (shorter) blocks can be converted into proper paragraphs in the final 
+  paper, while other (longer) blocks may remain in bullet form.
 
 ## Application
 
@@ -159,9 +183,11 @@ Analysis/Discussion: with tables and figures.
 > expository writing guidelines to writing an analytic essay.
 
 
-## Discussion
+## Discussion and Conclusion
 
 + A summary, again, of the contributions of the research. 
++ The research question posed as the `need' of the introduction must be
+  answered here [@zeiger2000writing].
 + Limitations of the current study
 + Future directions.
 
@@ -183,3 +209,57 @@ Analysis/Discussion: with tables and figures.
 + Computer code
 + Data
 + Additional simulation results
+
+## General Tips
+
+From @jenkins1995write:
+
+> In order to maintain continuity between the key sections (introduction, 
+> methods, results and discussion) it is helpful to consider the manuscript as
+> telling a story. 
+>
+> The strong parts to the story-line are the introduction and the discussion, so
+> the link between these sections must be clear.  
+
+Devices such as paragraphing, headings, indentation, and enumeration
+help the reader see the major points that you want to make.
+
+As a rule of thumb, if you type a full page (double spaced) without
+indenting for a new paragraph, you almost certainly have run one thought
+into another and have missed an opportunity to differentiate your ideas.
+
+Any tables and figures included in the manuscript must be mentioned (referenced)
+within the main text.
+
+If journal/instructions do not specify otherwise, tables and figures should be
+placed near (ideally after) the related text, and on the top of the page. 
+
+Use consistent notation throughout the manuscript, avoid defining any 
+unnecessary notation, and avoid using the same notation to describe different
+things (variables, indices, etc.).  
+
+## General Tips: Use of English
+
+It is relatively easy to read and understand English which is well written. 
+As the quality of writing deteriorates, however, it becomes progressively more 
+difficult for the reader to understand the author's intended meaning. 
+
+An obvious problem occurs when the author fails to use properly constructed 
+sentences. This can be easily corrected with revision and external review.
+
+A much more dangerous problem occurs when the author unconsciously assumes that 
+the reader is able to follow his/her unwritten train of thought.  This can 
+also usually be caught with external review.
+
+More tips on the use of English:
+
++ Use of tenses: Use present tense for most of the manuscript; use past tense 
+only when describing events that occurred in the past (data collection, an 
+experiment that has already been conducted, how simulations were designed).  
+Be consistent with tense usage within sections, paragraphs, etc.
+
++ Do not use the word 'significant' other than in a statistical sense.
+
++ The word 'data' is often mistakenly treated as if it were a singular noun
+instead of as a plural noun.  The word 'data' is, in fact, a plural noun (its 
+singular form is 'datum'). 
