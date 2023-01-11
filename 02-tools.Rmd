@@ -82,15 +82,14 @@ sections, and references. Let us start from a very basic template.
 Tips on getting started with \LaTeX.
 
 + Read the compiling log and fix the errors/warnings.
-+ Google the error/warning messages usually helps.
-+ Keep the preamble minimally necessary.
-+ Set up geometry with the `geometry` package.
++ Googling the error/warning messages usually helps.
++ Limit the preamble to include only what is necessary.
++ Set up document margins with the `geometry` package.
 + No manually controlling spaces.
-+ Read the [LaTeX symbol
-  tables](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols)
-  frequently.
-+ Keep line widths under 80 characters.
-+ Separate paragraphs by double blank likes.
++ Familiarize yourself with [LaTeX symbol
+  tables](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols).
++ Keep line widths under 80 characters in source files.
++ Separate paragraphs in source files by double blank lines.
 
 
 ### Math equations
@@ -102,17 +101,17 @@ Tips on using math:
 + Punctuate equations as they always are part of sentences.
 + Add spaces between symbols for better readability in sources.
 + No starting a sentence with a math symbol; rephrase to avoid it.
-+ No fractions (`\frac`) inline math.
-+ No breaking inline maths into different lines in tex sources.
-+ No labeling equations that are not referenced to.
++ No fractions (`\frac`) inline math expressions.
++ No breaking inline math expressions into different lines in tex sources.
++ No labeling equations that are not referenced.
++ Referencw labeled equations with `\eqref` instead of `(\ref)`.
 + Keep fonts consistent for the same notations (e.g., $n$ not n;
   AIC not $AIC$).
-+ Use appropriate sizes for parenthesis.
++ Use appropriate sizes for parentheses.
 + When multiple parentheses are needed in mathematical expressions, use the 
 following ordering unless the journal specifies otherwise $[\{(\mbox{math here})\}].$
 + Use predefined math functions (e.g, $\exp$ not $exp$; $\Pr$ not $P$).
 + Use `\allowdisplaybreak` to allow page breaks in aligned equations.
-+ Referencing with `\eqref` instead of `(\ref)`.
 + Use `\dd` for differentiation operator (available from package `physics`).
 + No breaking long equations arbitrarily in tex source; use short lines and add
   sufficient spaces to make the sources more readable.
@@ -138,6 +137,9 @@ Tips on professional \LaTeX tables:
 + Do not change font size for tables. Change table layout to fit instead of
   re-sizing it.
 + Right adjust numbers with decimal places.
++ Use consistent number of decimal places within a column or row of same types 
+  of measurements.
++ Avoid having many leading 0's in decimal entries.
   
 
 See [Small Guide to Making Nice Tables by Markus
@@ -157,9 +159,9 @@ Tips on \LaTeX figures:
 + Captions should be located below the table unless the journal specifies 
   otherwise.
 + For line plots with different groups, use different line pattern to
-  distinguish them, not only color, so that readers can tell the difference when
-  printing them out. Same for different dots on plots.
-+ Use colorblind friendly colors (especially avoid red/green)
+  distinguish them, not only color, so that readers can tell the difference if 
+  printed in black/white. Same for different dots (symbols) on plots.
++ Use colorblind friendly colors (especially avoid red/green).
 + Keep the right aspect ratio when necessary (e.g., basketball court; map;
   pp-plot).
 + Remove extra margins.
@@ -170,7 +172,7 @@ Tips on \LaTeX figures:
 ### References
 
 BibTeX is a reference management tool for formatting lists of references that 
-can be used together with the \LaTeX to generate a reference list. 
+can be used together with \LaTeX to generate a reference list. 
 Non-referenced
 references are not to be cited. All referenced references are to be listed. This
 nice feature is made possible by the package `natbib`.  We need to collect
@@ -179,8 +181,11 @@ display styles of the references are controlled by bib style (`.bst`)
 files. Many journals have their own bib style files available for download. One 
 can construct a customized bib style easily with the help of `custom-bib`.
 
+An alternative to BibTeX and `natbib` is `biblatex`. Most journals, however, use 
+BibTeX and `natbib`, so we focus on that here.
 
-A reference is cited in the manuscript through their keys by `\citep{}` for
+
+A reference is cited in the manuscript through its key by `\citep{}` for
 parenthetical citations or `\citet{}` for textual citations, where the key is
 placed inside the curly brackets. The key is used to cite or cross-reference the 
 bibliographic entry in a `.tex` document. Variations
@@ -189,10 +194,11 @@ and `\citeyear{}` can be useful when only author(s) or year is needed.
 The key of the cited references is put in the parentheses. 
 
 
-For `\citep{}`, multiple keys can be put in the same parentheses for citing
+For `\citep{}`, multiple keys separated by commas can be put in the same 
+parentheses for citing
 multiple references. Two optional arguments are allowed to `\citep[][]{}`.
 For example, `\citep[see, e.g.,][p. 26]{}` could be useful when a specific page
- (or section/chapter) is being referenced as an example,
+ (or section/chapter) is being referenced as an example.
 
 
 In general, to compile a tex file with bibtex references into a pdf document,
