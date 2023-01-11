@@ -2,26 +2,28 @@
 
 ## Full Cycle of a Statistical Research Project
 Like any research project, a statistical research project starts with an
-interesting idea, goes through a full cycle of brainstorming, planning with the
-right design/methods, investigation with the simulation studies/data analyses,
-iteration as nesessary, and summarizing through writing/revision.
+interesting idea, and goes through a full cycle of brainstorming, planning with 
+the
+right design/methods, investigating with the simulation studies/data analyses,
+fixing and iterating as necessary, and summarizing through writing/revision.
 
 
-1. Find a topic of interest. The topic should interests you, something about
-   which you already know something about or can find out more. The topic should
-   also be something that is within your capacity restricted by your skillsets
-   and time. Check the literature to see what works have been available on it or
+1. Find a topic of interest. The topic should interest you, and be something 
+   which you already know at least somewhat and/or can find out more. The topic 
+   should
+   also be something that is within your capacity restricted by your skill sets
+   and time. Check the literature to see what works are available on it or
    related topics. In short, the topic should be reasonably interesting and
    doable. You can get ideas for research by 
-    + attending siminars;
+    + attending seminars;
     + reading journals, books, magazines, and newspapers;
     + consulting;
     + collaboration.
-1. Initial planning. After you have identified an topic, you need to narrow down
+1. Initial planning. After you have identified a topic, you need to narrow down
    on the specific research questions that you want to answer, what data will be
-   used, and what methods are appropriate.
+   needed/used, and what methods are appropriate.
     + Form a hypothesis, design a study, conduct the study, make notes.
-    + Collect data and find some existing data.
+    + Collect data and/or find some existing data.
     + Decide on appropriate statistical methods.
     + Make a tentative outline to guide writing.
 1. Statistical investigation. 
@@ -29,11 +31,22 @@ iteration as nesessary, and summarizing through writing/revision.
     + Summarize substantive findings.
     + Investigate the performance of proposed methods via simulations.
 1. Iterate between planning and investigation.
-1. Revise and proofread. Revising and writing are two separate processes.
-    + Check organization --- reorganize paragraphs and add transitions where necessary.
+1. Write, revise and proofread. Revising and writing are two separate processes.
+    + Start with an outline for each section which includes major headings, 
+      sub-headings and paragraphs covering different points.  
+    + When starting, the goal is to get the main points and ideas captured in a 
+      document, so at this time, it does not matter if sentences are incomplete 
+      or if the grammar is incorrect.
+    + Are the statistical statements correct?
+    + Are the data displays informative?
+    + Are the conclusions based on sound evidence?
+    + Are the style and tone appropriate for the venue?
+    + Is the problem clearly stated?
+    + Check organization --- reorganize paragraphs and add transitions where 
+      necessary.
+    + Work on sentences --- check spelling, punctuation, word choice, tense, etc.
     + Make sure all researched information is documented (reproducibility).
     + Rework introduction and conclusion.
-    + Work on sentences --- check spelling, punctuation, word choice, etc.
     + Read out loud to check for flow.
     + Find a friend to review.
 
@@ -63,6 +76,6 @@ The following components are expected in your proposal.
 + Discussion: What do you expect to find and why
   do you feel so? Any ways your work can corroborate or challenge existing
   results or assumptions? What are the potential impacts of your work? What if
-  the investigation is not what you expect?
+  the results of your investigation is not what you expected?
 + Conclusion: Wrap it up by briefly summarizing your research proposal and
-  reinforces your research’s stated purpose.
+  reinforcing your research’s stated purpose.
