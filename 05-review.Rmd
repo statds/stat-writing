@@ -1,18 +1,43 @@
 # Review a Paper
 
+Peer review is the system used to assess the quality of a manuscript before it 
+is published in a journal. 
+
+Independent researchers in the relevant research area assess submitted 
+manuscripts for originality, validity and significance to help editors determine
+whether a manuscript should be published in their journal.
+
 Reviewing is the other side of the same coin as writing. It is an important
 skill and service for the scientific community. A good writer anticipates
-comments from possible reviewers and address them in writing. A critical review
-helps make an manuscript much stronger.
+comments from possible reviewers and addresses them in writing. A critical 
+review helps make a manuscript much stronger.
 
+According to <https://www.biomedcentral.com/getpublished/peer-review-process>,
+
+> Peer review is an integral part of scientific publishing that confirms the
+> validity of the manuscript. Peer reviewers are experts who volunteer their 
+> time to help improve the manuscripts they review. By undergoing peer review, 
+> manuscripts should become:
+>
+> More robust - peer reviewers may point out gaps in a paper that require more
+> explanation or additional experiments.
+> 
+> Easier to read - if parts of your paper are difficult to understand, reviewers 
+> can suggest changes.
+> 
+> More useful - peer reviewers also consider the importance of your paper to 
+> others in your field.
 
 In this writing course, we are writing statistical projects. Here is a check
 list adapted from <https://www.science.org/content/article/how-review-paper>.
 
 + Are the background literature and study rationale clearly articulated?
 + Do the hypotheses follow logically from previous work?
++ Are the statistical methods appropriate?
 + Are the methods robust and well controlled?
-+ Are the reported analyses appropriate? 
++ Is the statistical notation clearly defined?
++ Were the statistical methods conducted correctly?   
++ Are the assumptions of the statistical methods clearly articulated?
 + Are the assumptions of the statistical methods satisfied?
 + Is the presentation of results clear and accessible? 
 + To what extent does the Discussion place the findings in a wider context and
@@ -31,7 +56,74 @@ To write a reviewer's report, here is a template.
 
 Tips:
 
++ Precisely identify the location of the concern (page number, line number,
+  section number, etc.)
 + Be as constructive as possible.
 + Avoid rude or disparaging remarks.
 + Back up major criticisms.
 + Make the review useful for the editor as well as for the authors.
+
+# Response to Reviewers
+
+Peer-reviewed journals also give the author the opportunity to respond to the 
+reviewer's comments.
+
+This 'response to reviewers' document is submitted alongside your manuscript, 
+summarizing the changes that you made in response to the critiques.
+
+Follow these rules for writing responses to reviewers, adapted from
+@noble2017rules:
+
+*Rule 1:* Provide an overview, then quote the full set of reviews
+
+Begin the response letter with a broad-level summary of the changes, pointing 
+out new broad-level content added in response to the most essential criticisms 
+of the reviewers. 
+
+Thereafter, the response letter should contain the complete set of reviewer
+comments with your responses interleaved.
+
+*Rule 2:* Be polite and respectful of reviewers
+
+Even if you are convinced that the reviewer lacks intellectual capacity, it is
+certainly not in your interest to convey this impression to the reviewer. 
+
+Keep in mind that if the reviewer failed to understand something, the fault
+likely lies, at least in part, with you for not making the point clear enough. 
+
+Your goal is to make the work clear and accessible to all readers, not just to
+experts.
+
+*Rule 3:* Accept the blame
+
+If the reviewer failed to understand something, apologize for not making it clear.
+
+Even if you are convinced that the text is already clear (i.e., the reviewer
+simply missed it), consider revising the text and quoting the revised text in
+your response. 
+
+In general, even if the requested change seems unnecessary, it is usually better
+to go ahead and revise with the goal of showing the reviewer that they were
+listened to and understood.
+
+*Rule 4:* Make the response self-contained
+
+When you make changes to the text or to figures, quote the changes directly in
+the response. If possible, refer to the specific pages/sections/paragraphs were 
+the change was made.  
+
+*Rule 5:* Respond to every point raised by the reviewer
+
+Even if you do not agree with a comment from a reviewer, you cannot ignore it 
+and must respond to it. 
+
+If you disagree, provide evidence supporting your claim.  
+
+*Rule 6:* Use typography to help the reviewer navigate your response
+
+Use changes of typeface, color, and indenting to discriminate between 3 
+different elements: the review itself, your responses to the review, and changes 
+that you have made to the manuscript. 
+
+You can explain these typographical conventions in the introduction to your 
+response.
