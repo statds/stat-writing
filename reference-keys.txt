@@ -26,6 +26,7 @@ simulation
 application
 discussion-and-conclusion
 appendix
+acknowledgements
 references-1
 online-supplement
 general-tips
