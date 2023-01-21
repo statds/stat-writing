@@ -197,6 +197,16 @@ section.
   flow of the main text.
 + Data source details.
 
+## Acknowledgements
+
+This section is optional, but could be used to acknowledge certain individuals
+who have contributed to the research and/or success of the manuscript (e.g.
+peer reviewers).  
+
+In general, if the research upon which you are writing was funded, the funding
+agency and funding mechanism are typically included here unless otherwise 
+specified.  
+
 ## References
 
 + Every reference cited in the paper should appear here.
