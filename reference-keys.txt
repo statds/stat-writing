@@ -1,7 +1,8 @@
-prerequisites
+preface
 intro
 applied-papers
 methods-papers
+scientific-writing
 using-the-right-tools-for-writing
 git-for-version-control
 latex-for-typesetting
