@@ -12,7 +12,7 @@ github-repo: rstudio/bookdown-demo
 description: "This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook."
 ---
 
-# Preface
+# Preface {-}
 
 This book aims to train students in statistics and data science on statistical
 writing with professional tools such as LaTeX, BibTeX, R, and Git. It is based
