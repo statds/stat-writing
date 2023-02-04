@@ -79,6 +79,15 @@ than competing tests.
 
 Here are some examples: @li2022regularized; @lau2022bias.
 
+## Scientific Writing
+
+Many resources on scientific writing are available. For example,
+@gopen1990science was selected by its publisher, _American Scientist_,
+as one of its 36 "Classic Articles" from the first 100 years of its
+publishing history. Popular books are 
+oshima2000writing, @gopen2004expectations, @hairston2003successful,
+and @lebrun2021scientific.
+
 
 
 <!-- You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods). -->
