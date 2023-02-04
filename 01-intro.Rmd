@@ -43,7 +43,7 @@ An applied paper has a widely accepted structure:
 + Discussion
 
 An applied paper can be applying existing statistical methods to solve an
-applied problem. See, for example, @price2021effects; @caplan2019dental.
+applied problem. See, for example, @price2022effects; @caplan2019dental.
 
 
 When sensitivity analysis is desired for the applications, one can have a
