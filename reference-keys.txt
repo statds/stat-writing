@@ -1,4 +1,3 @@
-preface
 intro
 applied-papers
 methods-papers
