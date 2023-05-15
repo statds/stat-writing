@@ -1,0 +1,479 @@
+---
+title: |-
+  STAT3494W: Undergraduate Seminar\
+  STAT5095: Investigation of Special Topics\
+  \
+  Note 4: Writing Specific Sections of a \
+  Statistical Paper
+author: "Elizabeth Schifano"
+date: "Spring 2023"
+header-includes:
+  - \usefonttheme[onlymath]{serif}
+  - \usepackage{smartdiagram}
+  - \usepackage{amsmath, amsfonts, amssymb, amsthm}
+  - \usepackage{booktabs}
+  - \usepackage{enumerate}
+  - \usepackage{xcolor}
+  - \addfootbox{normal text}{\hfill\insertframenumber\quad}
+output:  
+  beamer_presentation:
+    theme: "boxes"
+    slide_level: 2
+bibliography: bib3494.bib
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA) # remove hashes from all output
+```
+
+\tableofcontents[hideallsubsections]
+
+
+# Title, Abstract, Keywords
+
+## Title
+
+The title is the most read part of an article, and influences whether a reader 
+is interested in reading the manuscript.
+
+@hairston2003successful suggest 
+that the title of a research paper should accomplish four goals:
+
++ predict the content of the research paper;
++ be interesting to the reader;
++ reflect the tone of the writing;
++ contain important keywords (that makes it easier to be found from keywords
+  search).
+  
+---
+
+The title of a paper is usually determined when the paper is close to
+completion. 
+
+To come up with a good title, list some key phrases that you would
+like to have, and be creative in forming a good title that consists of most of 
+them. Here are some tips:
+
++ Be informative by including these aspects: topic, method(s), data, and
+  results.
++ Consider adding a subtitle to give more specifics about the paper.
++ Use appropriate critical keywords to increase the discoverability of the
+  paper.
++ Follow the requirements from the instructions or journals.
++ Keep it as concise as possible.
+
+
+## Abstract
+
+@marron1999effective recommended the following:
+
+\small 
+> Abstract material needs to be carefully chosen. A balance between the
+> twin goals of brevity and maximal information content should again be
+> carefully sought. There is room for more detail than in the title, but not
+> enough room for all ideas covered in the paper. Make sure each ``high point"
+> is included. The paper will have a better chance in the review process if it
+> is made clear what is done, and why it is important, since this will
+> immediately capture the interest of the reviewer.
+
+> Any recommendations for length here must be more case dependent. Longer
+> papers will usually need longer abstracts. However, something between 4
+> and 10 sentences is reasonable for most situations.
+
+> Mathematical notation is rarely useful in the abstract. Sometimes notation is
+> introduced in an abstract, and then not used at all! Even when notation is
+> used in the abstract, the point can usually be conveyed more efficiently in
+> words alone.
+
+---
+
+\normalsize
+Tips:
+
++ Open with a sentence to establish the importance of the subject of the paper.
++ Identify a gap in the literature to set up the background of the paper.
++ Highlight the novelty/contributions of the paper.
++ For application papers, allude to new discoveries and their impacts.
++ For method papers, outline the essence of the methodology, and evidence from
+  theoretical and numerical studies supporting the methods.
++ Write this section towards the end of the writing process, after you have 
+  completed most of the other sections.
++ It must make sense when read in isolation for those who only read the 
+  abstract, and must also provide a clear and accurate summary of the manuscript
+  for readers who read the entire manuscript [@zeiger2000writing].  
++ Should not include citations.
+
+## Keywords
+
+Keywords are words in addition to those in the title that attract search
+queries. 
+
+Including the most relevant keywords helps other researchers find
+your paper.
+
++ No need to repeat anything in the title already. 
++ List them in alphabetical order.
++ Contain words and phrases that suggest what the topic is about. 
+
+# Introduction
+
+## Introduction
+
+The introduction section is always the first section of a paper. 
+
+Some journals
+may not call it introduction but require a section that serves the same
+purpose. 
+
+The purpose of the introduction is to stimulate the reader’s interest and to provide background information which is pertinent to the study [@jenkins1995write].
+
+The introduction section guides the readers from a general subject 
+area to the narrow topic of the paper. It should answer three questions:
+
++ Why does it matter?
++ What has already been done?
++ What is new?
+
+---
+
+That is, the introduction sections need to explain the importance of the topic 
+of
+the paper, provide the background of the research work, and highlight the
+contributions of the work. 
+
+At the end of the introduction, a roadmap, or an
+outline of the paper is useful in helping the readers navigate through the
+following sections.
+
+The introduction is typically outlined at the very beginning of the writing
+process, but completed towards the end after the other sections have been 
+written. 
+
+Do NOT wait until the end to perform the literature review, 
+however!  This should happen *before* the research is undertaken to ensure 
+you are not duplicating something that has already been done!
+
+---
+
+An introduction often contains the following items.
+
++ An overview of the topic. Start with a general overview of your topic and
+  narrow it to the specific subject you are addressing. Then, mention
+  questions or concerns you had about the case. Explain why they are important
+  and why it needs to be addressed right now.
++ Existing works. The introduction is the place to review other conclusions on 
+  your
+  topic. The literature review should be thorough, including both old and recent
+  works. It should show that you are aware of prior research. It also introduces
+  past findings to those who might not have that expertise. 
++ A gap needs to be
+  identified from the importance of the topic and the current status of the
+  literature, which is the rationale for your work. Why are existing methods not   sufficient?  What are elements of an attractive solution?
+  
+--- 
+
++ Contributions. This is a thesis statement, which summarizes the the
+  contributions of your work to the existing literature, and answers the "what
+  is new" question.
++ A roadmap. A brief summary of what each section does in the paper. This 
+  concludes the introduction.
+  
+
+# Data and Methods
+
+## Data
+
+The data section should provide all the details that are relevant for the
+research project.
+
++ Who collected the data (source)?
++ How was the data collected? Sampling frame? Sampling approach?
++ What period or range does the data cover?
++ Why does the data help answer the research question?
++ What exploratory analyses are done (descriptives, visualization, etc.)?
+
+
+## Methods
+
+This is the section often written first.  Here we establish notation and 
+attempt to answer the following questions where applicable:
+
++ What are the observed data?
++ What are the models?
++ What are the parameters to be estimated?
++ How are the point estimators obtained?
++ How are the uncertainty (standard errors) of the point estimators assessed?
++ How are the variances of the point estimators estimated?
++ How are the null distribution of the testing statistics established?
++ What are the assumptions of the methods? 
++ What are the claims of theoretical results?
+
+# Simulation and Application
+
+## Simulation
+
+A simulation section, if needed, should include the following:
+
+ADEMP [@morris2019using]:
+
++ Aims
++ Data generating mechanism
++ Estimand/target of analysis
++ Methods
++ Performance measures
+
+Coding and Execution
+
+Analysis/Discussion: with tables and figures.  May be included in a Results 
+section.
+
+---
+
+Tips:
+
++ For each table/figure, write down the bullet points to convey to the readers.
++ Group the bullet points in blocks and put the blocks in a logical order.
++ Within each block, put the bullet points in the right logical order.
++ Some (shorter) blocks can be converted into proper paragraphs in the final 
+  paper, while other (longer) blocks may remain in bullet form.
+
+## Application
+
++ Remember to check assumptions where possible.
++ Report the statistical analyses in tables/figures.
++ When summarizing from tables/figures, paint the big picture, rather than
+  reiterating all of the little details.
++ Discussions to link the analyses back to the substantive topic
+  [@miller2015chicago]:
+
+>  
+> Having presented the individual pieces of evidence, an investigator must
+> summarize how that evidence, taken together, support the conclusion of the
+> investigation. Statisticians should explain how the statistical evidence answers
+> the question posed at the beginning of the paper, following standard
+> expository writing guidelines to writing an analytic essay.
+
+
+# Discussion and Conclusion
+
+## Discussion and Conclusion
+
+This discussion section is usually written last, and includes:
+
++ A summary, again, of the contributions of the research. 
++ The research question posed as the `need' of the introduction must be
+  answered here [@zeiger2000writing].
++ Limitations of the current study.
++ Future directions.
+
+
+# Acknowledgements and References
+
+## Acknowledgements
+
+This section is optional, but could be used to acknowledge certain individuals
+who have contributed to the research and/or success of the manuscript (e.g.,
+peer reviewers).  
+
+In general, if the research upon which you are writing was funded, the funding
+agency and funding mechanism are typically included here unless otherwise 
+specified.  
+
+## References
+
+See Note 2, but as a reminder:
+
++ Every reference cited in the paper should appear here.
++ References not cited should not appear here.
++ All are automatically taken care of by BibTeX.
++ Styles are controlled by bib style (`.bst` file).
+
+
+# Appendix and Online Supplement
+
+## Appendix
+
+Here we include:
+
++ Technical details (e.g., proofs, algorithms) that would otherwise break  the
+  flow of the main text.
++ Data source details.
++ If these are too lengthy, they may be instead relegated to an online 
+  supplement.
+
+## Online Supplement
+
+If code and data are not provided through link to github, R package, etc., in the main paper, an online supplement often includes
+
++ computer code for reproducibility, 
++ data for reproducibility, and also
++ additional simulation results and technical details.
+
+# General Writing Tips
+
+## General Writing Tips
+
+From @jenkins1995write:
+
+> In order to maintain continuity between the key sections (introduction, 
+> methods, results and discussion) it is helpful to consider the manuscript as
+> telling a story. 
+>
+> The strong parts to the story-line are the introduction and the discussion, so
+> the link between these sections must be clear.  
+
+Devices such as paragraphing, headings, indentation, and enumeration
+help the reader see the major points that you want to make.
+
+As a rule of thumb, if you type a full page (double spaced) without
+starting a new paragraph, you almost certainly have run one thought
+into another and have missed an opportunity to differentiate your ideas.
+
+---
+
+Any tables and figures included in the manuscript must be mentioned (labeled and
+referenced) within the main text. Tables and figures should have a purpose; they
+should contribute to and be integrated with the rest of the text.
+
+If journal/instructions do not specify otherwise, tables and figures should be
+placed near (ideally after) the related text, and on the top of the page. 
+
+Use consistent notation throughout the manuscript, avoid defining any 
+unnecessary notation, and avoid using the same notation to describe different
+things (variables, indices, etc.).  
+
+## General Tips: Tone and Target Audience
+
+The tone of one's statistical writing needs to be appropriate for its target audience and venue.
+
+The target audience for your paper this semester should be 'upper-level 
+(junior or senior) undergraduate statistics students'.
+
+The tone of the writing should be *professional*. It should not be
+conversational and should not include slang. 
+
+Use proper English in terms of grammar, capitalization, and punctuation.   
+
+The content from the following slides are adapted from
+[Nature](https://www.nature.com/scitable/topicpage/effective-writing-13815989/).
+
+## General Tips: Use of English
+
+It is easy to read and understand English which is well written. 
+
+As the quality of writing deteriorates, however, it becomes
+progressively more difficult for the reader to understand the author's intended
+meaning. 
+
+An obvious, and
+easily corrected, problem occurs when the author fails to use properly
+constructed sentences. (A good check is to identify the verb in each sentence.)
+
+A much more dangerous (and very frequent) problem occurs when the author
+unconsciously assumes that the reader is able to follow his/her unwritten train of thought.
+
+Thus the reader is presumed to know exactly what the author is
+talking about -- e.g., what variables are currently being considered,
+what is being held fixed, and what is being allowed to vary -- when none of this has ever been stated.
+
+---
+
+More tips on the use of English: Construction of sentences
+
++ Target one idea per sentence. 
+
++ Use your current topic, i.e., what you are writing about, at the beginning of 
+the sentence:
+
+&nbsp;  
+
+> For example, should you write "The preprocessor sorts the
+two arrays" or "The two arrays are sorted by the preprocessor"? If you are
+discussing the preprocessor, the first sentence is the better option. In
+contrast, if you are discussing the arrays, the second sentence is better. If you
+are unsure what you are discussing, consider the surrounding sentences: Are they
+about the preprocessor or the two arrays?
+
+---
+
++ Unless instructions or journals say otherwise, it is okay to use 'I' and 'we'. 
+
++ Be concise: replace long phrases with shorter phrases or eliminate words 
+without loss of clarity or accuracy.
+
++ Subject-verb agreement: if the subject is singular, the verb must also be singular; if the subject is plural, the verb must also be plural. 
+
++ Common mistake of above: The word 'data' is often mistakenly treated as if it
+were a singular noun instead of as a plural noun.  The word 'data' is, in fact, 
+a plural noun (singular form is 'datum'). E.g., use 'The data are' instead of
+'The data is'.
+
++ Avoid ending sentences with a preposition; rephrase as needed.  E.g., Use 
+'This is something on which we must focus our attention.' or 'We must focus our
+attention on this' instead of 'This is something we must focus our attention 
+on.' 
+
+---
+
+More tips on the use of English: Use of tenses
+
+&nbsp;  
+
+> Use the past tense to report what happened in the past: what you did, what
+someone reported, what happened in an experiment, and so on. 
+
+> Use the present tense to express general truths, such as conclusions (drawn by
+you or by others) and atemporal facts (including information about what the
+paper does or covers). 
+
+> Reserve the future tense for perspectives: what you will do in the coming
+months or years. 
+
+>Typically, most of your sentences will be in the past tense, some will be in 
+the present tense, and very few, if any, will be in the future tense.
+
+---
+
+More tips on the use of English: Use of acronyms
+
+
++ Introduce acronyms systematically the first time they are used in a document.
+
++ First write the full expression, then provide the acronym in parentheses using
+  uppercase letters. E.g., ``We prepared Gold NanoParticles (GNP) by ...'' 
+  
++ If an acronym is used in both the abstract and the main paper, introduce
+ the acronym twice: in the abstract and its first instance in the main paper.
+ 
+--- 
+
+More tips on the use of English: Use of capitalization
+
+Use initial capital letters
+
++ at beginnings: the start of a sentence, of a heading, etc.;
+
++ for proper nouns, including nouns describing groups ('computing statistics' 
+vs. 'the Statistics Department');
+
++ for items identified by their number ('in the next figure' vs 'in Figure 2', 
+or 'in the following equation' vs. 'in Equation (4)');
+
++ for specific words: names of days (Monday) and months (April), adjectives of nationality (Algerian), etc.;
+
++ when defining acronyms. 
+
+## Caution!
+
++ Avoid using words that have a statistical meaning unless they are being used
+in the statistical sense.
+
++ E.g., 'significant' (or variations), although its statistical use is currently
+being de-emphasized. 
+
++ Other danger words that also have statistical meaning include 'likelihood',
+'odds', 'normal', 'robust'.  
+
+
+## References

@@ -1,0 +1,162 @@
+---
+title: |-
+  STAT3494W: Undergraduate Seminar\
+  STAT5095: Investigation of Special Topics\
+  \
+  Note 3: Statistical Research Projects
+author: "Elizabeth Schifano"
+date: "Spring 2023"
+header-includes:
+  - \usefonttheme[onlymath]{serif}
+  - \usepackage{smartdiagram}
+  - \usepackage{amsmath, amsfonts, amssymb, amsthm}
+  - \usepackage{booktabs}
+  - \usepackage{enumerate}
+  - \usepackage{xcolor}
+  - \addfootbox{normal text}{\hfill\insertframenumber\quad}
+output:  
+  beamer_presentation:
+    theme: "boxes"
+    slide_level: 2
+bibliography: bib3494.bib
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA) # remove hashes from all output
+```
+
+\tableofcontents[hideallsubsections]
+
+
+# Getting Started
+
+## Full Cycle of a Statistical Research Project
+
+Like any research project, a statistical research project starts with an
+interesting idea, and goes through a full cycle of
+
++ brainstorming, 
++ planning with the right design/methods, 
++ investigating with the simulation studies/data analyses, 
++ fixing and iterating as necessary, and 
++ summarizing through writing/revision.
+
+## 1. Find a topic of interest. 
+
+The topic should interest you, and be something which you already know at least somewhat and/or can find out more. 
+   
+The topic should also be something that is within your capacity restricted by your skill sets and time. 
+
+Check the literature to see what works are available on it or related topics. 
+
+In short, the topic should be reasonably interesting and doable. 
+
+---
+
+You can get ideas for research by 
+
++ attending seminars;
++ reading journals, books, magazines, and newspapers;
++ consulting;
++ collaboration.
+
+---
+
+You can get ideas for your statistical paper by checking out 
+
++ live data science competitions at [Kaggle](https://www.kaggle.com) and other places. 
++ open data websites (e.g., 
+[NYC Open Data](https://opendata.cityofnewyork.us), 
+[Connecticut Open Data](https://data.ct.gov).)
++ [ASA data challenge expo](https://community.amstat.org/dataexpo/home).
++ statistics journals and magazines!  *The American Statistician* and 
+  *Signifance Magazine* are usually student-friendly.  
+  
+## 2. Initial planning. 
+
+After you have identified a topic, you need to narrow down
+   on the specific research questions that you want to answer, what data will be
+   needed/used, and what methods are appropriate.
+   
++ Form a hypothesis and design a study.
++ Collect data and/or find some existing data.
++ Decide on appropriate statistical methods.
++ Make a tentative outline to guide writing.
+
+## 3. Statistical investigation. 
+    
++ Perform data analysis.
++ Summarize substantive findings.
++ Investigate the performance of any newly proposed methods via simulations.
++ Iterate between planning and investigation as needed.
+
+## 4. Write, Revise and Proofread. 
+
+Revising and writing are two separate processes.
+
+Tips when starting to write:
+
++ Start with an outline for each section which includes major headings, 
+  sub-headings and paragraphs covering different points.  
++ When starting, the goal is to get the main points and ideas captured in a 
+  document, so at this time, it does not matter if sentences are incomplete or 
+  if the grammar is incorrect.
+  
+---
+
+Tips for revising and proofreading:
+
++ Are the statistical statements correct?
++ Are the data displays informative?
++ Are the conclusions based on sound evidence?
++ Are the style and tone appropriate for the venue?
++ Is the problem clearly stated?
++ Check organization --- reorganize paragraphs and add transitions where 
+      necessary.
++ Work on sentences and grammar --- check spelling, punctuation, word choice,
+  tense, etc.
++ Make sure all researched information is documented (reproducibility).
++ Rework introduction and conclusion.
++ Read out loud to check for flow.
++ Find a friend to review.
+
+
+# Writing a Research Proposal
+
+## Writing a Research Proposal
+
+A research proposal is piece of writing that details exactly what you plan to do
+in a research project.
+
+The following components are expected in your proposal.  Use the `proposal.tex`
+template (under Templates.zip on course website) to get you started.
+
++ Introduction: Introducing the topic and why you have chosen this topic (3--5
+  lines). Mention briefly the current related research and cite relevant works.
++ Specific aims: Formulate a research question or hypothesis in the
+  chosen topic. Describe briefly why you select such a question or hypothesis
+  and its importance in the field (cite sources).
++ Data description: Describe your data set (for instance: sampling scheme,
+  number of observations, number of variables, variables of interest, nature of
+  the variables) and the source of your data set if it is not collected by
+  yourself.
+  
+---
+
++ Research design and methods: 
+  Describe briefly (5-7 lines) your plan of action. If you
+  choose to apply any specific statistical methods, please mention and cite
+  them. Please be consistent here with your research hypothesis. Write a line
+  regarding how the methods would help in investigating the research hypothesis.
++ Discussion: What do you expect to find and why
+  do you feel so? Any ways your work can corroborate or challenge existing
+  results or assumptions? What are the potential impacts of your work? What if
+  the results of your investigation are not what you expected?
++ Conclusion: Wrap it up by briefly summarizing your research proposal and
+  reinforcing your research’s stated purpose.
+
+
+
+ 
+

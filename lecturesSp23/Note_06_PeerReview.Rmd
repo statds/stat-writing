@@ -1,0 +1,219 @@
+---
+title: |-
+  STAT3494W: Undergraduate Seminar\
+  STAT5095: Investigation of Special Topics\
+  \
+  Note 6: Peer Review
+author: "Elizabeth Schifano"
+date: "Spring 2023"
+header-includes:
+  - \usefonttheme[onlymath]{serif}
+  - \usepackage{smartdiagram}
+  - \usepackage{amsmath, amsfonts, amssymb, amsthm}
+  - \usepackage{booktabs}
+  - \usepackage{enumerate}
+  - \usepackage{xcolor}
+  - \addfootbox{normal text}{\hfill\insertframenumber\quad}
+output:  
+  beamer_presentation:
+    theme: "boxes"
+    slide_level: 2
+bibliography: bib3494.bib
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA) # remove hashes from all output
+```
+
+\tableofcontents[hideallsubsections]
+
+
+# Reviewing a Paper
+
+## Reviewing a Paper 
+
+Peer review is the system used to assess the quality of a manuscript before it 
+is published in a journal. 
+
+Independent researchers in the relevant research area assess submitted 
+manuscripts for originality, validity, importance, and relevance to help editors
+determine whether a manuscript should be published in their journal.
+
+---
+
+According to <https://www.biomedcentral.com/getpublished/peer-review-process>,
+
+> Peer review is an integral part of scientific publishing that confirms the
+validity of the manuscript. Peer reviewers are experts who volunteer their 
+time to help improve the manuscripts they review. By undergoing peer review, 
+manuscripts should become:
+
+&nbsp;
+
+> More robust - peer reviewers may point out gaps in a paper that require more
+explanation or additional experiments.
+ 
+&nbsp;
+
+>Easier to read - if parts of your paper are difficult to understand, reviewers
+can suggest changes.
+
+&nbsp;
+
+> More useful - peer reviewers also consider the importance of your paper to 
+others in your field.
+
+A good writer anticipates
+comments from possible reviewers and addresses them in writing. 
+
+---
+
+In this writing course, each of you is an author. 
+
+You will each need to find a partner in either section of 
+STAT3494W and serve as each other's peer reviewer.  
+
+Thus, each of you is also a reviewer of your partner's work.
+
+You may use the Discussion Board on HuskyCT to help you find a partner for peer
+review.
+
+---
+
+Before submitting any draft of your project report via HuskyCT, you will email your (complete) first draft to your partner for review (and cc Dr. Schifano on this email).
+
+You, as author, will receive a reviewer report (described on the next slides) 
+from your partner via email.
+
+You, as reviewer, must also write a reviewer report for your partner. You will email this back to your partner (and cc Dr. Schifano on this email). 
+
+---
+
+Use the following checklist, adapted from
+<https://www.science.org/content/article/how-review-paper>, to help you in your
+peer review:
+
++ Are the background literature and study rationale clearly articulated?
++ Do the hypotheses follow logically from previous work?
++ Are the statistical methods appropriate?
++ Is the statistical notation clearly defined?
++ Were the statistical methods conducted correctly?   
++ Are the assumptions of the statistical methods clearly articulated?
++ Are the assumptions of the statistical methods satisfied?
++ Is the presentation of results clear and accessible? 
++ To what extent does the Discussion place the findings in a wider context and
+  achieve a balance between interpretation and useful speculation versus tedious
+  waffling?
+
+---
+
+To write a reviewer's report, see Course Website for a LaTeX template.  The report typically includes the following:
+
++ A summary of the what the paper is about and how you feel about its
+credibility.
++ A detailed list of the major concerns alluded to in the summary.
++ Each item in the major concerns list details specific points in the paper
+  that are not clearly presented or need to be improved; they should be listed
+  in the order they appeared in the paper.
++ Finally, a list of minor concerns (misprints, notation abuse, grammar
+  issues, etc.).
+
+
+---
+
+Tips:
+
++ Precisely identify the location of the concern (page number, line number,
+  section number, etc.)
++ Be as constructive as possible.
++ Avoid rude or disparaging remarks.
++ Back up major criticisms.
++ Make the review useful for the editor (grader/instructor!) as well as for the authors.
+
+
+# Response to Reviewers
+
+## Response to Reviewers
+
+Peer-reviewed journals also give the author the opportunity to respond to the 
+reviewer's comments.
+
+This 'response to reviewers' document is submitted alongside your manuscript,
+summarizing the changes that you made in response to the critiques.
+
+In this class, you, as authors, will also submit a 'response to reviewers'
+document at the same time you submit your first draft on HuskyCT.   
+
+See response template on HuskyCT course website.
+
+---
+
+Follow these rules for writing responses to reviewers, adapted from
+@noble2017rules:
+
+*Rule 1:* Provide an overview, then quote the full set of reviews
+
+Begin the response letter with a broad-level summary of the changes, pointing 
+out new broad-level content added in response to the most essential criticisms 
+of the reviewers. 
+
+Thereafter, the response letter should contain the complete set of reviewer
+comments with your responses interleaved.
+
+---
+
+*Rule 2:* Be polite and respectful of reviewers
+
+Even if you are convinced that the reviewer lacks intellectual capacity, it is
+certainly not in your interest to convey this impression to the reviewer. 
+
+Keep in mind that if the reviewer failed to understand something, the fault
+likely lies, at least in part, with you for not making the point clear enough. 
+
+Your goal is to make the work clear and accessible to all readers, not just to
+experts.
+
+---
+
+*Rule 3:* Accept the blame
+
+If the reviewer failed to understand something, apologize for not making it
+clear.
+
+Even if you are convinced that the text is already clear (i.e., the reviewer
+simply missed it), consider revising the text and quoting the revised text in
+your response. 
+
+In general, even if the requested change seems unnecessary, it is usually better
+to go ahead and revise with the goal of showing the reviewer that they were
+listened to and understood.
+
+--- 
+
+*Rule 4:* Make the response self-contained
+
+When you make changes to the text or to figures, quote the changes directly in
+the response. If possible, refer to the specific pages/sections/paragraphs were 
+the change was made.  
+
+&nbsp;  
+
+*Rule 5:* Respond to every point raised by the reviewer
+
+Even if you do not agree with a comment from a reviewer, you cannot ignore it 
+and must respond to it. 
+
+If you disagree, provide evidence supporting your claim.  
+
+--- 
+
+*Rule 6:* Use typography to help the reviewer navigate your response
+
+Use changes of typeface, color, and indenting to discriminate between 3 
+different elements: the review itself, your responses to the review, and changes
+that you have made to the manuscript. 
+
+You can explain these typographical conventions in the introduction to your response.
+
+## Reference

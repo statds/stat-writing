@@ -1,0 +1,253 @@
+---
+title: |-
+  STAT3494W: Undergraduate Seminar\
+  STAT5095: Investigation of Special Topics\
+  \
+  Note 1: Introduction
+author: "Elizabeth Schifano"
+date: "Spring 2023"
+header-includes:
+  - \usefonttheme[onlymath]{serif}
+  - \usepackage{smartdiagram}
+  - \usepackage{amsmath, amsfonts, amssymb, amsthm}
+  - \usepackage{booktabs}
+  - \usepackage{enumerate}
+  - \usepackage{xcolor}
+  - \addfootbox{normal text}{\hfill\insertframenumber\quad}
+output:  
+  beamer_presentation:
+    theme: "boxes"
+    slide_level: 2
+bibliography: bib3494.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA) # remove hashes from all output
+```
+
+\tableofcontents[hideallsubsections]
+
+# What Does a Statistics Paper Look Like?
+
+## What does a statistical paper look like? 
+
+As with all scientific papers, statistical papers should have some commonly
+expected structures which include components such as
+
+* title, abstract, keywords, 
+
+* introduction, 
+
+* methods, 
+
+* results, 
+
+* discussion,
+
+* acknowledgements, references, 
+
+* appendix, and supplement. 
+
+Due to the specificity of the statistical discipline and application areas,
+however, statistical papers could look quite different one from another. 
+
+
+## Types of statistical papers 
+
+* *Theory papers* look similar to papers in mathematics, with statement of the
+problem, presentation of some theorems, and technical proofs. Such papers are 
+not covered here. 
+
+* *Application papers* focus on a specific application problem in a certain
+domain area where the research discoveries depend on applications of existing or
+novel statistical methods. 
+
+* *Method papers* aim to provide a general methodological solution to a class of
+applied problems. Often, methods paper have a theoretical component, for 
+example, the establishment of the asymptotic properties of a new estimator. An
+applied paper in statistics could be a method paper in the domain of the problem
+it solves.
+
+## Target Audience
+
+* An author should always keep the target audience in mind when writing. 
+
+* There are many statistical journals on the wide spectrum for applied to
+theoretical papers. Each one has its own aims and scope, with different target
+readerships. 
+
+* Writings such as customary statistical technical reports that are not
+intended for journal publications also have target readerships. 
+
+* Regardless of
+the audience, any statistical paper should be convincing and concise. 
+
+<!--
+You need to
+show the readers that your work is important, valid, and useful, without bogging down the reader with superfluous information. 
+-->
+
+## Applied Papers
+
+An applied paper has a widely accepted structure:
+
++ Introduction
++ Data description
++ Methods
++ Results (often with Simulation and Real Data Analysis (sub)sections)
++ Discussion
+
+Some applied papers can simply apply existing statistical methods to novelly 
+solve an applied problem. 
+
+See, for example, @price2022effects; @wang2020geographical.
+
+<!--
+See, for example, @price2021effects; @caplan2019dental.
+
+When sensitivity analysis is desired for the applications, one may have a
+separate section on simulation studies. 
+
+See, for example, @jiao2022cyberattack;
+@li2021uncertainty.
+-->
+---
+
+Some (most?) applied papers involve novel methodology development that is 
+motivated by an applied problem. 
+
+In such cases, simulation studies become necessary as a way to validate your
+methods: 
+
++ generate simulated data (with known truth) in an attempt to mimic real
+data, 
++ then evaluate the novel methods against the truth. 
++ More on this later under *Methods Papers*.
+
+Such check is not feasible when analyzing real data.
+
+See, for example, @xue2020geographically; @chen2018mmm.
+
+<!--
+See, for example, @jiao2021bayesian; @hu2021moving.
+-->
+
+## Methods papers
+
+A methods paper focuses on a novel method that is applicable to a general class
+of problems arising in different domains. A commonly seen structure is:
+
++ Introduction
++ Methods (e.g., estimation, hypothesis tests, diagnosis)
++ Properties
++ Simulations
++ Illustrations (with real applications)
++ Discussion/Conclusions.
+
+---
+
+A simulations section is often needed for methods papers. 
+
+* All methods have assumptions, and any reasonably good method should work as
+expected when the assumptions hold. It would be even better if the method
+remains working when some of the assumptions are violated. 
+
+* Simulations can be conducted to check whether the method `works' when the
+assumptions are met, and to assess the robustness of the method when certain
+assumptions are violated. 
+
+* For example, simulation studies can be designed to check whether proposed 
+estimators are unbiased and more efficient than competing
+estimators, or whether proposed tests retain their sizes and are more powerful
+than competing tests.
+
+* See, for example, @xue2021monitor; @lee2021subsample; @schifano2016online.
+
+<!--
+Here are some examples: @li2022regularized; @lau2022bias.
+-->
+
+# Introduction to \LaTeX
+
+## Why \LaTeX?
+
+<!--
+* Many people use MS Word when it comes to writing, but  
+it is not the right tool to write statistical papers. 
+
+* The right, high-quality, professional typesetting system is \LaTeX. 
+-->
+
+* \LaTeX$\mbox{}$ is a typesetting language that makes it `easier' and cleaner
+to write documents involving a lot of math. 
+
+* It separates the document's appearance from its content.  This allows authors
+to be able to focus on writing the content without having to worry about
+its appearance until the end. 
+
+* There are many different appearances (styles) one can choose or design,
+allowing for easy adaptation to different formatting styles.
+
+* It includes features for cross-referencing and management of bibliographies. 
+
+* It is very easy to use and integrate with markup languages.
+
+* The final output can be of different types, the most popular of which is `pdf` (portable document format). 
+
+
+## Getting Started with \LaTeX
+
+Students can do one of the following:
+
+* install \LaTeX$\mbox{}$ for free on their own machines, 
+
+* use online sites such as \url{overleaf.com}, or 
+
+* use R Markdown or Quarto with \LaTeX .
+
+In class demonstrations, we will mainly use Overleaf, but if you are comfortable
+with the other options you are welcome to use them.
+
+## Overleaf
+
+Why?
+
+* Browser based. 
+
+* No need to install software.
+
+* Can be accessed from nearly any device.
+
+* Includes nearly all \LaTeX$\mbox{}$ packages and is up-to-date.
+
+* Has an extensive and extremely useful documentation, including a quick-start
+course (part of your first assignment!).
+
+* Easy sharing of files, both source and compiled pdf.
+
+* Great commenting and reviewing tools and a chat box.
+
+## \LaTeX$\mbox{}$ for Typesetting
+
+<!--
+Use [Anthony Zeimbekakis' thesis as a template](https://github.com/azeimbekakis/KS-Test-Thesis).
+-->
+
+* A \LaTeX$\mbox{}$ source file has extension name `.tex`. It can be
+edited by your favorite text editor. 
+
+* Different document classes (or types) are predefined such as `letter`,
+`article`, `report`, `beamer` (for presentations), and `book`. 
+
+* Customized document classes can be defined once
+you know more about \LaTeX. 
+
+* We focus on `article` for the purpose of writing a statistical paper; `beamer` is recommended for presentations. 
+
+## References
+\vspace{3mm}
+\scriptsize
+
+<!--
+The instructions in this section are practiced in a [demo repo](https://github.com/jun-yan/writing-demo).
+-->

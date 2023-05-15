@@ -1,0 +1,273 @@
+---
+title: |-
+  STAT3494W: Undergraduate Seminar\
+  STAT5095: Investigation of Special Topics\
+  \
+  Note 2: LaTeX Tips for Statistical Content
+author: "Elizabeth Schifano"
+date: "Spring 2023"
+header-includes:
+  - \usefonttheme[onlymath]{serif}
+  - \usepackage{smartdiagram}
+  - \usepackage{amsmath, amsfonts, amssymb, amsthm}
+  - \usepackage{booktabs}
+  - \usepackage{enumerate}
+  - \usepackage{xcolor}
+  - \addfootbox{normal text}{\hfill\insertframenumber\quad}
+output:  
+  beamer_presentation:
+    theme: "boxes"
+    slide_level: 2
+bibliography: bib3494.bib
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA) # remove hashes from all output
+```
+
+\tableofcontents[hideallsubsections]
+
+
+# LaTeX Tips for Statistical Content 
+
+
+## A beginner's template
+
+This noteset expands upon the material covered in [Learn LaTeX in 30 minutes]( https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes). Refer to the
+web link for the basics on math expressions, tables, and figures, and then refer 
+to the tips in this noteset. 
+
+&nbsp;  
+
+Let us start from a very basic template -- see, e.g., `manuscript.tex` from Templates.zip on course website.
+
+---
+
+Tips on getting started with \LaTeX.
+
++ Read the compiling log and fix the errors/warnings.
++ Googling the error/warning messages usually helps.
++ Limit the preamble to include only what is necessary.
++ Set up document margins with the `geometry` package.
++ Do not manually control spacing.
++ Familiarize yourself with [LaTeX symbol
+  tables](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols).
++ Keep line widths in source files under 80 characters in general.
++ Separate paragraphs in source files by double blank lines.
++ Watch for 
+  [quotations and hyphens](https://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/QuotDash.html).
+  
+## Math expressions
+
+For serious math typesetting, use packages `amsmath`, `amsthm`, and others.
+
+Tips on \LaTeX$\mbox{ }$ math expressions:
+
++ Punctuate equations as they always are part of sentences.
++ Add spaces between symbols for better readability in sources.
++ Do NOT start a sentence with a math symbol; rephrase to avoid it.
++ Do NOT use fractions (`\frac`) in inline math expressions.
++ Do NOT label (number) equations that are not referenced.
++ Reference labeled equations with `\eqref` instead of `(\ref)`.
++ Keep fonts and style consistent for the same notation (e.g., $n$ vs. n;
+  AIC vs. $AIC$).
+
+---
+
++ Use predefined math functions (e.g., $\exp$ not $exp$; $\Pr$ not $P$).
++ Use appropriate sizes for parentheses.
++ When multiple parentheses are needed, use the 
+following ordering unless specified otherwise $[\{(\cdots)\}],$ e.g., 
+$\exp[\{(x - \mu)^2 - (\mu - \theta)^2\}/(2\sigma^2)]$
++ Align at appropriate places in multiline equations.
++ Use `\allowdisplaybreaks` in preamble to allow page breaks in aligned 
+equations.
++ Use `\dd` for differentiation operator (available from package `physics`).
++ Do NOT break inline math expressions into different lines in tex sources.
++ Do NOT break long expressions arbitrarily in tex source; use short lines and add sufficient spaces to make the sources more readable.
+
+
+
+## Tables
+
+You may not need to manually type a \LaTeX$\mbox{}$ table source. There are multiple R packages that can generate the table tex source from a
+given dataset. See package `xtable` for example.
+
+Tips on professional \LaTeX$\mbox{}$ tables:
+
++ Use `tbp` for floating locations; `!t` to force top of page; avoid `h`.
++ Make it self-contained with an informative caption.
++ Captions should be located above the table unless specified 
+  otherwise.
++ Avoid vertical lines.
++ Put negative signs in math mode.
++ Use better top, middle, and bottom rules from package `booktabs`. 
++ Allow hierarchy with package `multirow` and `cmidrule{}`.
+
+
+---
+
++ Avoid changing the font size for tables. Change table layout to fit instead of
+  re-sizing it.
++ Right adjust numbers with decimal places.
++ Use consistent number of decimal places within a column or row of same types 
+  of measurements.
++ Avoid having many leading 0's in decimal entries (e.g., 0.000045 vs 4.5$\times 10^{-5}$ vs. 4.5 with "Entries multiplied by $\times 10^{5}$'' in caption).
++ See [Small Guide to Making Nice Tables by Markus
+Puschel](https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf)
+
+
+## Figures
+
+Save the code that generates the figures so the figures can be edited and
+improved easily.
+
+Tips on \LaTeX$\mbox{}$ figures:
+
++ Use `tbp` for floating locations; `!t` to force top of page; avoid `h`.
++ Use package `graphicx`.
++ Make it self-contained with an informative caption.
++ Captions should be located below the figure unless specified 
+  otherwise.
++ For line plots with different groups, use different line pattern to
+  distinguish them, not only color, so that readers can tell the difference
+  if printed in black/white.
++ Same for different dots (symbols) on plots.
+
+---
+
++ Use colorblind friendly colors (especially avoid red/green in same figure).
++ Keep the correct aspect ratio when necessary (e.g., basketball court; map).
++ Remove extra margins.
++ Keep the ratio when resizing (e.g., `width = \textwidth`)
++ Name the figure files appropriately.
+
+# References and Cross-referencing
+
+## References with BibTeX
+
+BibTeX is a reference management tool for formatting lists of references that 
+can be used together with \LaTeX$\mbox{}$ to generate a reference list. 
+
+Non-referenced references are not to be cited. All referenced references are to
+be listed. This nice feature is made possible by the package `natbib`.  
+
+An alternative to BibTeX and `natbib` is `biblatex`. Most journals, however, use 
+BibTeX and `natbib`, so we focus on that here.
+
+See also [Bibliography management with bibtex](https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex)
+and [Bibliography management with natbib](https://www.overleaf.com/learn/latex/Bibliography_management_with_natbib)
+for additional information.
+
+---
+
+We need to collect references in BibTeX format and syntax, and save them in a 
+bib database (`.bib`) file.  
+
+See links on previous page, but an example of a BibTeX entry is given below.
+
+\small
+\begin{verbatim}
+@article{xue2021monitor,
+ title =	 {Simultaneous Monitoring for Regression 
+              Coefficients and Baseline Hazard Profile 
+              in {C}ox Modeling of Time-to-Event Data},
+ author =	{Xue, Yishu and Yan, Jun and Schifano, Elizabeth D},
+ journal = {Biostatistics},
+ year =	{2021},
+ volume =	{22},
+ number =	{4},
+ pages = {756--771},
+ doi = {10.1093/biostatistics/kxz064}
+}
+\end{verbatim}
+
+\normalsize
+
+Any reference you wish to cite will need an entry like this in the `.bib` file. 
+
+---
+
+The display styles of the references are controlled by bib style (`.bst`)
+files. 
+
+Many journals have their own bib style files available for download. 
+
+One can also construct a customized bib style easily with the help of `custom-bib`.
+
+---
+
+A reference is cited in the manuscript through its key (e.g., `xue2021monitor`)
+by `\citep{}` for parenthetical citations or `\citet{}` for textual citations,
+where the key is placed inside the curly brackets (`\citep{xue2021monitor}`).
+
+
+The key is used to cite or cross-reference the 
+bibliographic entry in a `.tex` document. 
+
+Variations:
+
++ `\citep*{}` and `\citet*{}` prints all authors. 
++ `\citeauthor{}`
+  and `\citeyear{}` can be useful when only author(s) or year is needed.
++ For `\citep{}`, multiple keys separated by commas can be put in the same
+  curly brackets for citing multiple references. 
++ Two optional arguments are allowed to `\citep[][]{}`, e.g., 
+  `\citep[see, e.g.,][p. 26]{key}` could be useful when a specific page
+  (or section/chapter) is being referenced.
+
+---
+
+In general, to compile a tex file with bibtex references into a pdf document,
+one needs to run `pdflatex` first,  then `bibtex`, and then `pdflatex` twice to
+get the references correct. 
+
+If you are using Overleaf, it will take of this for you internally when you
+compile and you do not need to worry about it.
+
+Tips on preparing BibTeX databases (`.bib` files):
+
++ Devise a good naming convention for reference keys and stick to it.
++ Keep the database sorted and tidy. (No repeated entries.)
++ Title: Capitalize first letters of notional words (not form words).
++ If you use 
+[Google Scholar](https://texblog.org/2014/04/22/using-google-scholar-to-download-bibtex-citations/) 
+  or other web engines, e.g., 
+  [TeXMed](https://www.bioinformatics.org/texmed/), to get the bibtex source of 
+  a reference, be sure to __quality control__ the output for missing fields and
+  errors.
++ Do not end-punctuate the journal or title fields; the style file will take 
+  care of that for you.
+
+---
+
++ Protect capitalization of words with special meanings in curly braces.
+   (e.g., `{B}ayesian`, `{M}arkov Chain {M}onte {C}arlo`, `{C}ox`)
++ Protect capitalization of initial words after a colon in titles.
++ Books need to have publisher and address fields.
++ For preprints, always check if they have been published recently.
++ Use the `note` field to show information that should always be shown,
++ Use double hyphen between pages numbers.
++ All references without page numbers or volume number should be checked.
+
+
+## Cross-referencing
+
+Define a label using `\label` for each object (section, equation, figure, table,
+etc.) and refer to it by its label using `\ref{}` (or `\eqref{}` for equations).
+
+See also
+[Cross-referencing sections, equations, and floats](https://www.overleaf.com/learn/latex/Cross_referencing_sections%2C_equations_and_floats).
+
+Tips on cross-referencing:
+
++ Devise a good naming convention for labels and stick to it.
++ Use different label prefixes for different types of objects (e.g, `eq:` for 
+  equations, `sec:` for sections, `tab:` for tables, `fig:` for figures, `alg:` 
+  for algorithms, etc.)
++ Labels within the source(s) for a single document must be unique.
++ Watch warnings from compiling logs for undefined labels or multiply defined
+  labels and fix them.
++ Use package `xr` for cross-document referencing (and labels must be unique 
+  across documents).

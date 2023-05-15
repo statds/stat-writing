@@ -1,0 +1,142 @@
+---
+title: |-
+  STAT3494W: Undergraduate Seminar\
+  STAT5095: Investigation of Special Topics\
+  \
+  Note 5: Statistics Papers with Existing Methodology
+author: "Elizabeth Schifano"
+date: "Spring 2023"
+header-includes:
+  - \usefonttheme[onlymath]{serif}
+  - \usepackage{smartdiagram}
+  - \usepackage{amsmath, amsfonts, amssymb, amsthm}
+  - \usepackage{booktabs}
+  - \usepackage{enumerate}
+  - \usepackage{xcolor}
+  - \addfootbox{normal text}{\hfill\insertframenumber\quad}
+output:  
+  beamer_presentation:
+    theme: "boxes"
+    slide_level: 2
+bibliography: bib3494.bib
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA) # remove hashes from all output
+```
+
+\tableofcontents[hideallsubsections]
+
+# Data Section and Descriptive Statistics
+
+## Descriptive Statistics
+
+Regardless of the type of application paper, descriptive statistics are an important part (although not the only part!) of the Data section (see Note 4).
+
+Different types of descriptive statistics are used for different types of variables.
+
+The following slides are based on a 
+[UCLA seminar](https://stats.oarc.ucla.edu/other/mult-pkg/seminars/statistical-writing/).
+
+
+## Descriptive Statistics - Quantitative Variables:
+
+For quantitative variables, include the following information:
+
++ discrete or continuous;
+
++ number of valid (non-missing) values;
+
++ mean and standard deviation (or median and IQR);
+
++ correlations with other quantitative variables (if applicable; no p-values);
+
++ histograms or some other graphical display appropriate for quantitative 
+variables;
+
++ if the ultimate analysis compares two or more groups on a quantitative 
+variable, provide means and standard deviations (or medians and IQR) for each 
+group. 
+
+## Descriptive Statistics - Categorical Variables:
+
+For categorical variables, include the following information:
+
++ nominal or ordinal; 
+
++ number of levels and frequency (percent) of each level (including missing);
+
++ cross-tabulation with other categorical variables (if applicable);
+
++ bar charts or some other graphical display appropriate for categorical 
+variables.
+
+
+## Descriptive Statistics 
+
++ The use of p-values should be avoided in the Data section.
+
++ P-values necessarily mean that a hypothesis has been tested, so these would be
+more appropriate to include in the Results section.  The actual method used for testing the hypothesis should likewise be described in the Methods section.
+
+
+#  Methods and Results 
+
+## Methods Section Does Not Stand Alone
+
+In application papers that do not introduce new methodology, but rather use
+existing statistical methodology, the Methods and Results (Application) sections 
+should complement each other.
+
+In these cases, every method discussed in the Methods section should have corresponding results described in the Results section.  
+
+At the same time, the methods need to be appropriate for the hypotheses posed
+in the introduction.  Thus, all three sections need to work together.
+
+---
+
+It is difficult to say precisely what is needed in these sections, since you 
+will not all be using the same statistical methods or reporting the same types 
+of results.
+
+Recall for the Methods section, you should clearly describe the methods
+and write out the model(s) that will be used, defining all terms, and listing 
+all assumptions (see Note 4 for more details).
+
+You will need to check those assumptions in Results/Application section, so
+the Methods section should also describe how any check-able assumptions will be 
+checked. 
+
+---
+
+If there are categorical variables in your model, clearly state how they are 
+being handled (e.g., reference category, coding scheme, specific hypothesis).
+This is particularly important for any type of regression model.
+
+If there are missing data, indicate how the missing data are handled 
+(e.g., listwise deletion, complete cases analysis, 
+maximum likelihood techniques, multiple imputation, etc.).
+
+Null and alternative hypothesis should be clearly stated, as should the $\alpha$
+level.
+
+All $t$, $F$, or $\chi^2$ tests need to be accompanied by the associated
+degrees of freedom for the test statistic under the null hypothesis.
+
+
+
+## Results/Application:
+
++ Report point estimates with a measure of variability (i.e., include standard
+error estimate, variance estimate or confidence interval with a
+specified $\alpha$ level).
+
++ Report $t$, $F$, and $\chi^2$ statistics with their associated degrees of
+freedom.
+
++ Any reported p-value should be reported exactly if possible (i.e., write
+$p=0.15$ instead of $p>0.05$.)
+
++ Take care to avoid (a) over-stating results, (b) incorrectly suggesting 
+causal associations, or (c) ignoring the uncertainties in statistical thinking.
