@@ -90,6 +90,7 @@ Tips on getting started with \LaTeX.
   tables](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols).
 + Keep line widths under 80 characters in source files.
 + Separate paragraphs in source files by double blank lines.
++ Define acronyms at their first occurrences and only once.
 
 
 ### Math equations
