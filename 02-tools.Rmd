@@ -114,8 +114,9 @@ following ordering unless the journal specifies otherwise $[\{(\mbox{math here})
 + Use predefined math functions (e.g, $\exp$ not $exp$; $\Pr$ not $P$).
 + Use `\allowdisplaybreak` to allow page breaks in aligned equations.
 + Use `\dd` for differentiation operator (available from package `physics`).
-+ No breaking long equations arbitrarily in tex source; use short lines and add
-  sufficient spaces to make the sources more readable.
++ No breaking long equations arbitrarily in tex source; break them into short
+  lines at appropriate places and add sufficient spaces to make the sources more
+  readable.
 + Align at appropriate places in multiline equations.
 
 
@@ -219,10 +220,12 @@ __quality control__ the google output for missing fields and errors.
 + Protect capitalization of words with special meanings in curly braces.
    (e.g., `{B}ayesian`, `{M}arkov Chain {M}onte {C}arlo`)
 + Protect capitalization of initial words after a colon in titles.
++ Use title style for jornal/book titles.
++ Separate pages numbers with double dashes and no other spaces (e.g., 
+  `pages = {110--118}`).
 + Books need to have publisher and address fields.
 + For preprints, always check if they have been published recently.
 + Use the `note` field to show information that should always be shown,
-+ Use double hyphen between pages numbers.
 + All references without page numbers or volume number should be checked.
 
 
