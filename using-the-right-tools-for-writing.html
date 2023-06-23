@@ -23,7 +23,7 @@
 <meta name="author" content="Elizabeth Schifano and Jun Yan" />
 
 
-<meta name="date" content="2023-06-21" />
+<meta name="date" content="2023-06-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -335,8 +335,9 @@ following ordering unless the journal specifies otherwise <span class="math inli
 <li>Use predefined math functions (e.g, <span class="math inline">\(\exp\)</span> not <span class="math inline">\(exp\)</span>; <span class="math inline">\(\Pr\)</span> not <span class="math inline">\(P\)</span>).</li>
 <li>Use <code>\allowdisplaybreak</code> to allow page breaks in aligned equations.</li>
 <li>Use <code>\dd</code> for differentiation operator (available from package <code>physics</code>).</li>
-<li>No breaking long equations arbitrarily in tex source; use short lines and add
-sufficient spaces to make the sources more readable.</li>
+<li>No breaking long equations arbitrarily in tex source; break them into short
+lines at appropriate places and add sufficient spaces to make the sources more
+readable.</li>
 <li>Align at appropriate places in multiline equations.</li>
 </ul>
 </div>
@@ -428,10 +429,12 @@ compiling process. See, for example, Anthony’s thesis repo.</p>
 <li>Protect capitalization of words with special meanings in curly braces.
 (e.g., <code>{B}ayesian</code>, <code>{M}arkov Chain {M}onte {C}arlo</code>)</li>
 <li>Protect capitalization of initial words after a colon in titles.</li>
+<li>Use title style for jornal/book titles.</li>
+<li>Separate pages numbers with double dashes and no other spaces (e.g.,
+<code>pages = {110--118}</code>).</li>
 <li>Books need to have publisher and address fields.</li>
 <li>For preprints, always check if they have been published recently.</li>
 <li>Use the <code>note</code> field to show information that should always be shown,</li>
-<li>Use double hyphen between pages numbers.</li>
 <li>All references without page numbers or volume number should be checked.</li>
 </ul>
 </div>
