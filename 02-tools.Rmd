@@ -221,6 +221,8 @@ __quality control__ the google output for missing fields and errors.
    (e.g., `{B}ayesian`, `{M}arkov Chain {M}onte {C}arlo`)
 + Protect capitalization of initial words after a colon in titles.
 + Use title style for jornal/book titles.
++ For book chapters or proceeding articles, use `@incollection` instead of
+  `@article`, and fill the `booktitle` and `editor` fields.
 + Separate pages numbers with double dashes and no other spaces (e.g., 
   `pages = {110--118}`).
 + Books need to have publisher and address fields.
