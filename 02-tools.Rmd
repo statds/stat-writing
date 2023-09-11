@@ -45,8 +45,25 @@ co-workers easy.
 Here is a collection of [online Git exersices](https://gitexercises.fracz.com)
 that I used for Git training in other courses that I taught.
 
+### Set Up
 
-Tips on using Git:
++ Download Git [here](https://git-scm.com/downloads)
++ Make a GitHub Account [here](www.github.com) if you don't have one yet
++ Connect Git and Github with a [personal access token](https://www.youtube.com/watch?v=kHkQnuYzwoo)
+
+
+## Most Frequently Used Git Commands
+
++ `git clone`
++ `git pull`
++ `git status`
++ `git add`
++ `git remove`
++ `git commit`
++ `git push`
+
+
+### Tips on using Git:
 
 + Use the command line interface instead of the web interface (e.g., upload on GitHub)
 + Make frequent small commits instead of rare large commits.
@@ -57,6 +74,18 @@ Tips on using Git:
 + Keep the repo clean by not tracking generated files.
 + Creat a `.gitignore` file for better output from `git status`.
 + Keep the linewidth of sources to under 80 for better `git diff` view.
+
+### Pull Request
+
+To contribute to an open source project (e.g., our classnotes), use pull
+requests. [Pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+"let you tell others about changes you've pushed to a branch in a repository on
+GitHub. Once a pull request is opened, you can discuss and review the potential
+changes with collaborators and add follow-up commits before your changes are
+merged into the base branch."
+
+
+Watch this YouTube video: [GitHub pull requests in 100 seconds](https://youtu.be/8lGpZkjnkt4).
 
 
 ## LaTeX for Typesetting
@@ -71,7 +100,9 @@ document classes can be defined once
 you know more about \LaTeX. We focus on `article` here.
 
 
-The instructions in this section are practiced in a [demo repo](https://github.com/jun-yan/writing-demo).
+The instructions in this section are practiced in a
+[demo repo](https://github.com/jun-yan/writing-demo).
+
 
 ### A beginner's template
 
