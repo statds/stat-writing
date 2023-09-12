@@ -52,7 +52,7 @@ that I used for Git training in other courses that I taught.
 + Connect Git and Github with a [personal access token](https://www.youtube.com/watch?v=kHkQnuYzwoo)
 
 
-## Most Frequently Used Git Commands
+### Most Frequently Used Git Commands
 
 + `git clone`
 + `git pull`
