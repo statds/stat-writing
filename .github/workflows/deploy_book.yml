@@ -26,8 +26,6 @@ jobs:
         with:
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-renv@v2
-
       - name: Cache bookdown results
         uses: actions/cache@v3
         with:
