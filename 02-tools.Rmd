@@ -282,3 +282,25 @@ Tips on cross-referencing:
 ## Using R Markdown as a Frontend
 
 Here is [a template from the UConn Data Science Lab](https://statds.org/template/).
+
+
+## Command Line Interface
+
+On Linux or MacOS, simply open a terminal.
+
+On Windows, several options can be considered.
+
++ Cygwin (with X): <https://x.cygwin.com>
++ Git Bash: <https://www.gitkraken.com/blog/what-is-git-bash>
+
+The new Windows OS provides a [Windows Subsystem for
+Linux](https://learn.microsoft.com/en-us/windows/wsl/install). As the name
+suggests, it aims to provide a Linux system on a Windows computer. It might be
+worth trying out.
+
+To jump start, here is a tutorial:
+[Ubunto Linux for beginners](https://ubuntu.com/tutorials/command-line-for-beginners).
+
+At least, you need to know how to handle files and traverse across
+directories. The tab completion and introspection supports are very useful.
+
