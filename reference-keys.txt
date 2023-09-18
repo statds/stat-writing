@@ -16,6 +16,7 @@ figures
 references
 cross-referencing
 using-r-markdown-as-a-frontend
+command-line-interface
 getting-started
 full-cycle-of-a-statistical-research-project
 writing-a-research-proposal
