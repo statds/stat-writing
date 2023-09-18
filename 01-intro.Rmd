@@ -77,7 +77,7 @@ the proposed estimators are unbiased and more efficient than competing
 estimators; whether the proposed tests retains their sizes and are more powerful
 than competing tests.
 
-Here are some examples: @li2022regularized; @lau2022bias.
+Here are some examples: @li2023regularized; @lau2022bias.
 
 ## Scientific Writing
 
