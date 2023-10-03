@@ -107,7 +107,29 @@ The instructions in this section are practiced in a
 ### A beginner's template
 
 For the product to look like a paper, we need to have title, author, abstract,
-sections, and references. Let us start from a very basic template.
+sections, and references. Let us start from a very basic template in the
+[demo repo](https://github.com/jun-yan/writing-demo). Clone it to an appropriate
+location on your own computer. Go to the `manuscript` folder and compile the pdf
+product with the following:
+```
+pdflatex statspaper
+bibtex statspaper
+pdflatex statspaper
+pdflatex statspaper
+```
+It is the `bibtex` step that incorporates the references from the bib files. Two
+rounds of `pdflatex` are necessary for \LaTeX\ to get all the cross-referencing
+settled.
+
+
+The whole process could be automated by:
+```
+latexmk -pdf statspaper
+```
+
+
+Advanded users may take a look at the `Makefile`, in which different targets can
+be set up and the needed opertations for each target is automated.
 
 
 Tips on getting started with \LaTeX.
