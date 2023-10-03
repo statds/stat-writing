@@ -340,7 +340,21 @@ you know more about . We focus on <code>article</code> here.</p>
 <div id="a-beginners-template" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> A beginner’s template<a href="using-the-right-tools-for-writing.html#a-beginners-template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For the product to look like a paper, we need to have title, author, abstract,
-sections, and references. Let us start from a very basic template.</p>
+sections, and references. Let us start from a very basic template in the
+<a href="https://github.com/jun-yan/writing-demo">demo repo</a>. Clone it to an appropriate
+location on your own computer. Go to the <code>manuscript</code> folder and compile the pdf
+product with the following:</p>
+<pre><code>pdflatex statspaper
+bibtex statspaper
+pdflatex statspaper
+pdflatex statspaper</code></pre>
+<p>It is the <code>bibtex</code> step that incorporates the references from the bib files. Two
+rounds of <code>pdflatex</code> are necessary for  to get all the cross-referencing
+settled.</p>
+<p>The whole process could be automated by:</p>
+<pre><code>latexmk -pdf statspaper</code></pre>
+<p>Advanded users may take a look at the <code>Makefile</code>, in which different targets can
+be set up and the needed opertations for each target is automated.</p>
 <p>Tips on getting started with .</p>
 <ul>
 <li>Read the compiling log and fix the errors/warnings.</li>
