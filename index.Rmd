@@ -9,16 +9,17 @@ bibliography: [book.bib, packages.bib, jyan.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
-description: "This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook."
+description: "This is a book developed using the bookdown package. The
+  output format for this example is bookdown::gitbook."
 ---
 
 # Preface {-}
 
-This book aims to train students in statistics and data science on statistical
+This book aims to train students in statistics and data science on academic
 writing with professional tools such as LaTeX, BibTeX, R, and Git. It is based
-on my writing experience of over 20 years and 100 scholarly papers. Many of the
-tips have been taught to my Ph.D. students again and again. I hope this book
-saves me from that repetitive efforts.
+on our own writing experience of over 100 scholarly papers. Many of the
+tips have been taught to our Ph.D. students again and again. We hope this book
+saves us from that repetitive efforts.
 
 
 The source of the book is at
