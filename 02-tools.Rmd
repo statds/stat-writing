@@ -321,7 +321,7 @@ suggests, it aims to provide a Linux system on a Windows computer. It might be
 worth trying out.
 
 To jump start, here is a tutorial:
-[Ubunto Linux for beginners](https://ubuntu.com/tutorials/command-line-for-beginners).
+[Ubuntu Linux for beginners](https://ubuntu.com/tutorials/command-line-for-beginners).
 
 At least, you need to know how to handle files and traverse across
 directories. The tab completion and introspection supports are very useful.
