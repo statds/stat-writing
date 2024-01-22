@@ -9,7 +9,7 @@ routine office documentary tasks. For professional writing, one need to be aware
 of the professional tools and invest time to master them.
 
 
-The right, high-quality, professional typesetting system is \LaTeX. \LaTeX is a
+The right, high-quality, professional typesetting system is LaTeX. LaTeX is a
 typesetting language that makes it easier and cleaner to write documents 
 involving extensive mathematical content. It is the standard in Statistics, 
 Mathematics, Physics, Chemistry and other disciplines that require many 
@@ -37,7 +37,7 @@ Many tutorials are available in different formats. Here is a [YouTube video
 Course''](https://www.youtube.com/watch?v=RGOj5yH7evk)
 <!-- https://www.youtube.com/watch?v=USjZcfj8yxE). -->
 The video also covers GitHub, a cloud service for Git. Other similar services
-are, for example, [bitbucket](bitbucket.org), [GitLab](gitlab.com). A cloud
+are, for example, [bitbucket](bitbucket.org) and [GitLab](gitlab.com). A cloud
 service gives you a cloud back up of your work and makes collaboration with
 co-workers easy.
 
@@ -97,7 +97,7 @@ be edited by any text editor. It can be tracked easily for differences between
 any two versions. Different document classes are predefined such as `letter`,
 `article`, `report`, `beamer` (for presentations), and `book`. Customized 
 document classes can be defined once
-you know more about \LaTeX. We focus on `article` here.
+you know more about LaTeX. We focus on `article` here.
 
 
 The instructions in this section are practiced in a
@@ -154,11 +154,11 @@ Tips on using math:
 
 + Punctuate equations as they always are part of sentences.
 + Add spaces between symbols for better readability in sources.
-+ No starting a sentence with a math symbol; rephrase to avoid it.
-+ No fractions (`\frac`) inline math expressions.
++ Do not start a sentence with a math symbol; rephrase to avoid it.
++ No fractions (`\frac`) in inline math expressions.
 + No breaking inline math expressions into different lines in tex sources.
 + No labeling equations that are not referenced.
-+ Referencw labeled equations with `\eqref` instead of `(\ref)`.
++ Reference labeled equations with `\eqref` instead of `(\ref)`.
 + Keep fonts consistent for the same notations (e.g., $n$ not n;
   AIC not $AIC$).
 + Use appropriate sizes for parentheses.
@@ -303,7 +303,7 @@ Tips on cross-referencing:
 
 ## Using R Markdown as a Frontend
 
-Here is [a template from the UConn Data Science Lab](https://statds.org/template/).
+Here is [a template from the UConn Data Science Lab](https://statds.org/templates.html).
 
 
 ## Command Line Interface
@@ -321,7 +321,7 @@ suggests, it aims to provide a Linux system on a Windows computer. It might be
 worth trying out.
 
 To jump start, here is a tutorial:
-[Ubunto Linux for beginners](https://ubuntu.com/tutorials/command-line-for-beginners).
+[Ubuntu Linux for beginners](https://ubuntu.com/tutorials/command-line-for-beginners).
 
 At least, you need to know how to handle files and traverse across
 directories. The tab completion and introspection supports are very useful.
