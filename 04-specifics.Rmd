@@ -34,7 +34,7 @@ them. Here are some tips.
 > Abstract material needs to be carefully chosen. A balance between the
 > twin goals of brevity and maximal information content should again be
 > carefully sought. There is room for more detail than in the title, but not
-> enough room for all ideas covered in the paper. Make sure each ``high point"
+> enough room for all ideas covered in the paper. Make sure each "high point"
 > is included. The paper will have a better chance in the review process if it
 > is made clear what is done, and why it is important, since this will
 > immediately capture the interest of the reviewer.
@@ -95,14 +95,14 @@ following sections.
 The introduction is typically outlined at the very beginning of the writing
 process, but completed towards the end after the other sections have been 
 written.   Do NOT wait to perform the literature review until 
-last, however!  This should to happen *before* the research is undertaken to 
+last, however!  This should happen *before* the research is undertaken to
 ensure you are not duplicating something that has already been done!
 
 An introduction often contains the following items.
 
 + An overview of the topic. Start with a general overview of your topic and
   narrow it to the specific subject you are addressing. Then, mention
-  questions or concerns you had about the case. Explain why they are important
+  questions or concerns you have about the case. Explain why they are important
   and why it needs to be addressed right now.
 + Existing works. The introduction is the place to review other conclusions on 
   your

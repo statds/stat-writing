@@ -1,7 +1,7 @@
 # Introduction {#intro}
 
 
-What does a statistical paper looks like? As with all scientific papers, it 
+What does a statistical paper look like? As with all scientific papers, it
 should have some commonly expected structures which include components such as 
 title, abstract, keywords, introduction, methods, results, discussion,
 acknowledgements, references, appendix, and supplement. Due to the
@@ -23,7 +23,7 @@ be a method paper in the domain of the problem it solves.
 
 
 An author should always keep the target audience in mind when writing. There are
-many statistical journals on the wide spectrum for applied to theoretical
+many statistical journals on the wide spectrum from applied to theoretical
 papers. Each one has its own aims and scope, with different target
 readerships. Writings such as customary statistical reports that are not
 intended for journal publications also have target readerships. Regardless of
