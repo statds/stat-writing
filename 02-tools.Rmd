@@ -208,10 +208,10 @@ improved easily.
 
 Tips on \LaTeX figures:
 
-+ Use `tbp` for floating locations; avoid `h`.
++ Use `tbp` for floating locations; avoid `h`. 
 + Use latex package `graphicx`.
 + Make it self-contained with an informative caption.
-+ Captions should be located below the table unless the journal specifies 
++ Captions should be located below the figure unless the journal specifies 
   otherwise.
 + For line plots with different groups, use different line pattern to
   distinguish them, not only color, so that readers can tell the difference if 
