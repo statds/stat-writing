@@ -1,0 +1,31 @@
+# Exercises
+
+1. **Git basics and GitHub setup** 
+  Learn the Git basics and set up an account on GitHub if you do not
+  already have one. Practice the tips on Git in the notes. By going
+  through the following tasks, ensure your repo has at least 10
+  commits, each with an informative message. Regularly check the
+  status of your repo using `git status`. The specific tasks are:
+    1. Clone the repo to an appropriate folder on your computer.
+    1. On your computer, add a file called `learningGit.md` to your
+       repo; use Markdown syntax to fill it with the text of the
+       [documentation on Git/GitHub
+		resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources).
+    1. Play with `git commit` (save): add some a new section 
+    `Personal	Notes` to describe your own learning
+    experience. Experiment with commits such as:
+	add new lines;	introduce some typos; correct the typo; etc. 
+	Make sure you have informative commit messages.
+	1. Use `git diff` to view the difference between two commits and
+       appreciate the linewidth recommendation.
+    1. "Push" your changes to GitHub.
+    1. Make a change to your file on GitHub and commit.
+    1. "Pull" the changes to your local computer.
+    1. Create a "branch" (version), make a change, commit the change.
+    1. Open a "pull request" (propose changes to the main branch)
+	1. "Merge" your branch to the main branch.
+
+  Git will keep track of all your changes. Use the command line to do
+  the exercises. My grader will check the commit history.
+  
+
