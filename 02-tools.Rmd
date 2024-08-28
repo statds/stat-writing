@@ -47,9 +47,17 @@ that I used for Git training in other courses that I taught.
 
 ### Set Up
 
-+ Download Git [here](https://git-scm.com/downloads)
-+ Make a GitHub Account [here](www.github.com) if you don't have one yet
-+ Connect Git and Github with a [personal access token](https://www.youtube.com/watch?v=kHkQnuYzwoo)
++ Download Git [here](https://git-scm.com/downloads).
++ Make a GitHub Account [here](https://www.github.com) if you don't have one yet.
++ Get started with your GitHub account by following the [help
+  page](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account). 
+    - One important step is the
+	[set-up](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account#2-setting-up-git).
+	- The connection between your local and GitHub repositories needs
+      to be [set up only
+      once](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories). 
+	  One easy way is with a personal access token, as illustrated
+	  in a [YouTube video](https://www.youtube.com/watch?v=kHkQnuYzwoo).
 
 
 ### Most Frequently Used Git Commands
