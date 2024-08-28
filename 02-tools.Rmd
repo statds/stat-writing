@@ -42,8 +42,16 @@ service gives you a cloud back up of your work and makes collaboration with
 co-workers easy.
 
 
-Here is a collection of [online Git exersices](https://gitexercises.fracz.com)
-that I used for Git training in other courses that I taught.
+There are tools that make learning Git easy. 
+
++ Here is a collection of
+  [online Git exersices](https://gitexercises.fracz.com)
+  that I used for Git training in other courses that I taught.
++ Here is a game called [`Oh My Git`](https://ohmygit.org), an open
+  source game about learning Git!
+
+
+
 
 ### Set Up
 
