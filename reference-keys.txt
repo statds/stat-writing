@@ -40,3 +40,4 @@ review-a-paper
 response-to-reviewers
 other-topics
 verb-tenses
+exercises
