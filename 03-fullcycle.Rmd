@@ -19,6 +19,15 @@ fixing and iterating as necessary, and summarizing through writing/revision.
     + reading journals, books, magazines, and newspapers;
     + consulting;
     + collaboration.
+  
+   A critical factor to consider when identifying a topic is data. You
+   could start from an idea and then check if there are data available
+   that can be used to test out your idea. Alternatively, you could
+   start from some available data and formulate your ideas by closely
+   studying the data. The idea-driven approach could be frustrating
+   when you don't have data to support it; the data-driven approach
+   needs creative thinking to do something new on a old data.
+
 1. Initial planning. After you have identified a topic, you need to narrow down
    on the specific research questions that you want to answer, what data will be
    needed/used, and what methods are appropriate.
@@ -49,6 +58,13 @@ fixing and iterating as necessary, and summarizing through writing/revision.
     + Rework introduction and conclusion.
     + Read out loud to check for flow.
     + Find a friend to review.
+
+
+There are resource online that could be helpful. Here are some
+examples.
++ UCSD[Data Science: Guide for Independent Projects](https://ucsd.libguides.com/data-science/projects)
++ FreeCodeCamp[How to build a data science project from scratch](https://www.freecodecamp.org/news/how-to-build-a-data-science-project-from-scratch-dc4f096a62a1/)
+
 
 
 ## Writing a Research Proposal
