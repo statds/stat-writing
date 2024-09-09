@@ -62,6 +62,7 @@ fixing and iterating as necessary, and summarizing through writing/revision.
 
 There are resource online that could be helpful. Here are some
 examples.
+
 + UCSD[Data Science: Guide for Independent Projects](https://ucsd.libguides.com/data-science/projects)
 + FreeCodeCamp[How to build a data science project from scratch](https://www.freecodecamp.org/news/how-to-build-a-data-science-project-from-scratch-dc4f096a62a1/)
 
