@@ -29,7 +29,7 @@
    the exercises. My grader will check the commit history.
 
 1. **Type setting with LaTeX/BibTeX**
-  Follow the template linked to in Chapter @sec-tools my stat-writing
+  Follow the template linked to in Chapter \@ref(ch-tools) my stat-writing
   notes to create a  nice-looking pdf manuscript. The manuscript
   should contain all components of an academic paper:
     1. title, authors, affiliations, abstract, sections, appendix, and
