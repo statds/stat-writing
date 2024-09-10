@@ -1,4 +1,4 @@
-# Using the Right Tools for Writing
+# Using the Right Tools for Writing {#sec-tools}
 
 Many people use MS Word when it comes to writing. 
 Not withholding the importance of the invention of MS Office,

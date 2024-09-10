@@ -1,11 +1,11 @@
 # Exercises
 
 1. **Git basics and GitHub setup** 
-  Learn the Git basics and set up an account on GitHub if you do not
-  already have one. Practice the tips on Git in the notes. By going
-  through the following tasks, ensure your repo has at least 10
-  commits, each with an informative message. Regularly check the
-  status of your repo using `git status`. The specific tasks are:
+   Learn the Git basics and set up an account on GitHub if you do not
+   already have one. Practice the tips on Git in the notes. By going
+   through the following tasks, ensure your repo has at least 10
+   commits, each with an informative message. Regularly check the
+   status of your repo using `git status`. The specific tasks are:
     1. Clone the repo to an appropriate folder on your computer.
     1. On your computer, add a file called `learningGit.md` to your
        repo; use Markdown syntax to fill it with the text of the
@@ -25,7 +25,25 @@
     1. Open a "pull request" (propose changes to the main branch)
 	1. "Merge" your branch to the main branch.
 
-  Git will keep track of all your changes. Use the command line to do
-  the exercises. My grader will check the commit history.
-  
+   Git will keep track of all your changes. Use the command line to do
+   the exercises. My grader will check the commit history.
 
+1. **Type setting with LaTeX/BibTeX**
+  Follow the template linked to in Chapter @sec-tools my stat-writing
+  notes to create a  nice-looking pdf manuscript. The manuscript
+  should contain all components of an academic paper:
+    1. title, authors, affiliations, abstract, sections, appendix, and
+      references;
+    1. refer to the sections in a roadmap paragraph at the end of
+       Introduction;
+    1. cite at least two references, one with textual citation and one
+       parenthetical citation;
+    1. include at least one table and referene to it;
+    1. include at least one figure and reference to it;
+    1. include the code that generated the figures/tables in the code folder;
+    1. include at least two in-line math expressions;
+    1. include at least two in-display equations, and at least one of
+       them should be numbered, and reference to the numbered ones;
+    1. follow the specific tips in the stat-writing notes;
+    1. follow the instructions on using Git to keep your repo clean;
+    1. put the generated pdf file in a release.
