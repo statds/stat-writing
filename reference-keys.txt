@@ -2,7 +2,7 @@ intro
 applied-papers
 methods-papers
 scientific-writing
-using-the-right-tools-for-writing
+sec-tools
 git-for-version-control
 set-up
 most-frequently-used-git-commands
