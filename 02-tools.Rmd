@@ -70,13 +70,25 @@ There are tools that make learning Git easy.
 
 ### Most Frequently Used Git Commands
 
-+ `git clone`
-+ `git pull`
-+ `git status`
-+ `git add`
-+ `git remove`
-+ `git commit`
-+ `git push`
++ `git clone`:
+    + Clones a remote repository to a local folder.
+    + Requires either HTTPS link or SSH key to authenticate. 
++ `git pull`:
+    + Downloads any updates made to the remote repository and automatically updates the local repository.
++ `git status`: 
+    + Returns the state of the working directory. 
+    + Lists the files that have been modified, and are yet to be or have been staged and/or committed. 
+    + Shows if the local repository is begind or ahead a remote branch.
++ `git add`:
+    + Adds new or modified files to the Git staging area. 
+    + Gives the option to select which files are to be sent to the remote repository
++ `git rm`: 
+    + Used to remove files from the staging index or the local repository. 
++ `git commit`: 
+    + Commits changes made to the local repository and saves it like a snapshot. 
+    + A message is recommended with every commit to keep track of changes made.
++ `git push`:
+    + Pushes commits made on local repository to the remote repository. 
 
 
 ### Tips on using Git:
