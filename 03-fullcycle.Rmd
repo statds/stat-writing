@@ -82,23 +82,40 @@ in a research project.
 
 The following components are expected in your proposal.
 
-+ Introduction: Introducing the topic and why you have chosen this topic (3--5
-  lines). Mention briefly the current related research and cite relevant works.
++ Introduction: Introducing the topic and why you have chosen this
+  topic (3--5 lines). Mention briefly the current related research and
+  cite relevant works.
+    - Why shold we care?
+    - What have been done?
+    - What are new?
+  
 + Specific aims: Formulate a research question or hypothesis in the
-  chosen topic. Describe briefly why you select such a question or hypothesis
-  and its importance in the field (cite sources).
-+ Data description: Describe your data set (for instance: sampling scheme,
-  number of observations, number of variables, variables of interest, nature of
-  the variables) and the source of your data set if it is not collected by
-  yourself.
+  chosen topic. Describe briefly why you select such a question or
+  hypothesis and its importance in the field (cite sources).
+    - Why is it hard/interesting/unstudied?
+    - How hard/interesting is it?
+
++ Data description: Describe your data set (for instance: sampling
+  scheme, number of observations, number of variables, variables of
+  interest, nature of the variables) and the source of your data set
+  if it is not collected by yourself.
+
 + Research design/methods/schedule: 
-  Describe briefly (5-7 lines) your plan of action. If you
-  choose to apply any specific statistical methods, please mention and cite
-  them. Please be consistent here with your research hypothesis. Write a line
-  regarding how the methods would help in investigating the research hypothesis.
-+ Discussion: What do you expect to find and why
-  do you feel so? Any ways your work can corroborate or challenge existing
-  results or assumptions? What are the potential impacts of your work? What if
-  the results of your investigation is not what you expected?
-+ Conclusion: Wrap it up by briefly summarizing your research proposal and
-  reinforcing your research’s stated purpose.
+  Describe briefly (5-7 lines) your plan of action. 
+    - Why are the methods appropriate (with proper references) for the
+      problem?
+    - What steps are required to use the methods?
+    - Which of the steps will be particularly hard?
+    - What would you do if the hardest steps do not work as planned?
+    - How would the methods help in investigating the task problem?
+
++ Discussion: potential problems and solutions.
+    - What do you expect to find and why do you feel so? 
+    - Any ways your work can corroborate or challenge existing results
+      or assumptions?
+    - What are the potential impacts of your work?
+    - What if the results of your investigation is not what you
+      expected?
+
++ Conclusion (optional):  Wrap it up by briefly summarizing your
+  research proposal and reinforcing your research’s stated purpose.
