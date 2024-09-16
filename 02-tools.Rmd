@@ -354,3 +354,15 @@ To jump start, here is a tutorial:
 At least, you need to know how to handle files and traverse across
 directories. The tab completion and introspection supports are very useful.
 
+Here are several commonly used shell commands:
+
++ `cd`: change directory; `..` means parent directory.
++ `pwd`: present working directory.
++ `ls`: list the content of a folder; `-l` long version;
+   `-a` show hidden files; `-t` ordered by modification time.
++ `mkdir`: create a new directory.
++ `cp`: copy file/folder from a source to a target.
++ `mv`: move file/folder from a source to a target.
++ `rm`: remove a file a folder.
+
+
