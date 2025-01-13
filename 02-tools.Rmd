@@ -308,7 +308,7 @@ Tips on preparing BibTeX databases:
 __quality control__ the google output for missing fields and errors.
 + Protect capitalization of words with special meanings in curly braces.
    (e.g., `{B}ayesian`, `{M}arkov Chain {M}onte {C}arlo`)
-+ Protect capitalization of initial words after a colon in titles.
++ Protect capitalization of initial words after a colon in titles and journals.
 + Use title style for jornal/book titles.
 + For book chapters or proceeding articles, use `@incollection` instead of
   `@article`, and fill the `booktitle` and `editor` fields.
@@ -318,7 +318,7 @@ __quality control__ the google output for missing fields and errors.
 + For preprints, always check if they have been published recently.
 + Use the `note` field to show information that should always be shown,
 + All references without page numbers or volume number should be checked.
-
++ Keep bib key style consistent.
 
 ### Cross-referencing
 
