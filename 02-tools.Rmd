@@ -234,7 +234,7 @@ Tips on professional \LaTeX tables:
   
 
 See [Small Guide to Making Nice Tables by Markus
-P{\"u}schel](https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf)
+Puschel](https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf)
 
 ### Figures
 
