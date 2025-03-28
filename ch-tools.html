@@ -23,7 +23,7 @@
 <meta name="author" content="Elizabeth Schifano and Jun Yan" />
 
 
-<meta name="date" content="2025-03-14" />
+<meta name="date" content="2025-03-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -556,6 +556,8 @@ compiling process. See, for example, Anthony’s thesis repo.</p>
 equations, <code>sec:</code> for sections, <code>tab:</code> for tables, <code>fig:</code> for figures, <code>alg:</code>
 for algorithms, etc.)</li>
 <li>Labels within the source(s) for a single document must be unique.</li>
+<li>Prevent referencing numbers from starting at a new line (e.g., use
+<code>Table~\ref{tab:simulation}</code>; note the tilde).</li>
 <li>Watch warnings from compiling logs for undefined labels or multiply defined
 labels and fix them.</li>
 <li>Use package <code>xr</code> for cross-document referencing (and labels must be unique
