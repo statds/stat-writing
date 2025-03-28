@@ -331,6 +331,8 @@ Tips on cross-referencing:
   equations, `sec:` for sections, `tab:` for tables, `fig:` for figures, `alg:` 
   for algorithms, etc.)
 + Labels within the source(s) for a single document must be unique.
++ Prevent referencing numbers from starting at a new line (e.g., use
+  `Table~\ref{tab:simulation}`; note the tilde).
 + Watch warnings from compiling logs for undefined labels or multiply defined
   labels and fix them.
 + Use package `xr` for cross-document referencing (and labels must be unique 
