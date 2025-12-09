@@ -303,9 +303,9 @@ Tips on preparing BibTeX databases:
 
 + Devise a good naming convention for reference keys and stick to it.
 + Keep the bib database sorted and formatted tidy. (No repeated entries.)
-+ Title: Capitalize first letters of notional words (not form words).
 + Use Google Scholar to get the bibtex source of a reference, but be sure to 
 __quality control__ the google output for missing fields and errors.
++ Title: Keep styles consistent in case your bibstyle takes it as is.
 + Protect capitalization of words with special meanings in curly braces.
    (e.g., `{B}ayesian`, `{M}arkov Chain {M}onte {C}arlo`)
 + Protect capitalization of initial words after a colon in titles and journals.
