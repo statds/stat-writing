@@ -1,0 +1,506 @@
+---
+title: "LaTeX Skills That Make Manuscripts Look Professional"
+subtitle: "Academic writing workshop for statistics and data science"
+author: "Jun Yan"
+institute: "Department of Statistics, University of Connecticut"
+date: ""
+aspectratio: 169
+bibliography: ../book.bib
+csl: apa.csl
+format:
+  beamer:
+    theme: boxes
+    slide-level: 2
+    navigation: horizontal
+    header-includes: |
+      \setbeamertemplate{navigation symbols}{}
+      \setbeamertemplate{footline}[page number]
+      \usefonttheme[onlymath]{serif}
+      \usepackage{amsmath, amssymb, booktabs}
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Starting Point: What Looks Unprofessional?
+
+We will start from symptoms, not rules.
+
+The goal is to notice the small LaTeX decisions that make readers spend more
+energy than necessary.
+
+Reader energy matters: good scientific writing manages reader expectations and
+reduces avoidable cognitive work [@gopen1990science; @gopen2004expectations].
+
+## Plan for the Hour
+
+| Time | Activity |
+|---:|---|
+| 0--10 | Top annoyance audit |
+| 10--25 | Repair the highest-impact LaTeX problems |
+| 25--40 | Spot problems in a real PDF |
+| 40--52 | Tables, figures, citations, and references |
+| 52--60 | Personal checklist and Q&A |
+
+## Top Annoyances to Avoid
+
+From the JDS author workshop:
+
+1. no punctuation for equations
+2. raster graphs for line art
+3. negative signs not in math mode
+4. wrong math symbols and operators
+5. inconsistent notation
+6. confusing `\citet` and `\citep`
+
+## Top Annoyances to Avoid
+
+7. unordered or redundant keywords
+8. nonuse of cross-referencing
+9. unclean BibTeX source
+10. no line numbers for reviewing
+11. no supplement for reproducibility checking
+
+Most are easy to fix. The hard part is learning to see them.
+
+## Quick Poll
+
+Which problems do you notice most often?
+
+- equations that do not read as sentences
+- blurry or distorted figures
+- spreadsheet-looking tables
+- inconsistent symbols
+- broken citations or references
+- source files nobody can review
+
+## A Professional Manuscript Has Two Layers
+
+Visible layer:
+
+- equations, tables, figures, references
+- spacing, alignment, captions, numbering
+
+Source layer:
+
+- clean labels
+- reproducible figures and tables
+- readable `.tex`
+- controlled bibliography data
+
+## Compile and Read the Warnings
+
+Use a tool that runs the needed LaTeX passes:
+
+```bash
+latexmk -pdf manuscript
+```
+
+Then read the log for:
+
+- undefined citations
+- undefined or duplicated labels
+- overfull boxes
+- missing files
+
+## Equation Problem: Missing Punctuation
+
+Bad:
+
+```tex
+The estimator is
+\[
+\hat\theta = \arg\max_\theta \ell(\theta)
+\]
+It is consistent.
+```
+
+Result:
+
+The estimator is
+$$
+\hat\theta = \arg\max_\theta \ell(\theta)
+$$
+
+It is consistent.
+
+What to notice:
+
+- the equation has no punctuation
+- the next sentence feels disconnected
+- the display interrupts the prose
+
+## Equation Repair: Read It as Prose
+
+Better:
+
+```tex
+The estimator is
+\[
+  \hat\theta = \arg\max_\theta \ell(\theta),
+\]
+and it is consistent under the regularity conditions.
+```
+
+Result:
+
+The estimator is
+$$
+  \hat\theta = \arg\max_\theta \ell(\theta),
+$$
+
+and it is consistent under the regularity conditions.
+
+## Inline Math: Keep It Light
+
+Bad:
+
+```tex
+The statistic $\frac{\bar X - \mu_0}{S/\sqrt n}$ is compared with ...
+```
+
+Result: The statistic $\frac{\bar X - \mu_0}{S/\sqrt n}$ is compared with ...
+
+Better:
+
+```tex
+The statistic $(\bar X - \mu_0)/(S/\sqrt n)$ is compared with ...
+```
+
+Result: The statistic $(\bar X - \mu_0)/(S/\sqrt n)$ is compared with ...
+
+Use display math when the expression carries real weight.
+
+## Use Math Operators
+
+Bad:
+
+```tex
+$log(x)$, $exp(x)$, $min_i x_i$, $P(A)$
+```
+
+Result: $log(x)$, $exp(x)$, $min_i x_i$, $P(A)$
+
+Better:
+
+```tex
+$\log(x)$, $\exp(x)$, $\min_i x_i$, $\Pr(A)$
+```
+
+Result: $\log(x)$, $\exp(x)$, $\min_i x_i$, $\Pr(A)$
+
+Define special operators once when needed:
+
+```tex
+\DeclareMathOperator*{\argmax}{arg\,max}
+```
+
+## Consistency Is a Statistical Virtue
+
+Common signals of carelessness:
+
+- `n` versus `$n$`
+- `AIC` versus `$\mathrm{AIC}$`
+- `MSE` versus `$\mathrm{MSE}$`
+- `$\theta_{LS}$` versus `$\theta_{\mathrm{LS}}$`
+
+Notation should be boringly consistent.
+
+## Mini Repair
+
+Find and fix the LaTeX problems:
+
+```tex
+Since
+\[
+MSE(\hat\theta)=E(\hat\theta-\theta)^2
+\]
+\hat\theta is good when n is large.
+```
+
+Focus on punctuation, operators, notation, and sentence flow.
+
+## One Possible Repair
+
+```tex
+The mean squared error of $\hat\theta$ is
+\[
+  \operatorname{MSE}(\hat\theta)
+    = \operatorname{E}\{(\hat\theta - \theta)^2\}.
+\]
+This quantity is small when the sample size $n$ is large.
+```
+
+The exact notation can vary. The convention should not.
+
+## Tables Should Reveal Comparisons
+
+Good tables are designed, not dumped.
+
+Use tables to make comparisons easy:
+
+- align comparable numbers
+- round to meaningful precision
+- include units in headers or captions
+- use consistent decimal places
+- avoid vertical lines
+- avoid shrinking a bad table
+
+Clear presentation of numerical results is part of statistical writing
+[@miller2015chicago; @morris2019using].
+
+## Table Problem: Spreadsheet Habits
+
+Bad:
+
+```tex
+\begin{tabular}{|l|c|c|}
+\hline
+Method & Bias & RMSE \\ \hline
+A & -0.02 & 0.31 \\ \hline
+B & 0.01 & 0.28 \\ \hline
+\end{tabular}
+```
+
+Result:
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+Method & Bias & RMSE \\ \hline
+A & -0.02 & 0.31 \\ \hline
+B & 0.01 & 0.28 \\ \hline
+\end{tabular}
+\end{center}
+
+Notice the grid, repeated rules, and text hyphen for the negative number.
+
+## Table Repair: `booktabs`
+
+Better: no vertical lines, real rules, math minus signs.
+
+```tex
+\begin{tabular}{lrr}
+\toprule
+Method & Bias & RMSE \\
+\midrule
+A & $-0.02$ & 0.31 \\
+B & 0.01 & 0.28 \\
+\bottomrule
+\end{tabular}
+```
+
+Result:
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Method & Bias & RMSE \\
+\midrule
+A & $-0.02$ & 0.31 \\
+B & 0.01 & 0.28 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+## Figures: Prefer Vector Graphics
+
+For line art, save figures as vector graphics:
+
+- `.pdf`
+- `.eps`
+- `.svg`, when supported
+
+Avoid screenshots and low-resolution `.png` or `.jpg` files for statistical
+plots.
+
+Vector figures remain sharp when zoomed or printed.
+
+## Figure Accessibility
+
+Do not rely on color alone.
+
+Use:
+
+- colorblind-friendly palettes
+- line types plus colors
+- point shapes plus colors
+- readable labels
+- correct aspect ratios
+- informative captions
+
+## Captions and Floats
+
+Use floats as layout tools:
+
+```tex
+\begin{figure}[tbp]
+\centering
+\includegraphics[width = 0.8\textwidth]{figures/rmse-by-n.pdf}
+\caption{Root mean squared error across sample sizes.}
+\label{fig:rmse}
+\end{figure}
+```
+
+Avoid forcing everything with `[h]`.
+
+## Citations Must Read Grammatically
+
+Parenthetical:
+
+```tex
+The bootstrap is widely used for uncertainty quantification
+\citep{efron1979bootstrap}.
+```
+
+Result: The bootstrap is widely used for uncertainty quantification (Efron,
+1979).
+
+Textual:
+
+```tex
+\citet{efron1979bootstrap} introduced the bootstrap as ...
+```
+
+Result: Efron (1979) introduced the bootstrap as ...
+
+The citation command should fit the sentence.
+
+## Cross-Reference Everything
+
+Use labels:
+
+```tex
+\label{sec:methods}
+\label{eq:score}
+\label{tab:simulation}
+\label{fig:rmse}
+```
+
+Use nonbreaking spaces:
+
+```tex
+Table~\ref{tab:simulation}
+Figure~\ref{fig:rmse}
+Section~\ref{sec:methods}
+```
+
+## Keep BibTeX Clean
+
+Downloaded BibTeX is only a draft.
+
+Check:
+
+- author names
+- capitalization
+- journal names
+- volume, issue, pages, DOI
+- duplicate entries
+- preprints that are now published
+
+Protect capitalization: `{B}ayesian`, `{M}arkov Chain {M}onte {C}arlo`.
+
+## Quarto and CSL
+
+For Quarto/R Markdown manuscripts, citation formatting can be controlled with a
+CSL file:
+
+```yaml
+bibliography: references.bib
+csl: apa.csl
+```
+
+This slide folder includes `apa.csl`.
+
+Many statistics journals still expect BibTeX plus `natbib`.
+
+## PDF Spotting Activity
+
+Open an arXiv manuscript or a published paper.
+
+Spend 5 minutes marking:
+
+- one equation problem
+- one table or figure problem
+- one citation or reference problem
+- one place where cross-referencing could help
+- one thing the authors did well
+
+Then we compare notes.
+
+## Spotting Guide
+
+Look for:
+
+- equations without punctuation
+- symbols that change fonts
+- rasterized or distorted plots
+- unexplained table entries
+- hard-coded numbers instead of references
+- broken line breaks before reference numbers
+- bibliography entries with inconsistent capitalization
+
+## Repair Clinic
+
+Mark every issue:
+
+```tex
+From Figure \ref{fig1}, MSE is small when n increases.
+\[
+MSE(\hat\theta)=E(\hat\theta-\theta)^2
+\]
+See (Smith, 2020). The estimate is -0.04.
+
+\begin{figure}[h]
+\includegraphics[width=6in,height=2in]{plot.png}
+\caption{plot}
+\label{fig1}
+\end{figure}
+```
+
+## One Cleaner Version
+
+```tex
+Figure~\ref{fig:mse} shows that the mean squared error decreases
+as the sample size $n$ increases. Following \citet{smith2020},
+we define
+\[
+  \operatorname{MSE}(\hat\theta)
+    = \operatorname{E}\{(\hat\theta - \theta)^2\}.
+\]
+The estimate is $-0.04$.
+```
+
+Then use a vector figure file, `[tbp]`, and an informative caption.
+
+## Pre-Submission Checklist
+
+Before circulating a draft:
+
+- compile from a clean checkout
+- read the warnings
+- inspect every display equation for punctuation
+- zoom into every figure
+- scan every table for alignment and precision
+- check citations and BibTeX
+- include line numbers if allowed
+- prepare reproducibility materials
+
+## What to Remember
+
+Professional LaTeX is mostly habit:
+
+- equations are prose
+- notation is stable
+- tables and figures serve comparisons
+- citations are grammatical
+- labels replace hard-coded numbers
+- logs are read, not ignored
+
+For details, use the writing notes as the reference.
+
+## Selected References
+
+::: {#refs}
+:::

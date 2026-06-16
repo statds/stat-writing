@@ -1,0 +1,451 @@
+---
+title: "Reviewing Papers and Responding to Reviews"
+subtitle: "Academic writing workshop for statistics and data science"
+author: "Jun Yan"
+institute: "Department of Statistics, University of Connecticut"
+date: ""
+aspectratio: 169
+bibliography: ../book.bib
+csl: apa.csl
+format:
+  beamer:
+    theme: boxes
+    slide-level: 2
+    navigation: horizontal
+    header-includes: |
+      \setbeamertemplate{navigation symbols}{}
+      \setbeamertemplate{footline}[page number]
+      \usefonttheme[onlymath]{serif}
+      \usepackage{amsmath, amssymb, booktabs}
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Goal for This Hour
+
+Learn both sides of peer review:
+
+- how to evaluate a statistical manuscript
+- how to write a useful review
+- how to respond point-by-point
+- how to revise without becoming defensive
+
+Reviewing is writing training. A good author anticipates reviewer questions.
+
+## Plan for the Hour
+
+| Time | Activity |
+|---:|---|
+| 0--10 | What peer review is for |
+| 10--25 | How to review a statistical paper |
+| 25--38 | Writing the reviewer report |
+| 38--53 | Responding point-by-point |
+| 53--60 | Templates, demo repo, and Q&A |
+
+## Why Peer Review Exists
+
+Peer review helps editors judge:
+
+- originality
+- validity
+- significance
+- clarity
+- usefulness to the field
+
+The review should help both the editor and the authors.
+
+## The Reviewer Mindset
+
+A reviewer is not:
+
+- a coauthor
+- a copyeditor
+- a competitor
+- a prosecutor
+
+A reviewer is a skeptical, constructive reader who evaluates whether the claims
+are supported.
+
+## What Makes a Review Useful?
+
+Useful reviews are:
+
+- specific
+- evidence-based
+- prioritized
+- professional
+- actionable
+
+Unhelpful reviews are vague, hostile, or focused only on personal preference.
+
+## Quick Poll
+
+Which is the most serious issue?
+
+- unclear contribution
+- incomplete literature review
+- inappropriate statistical method
+- unsupported conclusion
+- poor presentation
+- lack of reproducibility materials
+
+The answer depends on the manuscript's central claim.
+
+## First Pass: Orientation
+
+Read once for the big picture:
+
+- What is the research question?
+- What type of paper is it?
+- What is the central contribution?
+- Who is the target audience?
+- What evidence supports the claim?
+
+Do not start by line-editing.
+
+## Second Pass: Technical Evaluation
+
+For statistics and data science papers, ask:
+
+- Are the methods appropriate?
+- Are assumptions stated and plausible?
+- Are competing methods compared fairly?
+- Are simulations designed to answer the stated question?
+- Are data analyses reproducible enough to trust?
+- Do conclusions follow from the evidence?
+Also check notation, estimands, uncertainty, sensitivity analyses, presentation,
+and limitations.
+
+## Literature and Motivation
+
+Ask:
+
+- Is the background literature sufficient?
+- Does the paper explain why the problem matters?
+- Does the paper identify a real gap?
+- Are recent and competing works discussed?
+- Is novelty overstated?
+
+A paper can be technically correct and still poorly motivated.
+
+## Methods Papers: What to Check {.smaller}
+
+For a methods paper:
+
+- What class of problems does the method address?
+- What assumptions are required?
+- What is theoretically justified?
+- What competitors are relevant?
+- What simulation settings stress the method?
+- Does the real-data example show practical value?
+
+## Application and Computing Papers {.smaller}
+
+For an application paper:
+
+- Is the substantive question important?
+- Are the data appropriate?
+- Are the methods suitable for the domain problem?
+- Do results answer the scientific question?
+- Is the paper honest about limitations?
+
+For software, algorithms, or computing papers:
+
+- Is the contribution more than implementation?
+- Are performance claims benchmarked fairly?
+- Is code available and documented?
+- Can examples be reproduced?
+
+## Presentation Matters
+
+Review presentation when it affects understanding:
+
+- unclear structure
+- missing roadmap
+- overloaded tables
+- unreadable figures
+- inconsistent notation
+- unsupported claims
+- broken citations or references
+
+Do not confuse cosmetic preference with scientific weakness.
+
+## Interaction: Triage the Problems
+
+Given a manuscript, classify comments as:
+
+1. fatal flaw
+2. major revision
+3. minor clarification
+4. copyediting
+
+This priority ranking is the backbone of a useful review.
+
+## Structure of a Reviewer Report
+
+A practical structure:
+
+1. brief summary of the paper
+2. overall assessment
+3. major concerns
+4. minor comments
+5. optional confidential note to editor
+
+Number the comments.
+
+## Opening Summary
+
+The summary should show that you understood the paper.
+
+Include:
+
+- topic
+- claimed contribution
+- main evidence
+- overall recommendation rationale
+
+Avoid starting with a list of complaints.
+
+## Major and Minor Comments
+
+Major comments address issues that affect:
+
+- validity
+- novelty
+- interpretation
+- completeness
+- reproducibility
+- fit for journal audience
+
+Minor comments include:
+
+- unclear sentences
+- missing definitions
+- notation inconsistencies
+- figure/table improvements
+- citation corrections
+- typographical errors
+
+Back up major criticisms. Give precise locations for minor comments.
+
+## Tone: Direct but Professional
+
+Bad:
+
+> The authors clearly do not understand the literature.
+
+Better:
+
+> The literature review omits several directly related methods, including ...
+> This omission makes it difficult to assess the novelty of the contribution.
+
+Critique the manuscript, not the authors.
+
+## Reviewer Report Template
+
+```text
+Summary:
+This paper studies ... The main contribution is ...
+
+Overall assessment:
+The question is important, but ...
+
+Major comments:
+1. ...
+2. ...
+
+Minor comments:
+1. Page 3, line 12: ...
+```
+
+## Confidential Comments to Editor
+
+Use confidential comments for:
+
+- ethical concerns
+- suspected plagiarism
+- conflicts not visible to authors
+- recommendation rationale inappropriate for authors
+
+Do not hide substantive scientific criticisms from the authors.
+
+## The Author Mindset
+
+The goal is not to prove the reviewers wrong.
+
+The goal is to:
+
+- show that every concern was understood
+- revise the manuscript where needed
+- explain decisions clearly
+- make the editor's decision easy
+
+Responding well is part of publishing well.
+
+## Structure of a Response Letter
+
+Use a predictable structure:
+
+1. short overview of major changes
+2. response to editor
+3. response to reviewer 1
+4. response to reviewer 2
+5. point-by-point replies
+
+Quote each comment before responding.
+
+## Rule: Respond to Every Point
+
+Do not skip comments.
+
+For each point:
+
+- acknowledge the concern
+- state what changed
+- give location of the change
+- quote revised text when useful
+- explain if no change was made
+
+This follows the point-by-point discipline recommended by @noble2017rules.
+
+## Response Pattern
+
+```text
+Comment 2.1:
+The simulation settings do not include heavy censoring.
+
+Response:
+We agree that this setting is important. We added a
+heavy-censoring scenario to Section 4.2 and report the
+results in Table 3. The new results show that ...
+```
+
+## If You Agree, Disagree, or Cannot Fix {.smaller}
+
+If you agree:
+
+- "We agree."
+- "We have revised ..."
+- "The revised manuscript now ..."
+- "Specifically, Section 3 now states ..."
+
+If you disagree:
+
+- acknowledge the concern
+- explain the reasoning
+- cite evidence or constraints
+- revise text to prevent the same misunderstanding
+
+If you cannot fully fix it:
+
+- acknowledge it
+- explain why it is difficult
+- add a limitation statement
+- describe future work
+
+## Make the Response Self-Contained
+
+Help reviewers navigate:
+
+- quote reviewer comments
+- distinguish response from manuscript changes
+- cite section/page/line numbers
+- quote important revised text
+- summarize new analyses or tables
+
+Typography and organization reduce reviewer effort [@noble2017rules].
+
+## Bad vs Better Response
+
+Bad:
+
+> We disagree. The method is standard.
+
+Better:
+
+> We agree that the original text did not justify this modeling choice. We added
+> a paragraph in Section 2 explaining why the proportional hazards assumption is
+> plausible in this application and added a diagnostic plot in Figure S2.
+
+## Interaction: Rewrite a Response
+
+Reviewer:
+
+> The simulation study is too limited to support the broad claim in the
+> introduction.
+
+Draft response:
+
+> We think the simulations are enough.
+
+Rewrite it into a point-by-point response that either revises the manuscript or
+narrows the claim.
+
+## A Better Response
+
+```text
+We agree that the original claim was too broad relative to
+the simulation evidence. We made two changes. First, we added
+two simulation settings with stronger dependence and smaller
+sample sizes. Second, we revised the final paragraph of the
+Introduction to limit the claim to the settings represented
+by our theory and numerical experiments.
+```
+
+## Practical Response Workflow
+
+1. Read reviews once without editing.
+2. Sort comments by theme.
+3. Decide manuscript changes first.
+4. Revise the manuscript.
+5. Draft point-by-point responses.
+6. Check that every comment has a response.
+7. Ask a coauthor to read for tone.
+
+## Shared Demo Repo
+
+Use the writing demo repository for examples and templates:
+
+\url{https://github.com/jun-yan/writing-demo}
+
+Potential uses:
+
+- manuscript source organization
+- LaTeX workflow
+- response-letter examples or templates
+- reproducible supplement structure
+
+## Final Checklist {.smaller}
+
+Before submitting a review:
+
+- summarize the paper fairly
+- prioritize major issues
+- give precise locations
+- support serious criticisms
+
+Before resubmission:
+
+- every comment is quoted or paraphrased
+- every comment has a response
+- every manuscript change has a location
+- disagreements are evidence-based
+- tone is calm and professional
+- claims are revised if evidence is limited
+
+## Closing Principle
+
+Good reviewing and good responding share the same discipline:
+
+- understand the claim
+- evaluate the evidence
+- identify what must change
+- communicate precisely
+- keep the scientific conversation professional
+
+## Selected References
+
+::: {#refs}
+:::
