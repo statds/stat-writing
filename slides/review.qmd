@@ -40,9 +40,9 @@ Reviewing is writing training. A good author anticipates reviewer questions.
 |---:|---|
 | 0--10 | What peer review is for |
 | 10--25 | How to review a statistical paper |
-| 25--38 | Writing the reviewer report |
-| 38--53 | Responding point-by-point |
-| 53--60 | Templates, demo repo, and Q&A |
+| 25--40 | Writing the reviewer report |
+| 40--50 | Responding point-by-point |
+| 50--60 | Templates, demo repo, and Q&A |
 
 ## Why Peer Review Exists
 
@@ -327,8 +327,7 @@ results in Table 3. The new results show that ...
 If you agree:
 
 - "We agree."
-- "We have revised ..."
-- "The revised manuscript now ..."
+- "We have revised ..." /  "The revised manuscript now ..."
 - "Specifically, Section 3 now states ..."
 
 If you disagree:
@@ -342,8 +341,7 @@ If you cannot fully fix it:
 
 - acknowledge it
 - explain why it is difficult
-- add a limitation statement
-- describe future work
+- add a limitation statement / describe future work
 
 ## Make the Response Self-Contained
 
