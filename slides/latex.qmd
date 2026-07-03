@@ -25,12 +25,12 @@ execute:
 
 ## Starting Point: What Looks Unprofessional?
 
-We will start from symptoms, not rules.
++ We will start from symptoms, not rules.
 
-The goal is to notice the small LaTeX decisions that make readers spend more
++ The goal is to notice the small LaTeX decisions that make readers spend more
 energy than necessary.
 
-Reader energy matters: good scientific writing manages reader expectations and
++ Reader energy matters: good scientific writing manages reader expectations and
 reduces avoidable cognitive work [@gopen1990science; @gopen2004expectations].
 
 ## Plan for the Hour
@@ -40,8 +40,8 @@ reduces avoidable cognitive work [@gopen1990science; @gopen2004expectations].
 | 0--10 | Top annoyance audit |
 | 10--25 | Repair the highest-impact LaTeX problems |
 | 25--40 | Spot problems in a real PDF |
-| 40--52 | Tables, figures, citations, and references |
-| 52--60 | Personal checklist and Q&A |
+| 40--50 | Tables, figures, citations, and references |
+| 50--60 | Personal checklist and Q&A |
 
 ## Top Annoyances to Avoid
 
@@ -152,6 +152,18 @@ $$
 
 and it is consistent under the regularity conditions.
 
+## Equations in Display
+
++ Each equation in display must be a grammatical component of a
+  sentence.
+   - A standalone equation, even properly puctuated, is no good.
+
++ Puctuate Equations with Cases: comma is needed for every expression
+  and every condition.
+   - No need for "if."
+
+
+
 ## Inline Math: Keep It Light
 
 Bad:
@@ -194,16 +206,17 @@ Define special operators once when needed:
 
 ```tex
 \DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\logit}{logit}
 ```
 
 ## Consistency Is a Statistical Virtue
 
 Common signals of carelessness:
 
-- `n` versus `$n$`
-- `AIC` versus `$\mathrm{AIC}$`
-- `MSE` versus `$\mathrm{MSE}$`
-- `$\theta_{LS}$` versus `$\theta_{\mathrm{LS}}$`
+- n versus $n$
+- AIC versus $\mathrm{AIC}$
+- MSE versus $\mathrm{MSE}$
+- $\theta_{LS}$ versus $\theta_{\mathrm{LS}}$
 
 Notation should be boringly consistent.
 
@@ -216,7 +229,7 @@ Since
 \[
 MSE(\hat\theta)=E(\hat\theta-\theta)^2
 \]
-\hat\theta is good when n is large.
+$\hat\theta$ is good when n is large.
 ```
 
 Focus on punctuation, operators, notation, and sentence flow.
@@ -224,15 +237,22 @@ Focus on punctuation, operators, notation, and sentence flow.
 ## One Possible Repair
 
 ```tex
-The mean squared error of $\hat\theta$ is
+The mean squared error of $\hat\theta_n$ is
 \[
-  \operatorname{MSE}(\hat\theta)
-    = \operatorname{E}\{(\hat\theta - \theta)^2\}.
+  \operatorname{MSE}(\hat\theta_n)
+    = \operatorname{E}\{(\hat\theta_n - \theta)^2\}.
 \]
 This quantity is small when the sample size $n$ is large.
 ```
 
 The exact notation can vary. The convention should not.
+
+
+## Break: You Think You Know LaTeX?
+
++ How would you typeset Komolgorov--Smirnov?
+
++ How would you typeset differentiation operator?
 
 ## Tables Should Reveal Comparisons
 
