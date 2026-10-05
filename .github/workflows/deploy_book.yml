@@ -1,5 +1,3 @@
-# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
-# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
   push:
     branches: [main, master]
@@ -7,37 +5,23 @@ on:
     branches: [main, master]
   workflow_dispatch:
 
-name: bookdown
+name: Quarto book
 
 jobs:
-  bookdown:
-    runs-on: macos-latest
-    # Only restrict concurrency for non-PR jobs
+  quarto:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
     concurrency:
-      group: pkgdown-${{ github.event_name != 'pull_request' || github.run_id }}
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      group: quarto-${{ github.event_name != 'pull_request' || github.run_id }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: r-lib/actions/setup-pandoc@v2
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
 
-      - uses: r-lib/actions/setup-r@v2
-        with:
-          use-public-rspm: true
-
-      - name: Cache bookdown results
-        uses: actions/cache@v3
-        with:
-          path: _bookdown_files
-          key: bookdown-${{ hashFiles('**/*Rmd') }}
-          restore-keys: bookdown-
-
-      - name: Build site
-        run: |
-          install.packages(c("rmarkdown", "bookdown"))
-          bookdown::render_book("index.Rmd", quiet = TRUE)
-        shell: Rscript {0}
+      - name: Render book
+        run: make render
 
       - name: Deploy to GitHub pages 🚀
         if: github.event_name != 'pull_request'
@@ -45,3 +29,5 @@ jobs:
         with:
           branch: gh-pages
           folder: _book
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

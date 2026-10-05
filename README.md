@@ -1,5 +1,12 @@
-[![Build Status](https://travis-ci.com/rstudio/bookdown-demo.svg?branch=master)](https://travis-ci.com/rstudio/bookdown-demo)
+# Statistical Writing
 
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "[Get Started](https://bookdown.org/yihui/bookdown/get-started.html)" at https://bookdown.org/yihui/bookdown/ for how to compile this example into HTML. You may generate a copy of the book in `bookdown::pdf_book` format by calling `bookdown::render_book('index.Rmd', 'bookdown::pdf_book')`. More detailed instructions are available here https://bookdown.org/yihui/bookdown/build-the-book.html.
+This book is authored in Quarto and rendered as an HTML book with Quarto's
+default styling. Install Quarto from <https://quarto.org/> and run
+`make render` in the repository root. It passes the root `.qmd` sources,
+`_quarto.yml`, and the book bibliographies as Make prerequisites, then lets
+Quarto render its multi-page output and handle incremental work. The generated
+site is written to `_book/`; `make clean` removes `_book/` and `.quarto/`.
 
-You can find the preview of this example at https://bookdown.org/yihui/bookdown-demo/.
+GitHub Actions renders the book and deploys `_book/` to the `gh-pages` branch
+on pushes to `main` or `master`. The source is at
+<https://github.com/statds/stat-writing>.

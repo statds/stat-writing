@@ -17,15 +17,14 @@ typesetting review/edit/teaching task and allow automatic selection.
 
 It has no runtime dependencies or scripts. Use the project's own LaTeX,
 Quarto, R Markdown/bookdown, BibTeX, and PDF tools for the target manuscript.
-For this book, the declared PDF route is `bookdown::pdf_book` with XeLaTeX,
-`natbib`, and `preamble.tex`; the source also supports the configured gitbook
-route. Check available commands and project instructions before building.
+This repository's book now uses `quarto render` for HTML; it has no PDF build
+target. Check available commands and project instructions before building.
 
 ## Maintenance
 
 Maintain each rule once in `references/rules.md`, including its stable ID,
 source, practice, rationale status, before/after, exceptions, and verification.
-When adding guidance, consult `02-tools.Rmd`, its teaching-note counterpart,
+When adding guidance, consult `ch-tools.qmd`, its teaching-note counterpart,
 and current journal/user requirements. Preserve conflicting source guidance as
 a conflict until the author resolves it. Keep the skill instructions concise
 and point to the catalogue. Update the fixture and walkthrough when behavior
