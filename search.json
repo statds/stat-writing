@@ -1,0 +1,352 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistical Writing",
+    "section": "",
+    "text": "Preface\nThis book aims to train students in statistics and data science on academic writing with professional tools such as LaTeX, BibTeX, R, and Git. It is based on our own writing experience of over 100 scholarly papers. Many of the tips have been taught to our Ph.D. students again and again. We hope this book saves us from that repetitive efforts.\nThe source of the book is at https://github.com/statds/stat-writing.\nThe first edition of these notes used the bookdown R package (Xie 2016). This edition is authored in Quarto; see https://quarto.org/ for installation and documentation.\nEach chapter is a .qmd file that begins with a first-level heading (#). Render the HTML book from the project directory with quarto render.\n\n\n\n\nXie, Yihui. 2016. Bookdown: Authoring Books and Technical Documents with R Markdown. Chapman; Hall/CRC.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "1.1 Applied papers\nWhat does a statistical paper look like? As with all scientific papers, it should have some commonly expected structures which include components such as title, abstract, keywords, introduction, methods, results, discussion, acknowledgements, references, appendix, and supplement. Due to the specificity of the statistical discipline and application areas, however, statistical papers could look quite different one from another.\nThere are different types of statistical papers. A theory paper would look similar to a paper in mathematics, with statement of the problem, presentation of some theorems, and technical proofs. Such papers are not covered here. We focus on two types of statistical papers: application papers and method papers. Application papers focus on a specific application problem in a certain domain where the research discoveries depend on applications of existing or novel statistical methods. Method papers, on the other hand, aim to provide a general methodological solution to a class of applied problems. Often, methods paper have a theoretical component, for example, the establishment of the asymptotic properties of a new estimator. An applied paper in statistics could be a method paper in the domain of the problem it solves.\nAn author should always keep the target audience in mind when writing. There are many statistical journals on the wide spectrum from applied to theoretical papers. Each one has its own aims and scope, with different target readerships. Writings such as customary statistical reports that are not intended for journal publications also have target readerships. Regardless of the audience, any scientific paper should be convincing and concise. You need to show the readers that your work is important, valid, and useful. You don’t want to waste the time of any readers.\nAn applied paper has a widely accepted structure:\nAn applied paper can be applying existing statistical methods to solve an applied problem. See, for example, Price and Yan (2022); Caplan et al. (2019).\nWhen sensitivity analysis is desired for the applications, one can have a section on simulation studies. See, for example, Jiao et al. (2022); Li et al. (2021).\nSome applied papers can involve novel methodology development that is motivated by an applied problem. In such cases, simulation studies become necessary, where you validate your methods with simulated data so you can check your estimator with the truth. Such check is not feasible when analyzing real data. See, for example, Jiao et al. (2021); Hu et al. (2021).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#applied-papers",
+    "href": "intro.html#applied-papers",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "Introduction\nData description\nMethods\nResults\nDiscussion",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#methods-papers",
+    "href": "intro.html#methods-papers",
+    "title": "1  Introduction",
+    "section": "1.2 Methods papers",
+    "text": "1.2 Methods papers\nA methods paper focuses on a novel method that is applicable to a general class of problems arising in different domains. A commonly seen structure is:\n\nIntroduction\nMethods (e.g., estimation, hypothesis tests, diagnosis)\nProperties\nSimulations\nIllustrations (with real applications)\nDiscussion/Conclusions.\n\nThe simulations section is often needed for methods papers. Any method has assumptions. Any reasonably good method should work as expected when the assumptions hold. It would be even better if it remains working when some of the assumptions are violated. Simulation studies can be designed to check whether the proposed estimators are unbiased and more efficient than competing estimators; whether the proposed tests retains their sizes and are more powerful than competing tests.\nHere are some examples: Li et al. (2023); Lau and Yan (2022).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#scientific-writing",
+    "href": "intro.html#scientific-writing",
+    "title": "1  Introduction",
+    "section": "1.3 Scientific Writing",
+    "text": "1.3 Scientific Writing\nMany resources on scientific writing are available. For example, Gopen and Swan (1990) was selected by its publisher, American Scientist, as one of its 36 “Classic Articles” from the first 100 years of its publishing history. Popular books are Oshima and Hogue (2000), Gopen (2004), Hairston and Keene (2003), and Lebrun and Lebrun (2021).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaplan, D J, Y Li, W Wang, et al. 2019. “Dental Restoration Longevity Among Geriatric and Special Needs Patients.” JDR Clinical & Translational Research 4 (1): 41–48. https://doi.org/10.1177/2380084418799083.\n\n\nGopen, George D. 2004. Expectations: Teaching Writing from the Reader’s Perspective. Pearson.\n\n\nGopen, George D, and Judith A Swan. 1990. “The Science of Scientific Writing.” American Scientist 78 (6): 550–58.\n\n\nHairston, Maxine, and Michael L Keene. 2003. Successful Writing. 5th ed. W. W. Norton & Company.\n\n\nHu, Chaoran, Mark Elbroch, Thomas Meyer, Vladimir Pozdnyakov, and Jun Yan. 2021. “Moving-Resting Process with Measurement Error in Animal Movement Modeling.” Methods in Ecology and Evolution 12 (11): 2221–33. https://doi.org/10.1111/2041-210X.13694.\n\n\nJiao, Jieying, Guanyu Hu, and Jun Yan. 2021. “A Bayesian Marked Spatial Point Processes Model for Basketball Shot Chart.” Journal of Quantitative Analysis in Sports 17 (2): 77–90. https://doi.org/10.1515/jqas-2019-0106.\n\n\nJiao, J., Z. Tang, M. Yue, P. Zhang, and J. Yan. 2022. “Cyberattack-Resilient Load Forecasting with Adaptive Robust Regression.” International Journal of Forecasting 38 (3): 910–19. https://doi.org/10.1016/j.ijforecast.2021.06.009.\n\n\nLau, Abby Y. Z., and Jun Yan. 2022. “Bias Analysis of Generalized Estimating Equations Under Measurement Error and Practical Bias Correction.” Stat 11 (1): e418. https://doi.org/10.1002/sta4.418.\n\n\nLebrun, Jean-Luc, and Justin Lebrun. 2021. Scientific Writing 3.0: A Reader and Writer’s Guide. World Scientific.\n\n\nLi, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. 2021. “Uncertainty in Optimal Fingerprinting Is Underestimated.” Environmental Research Letters 16 (8): 084043. https://doi.org/10.1088/1748-9326/ac14ee.\n\n\nLi, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. 2023. “Regularized Fingerprinting in Detection and Attribution of Climate Change with Weight Matrix Optimizing the Efficiency in Scaling Factor Estimation.” Annals of Applied Statistics 17 (1): 225–39. https://doi.org/10.1214/22-AOAS1624.\n\n\nOshima, Alex, and Ann Hogue. 2000. Writing Academic English. Longman.\n\n\nPrice, Michael, and Jun Yan. 2022. “The Effects of the NBA COVID Bubble on the NBA Playoffs: A Case Study for Home-Court Advantage.” American Journal of Undergraduate Research 18(4): 3–15. https://doi.org/10.33697/ajur.2022.051.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "ch-tools.html",
+    "href": "ch-tools.html",
+    "title": "2  Using the Right Tools for Writing",
+    "section": "",
+    "text": "2.1 Git for Version Control\nMany people use MS Word when it comes to writing. Not withholding the importance of the invention of MS Office, it is not the right tool to write statistical papers. Writing a statistical paper using MS Word would be as interesting as running a statistical data analysis using MS Excel. Simply put, MS Office is great for office staff to do routine office documentary tasks. For professional writing, one need to be aware of the professional tools and invest time to master them.\nThe right, high-quality, professional typesetting system is LaTeX. LaTeX is a typesetting language that makes it easier and cleaner to write documents involving extensive mathematical content. It is the standard in Statistics, Mathematics, Physics, Chemistry and other disciplines that require many mathematical formulas. It separates the appearance of a document from its content. This allows authors to be able to focus on writing the content without having to worry about its appearance until the end. There are many different professionally looking appearances one can choose or design, allowing for easy adaptation to different formats and styles. The document has .tex extension, and can be edited by your favorite text editor. The final output of the document can have different formats, the most popular of which is pdf, which stands for portable document format. It can be opened on any platform (computer operating system).\nThe source .tex file is a plain text file. Just like source code of any programming language, a plain text file allows version control, which makes tracking and managing the source easy and professional. The most popular version control tool today is git.\nMany tutorials are available in different formats. Here is a YouTube video ``Git and GitHub for Beginners — Crash Course’’  The video also covers GitHub, a cloud service for Git. Other similar services are, for example, bitbucket and GitLab. A cloud service gives you a cloud back up of your work and makes collaboration with co-workers easy.\nThere are tools that make learning Git easy.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using the Right Tools for Writing</span>"
+    ]
+  },
+  {
+    "objectID": "ch-tools.html#git-for-version-control",
+    "href": "ch-tools.html#git-for-version-control",
+    "title": "2  Using the Right Tools for Writing",
+    "section": "",
+    "text": "Here is a collection of online Git exersices that I used for Git training in other courses that I taught.\nHere is a game called Oh My Git, an open source game about learning Git!\n\n\n2.1.1 Set Up\n\nDownload Git here.\nMake a GitHub Account here if you don’t have one yet.\nGet started with your GitHub account by following the help page.\n\nOne important step is the set-up.\nThe connection between your local and GitHub repositories needs to be set up only once. One easy way is with a personal access token, as illustrated in a YouTube video.\n\n\n\n\n2.1.2 Most Frequently Used Git Commands\n\ngit clone:\n\nClones a remote repository to a local folder.\nRequires either HTTPS link or SSH key to authenticate.\n\ngit pull:\n\nDownloads any updates made to the remote repository and automatically updates the local repository.\n\ngit status:\n\nReturns the state of the working directory.\nLists the files that have been modified, and are yet to be or have been staged and/or committed.\nShows if the local repository is begind or ahead a remote branch.\n\ngit add:\n\nAdds new or modified files to the Git staging area.\nGives the option to select which files are to be sent to the remote repository\n\ngit rm:\n\nUsed to remove files from the staging index or the local repository.\n\ngit commit:\n\nCommits changes made to the local repository and saves it like a snapshot.\nA message is recommended with every commit to keep track of changes made.\n\ngit push:\n\nPushes commits made on local repository to the remote repository.\n\n\n\n\n2.1.3 Tips on using Git:\n\nUse the command line interface instead of the web interface (e.g., upload on GitHub)\nMake frequent small commits instead of rare large commits.\nMake commit messages informative and meaningful.\nName your files/folders by some reasonable convention.\n\nLower cases are better than upper cases.\nNo blanks in file/folder names.\n\nKeep the repo clean by not tracking generated files.\nCreat a .gitignore file for better output from git status.\nKeep the linewidth of sources to under 80 for better git diff view.\n\n\n\n2.1.4 Pull Request\nTo contribute to an open source project (e.g., our classnotes), use pull requests. Pull requests “let you tell others about changes you’ve pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.”\nWatch this YouTube video: GitHub pull requests in 100 seconds.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using the Right Tools for Writing</span>"
+    ]
+  },
+  {
+    "objectID": "ch-tools.html#latex-for-typesetting",
+    "href": "ch-tools.html#latex-for-typesetting",
+    "title": "2  Using the Right Tools for Writing",
+    "section": "2.2 LaTeX for Typesetting",
+    "text": "2.2 LaTeX for Typesetting\nA source file has extension name .tex. It is a plain text file that can be edited by any text editor. It can be tracked easily for differences between any two versions. Different document classes are predefined such as letter, article, report, beamer (for presentations), and book. Customized document classes can be defined once you know more about LaTeX. We focus on article here.\nThe instructions in this section are practiced in a demo repo.\nAnthony Zeimekakis was an undergraduate student who worked with us on a thesis. The tex sources, data, and code are in a GitHub repo, which can be used as a template too. This paper was published in American Statistician, two years after Anthony graduated. Interested students beaware that this is a serious commitment.\n\n2.2.1 A beginner’s template\nFor the product to look like a paper, we need to have title, author, abstract, sections, and references. Let us start from a very basic template in the demo repo. Clone it to an appropriate location on your own computer. Go to the manuscript folder and compile the pdf product with the following:\npdflatex statspaper\nbibtex statspaper\npdflatex statspaper\npdflatex statspaper\nIt is the bibtex step that incorporates the references from the bib files. Two rounds of pdflatex are necessary for  to get all the cross-referencing settled.\nThe whole process could be automated by:\nlatexmk -pdf statspaper\nAdvanded users may take a look at the Makefile, in which different targets can be set up and the needed opertations for each target is automated.\nTips on getting started with .\n\nRead the compiling log and fix the errors/warnings.\nGoogling the error/warning messages usually helps.\nLimit the preamble to include only what is necessary.\nSet up document margins with the geometry package.\nNo manually controlling spaces.\nFamiliarize yourself with LaTeX symbol tables.\nKeep line widths under 80 characters in source files.\nSeparate paragraphs in source files by double blank lines.\nDefine acronyms at their first occurrences and only once.\n\n\n\n2.2.2 Math equations\n\nFor serious math typesetting, use packages amsmath, amsthm, and others.\nTips on using math:\n\nPunctuate equations as they always are part of sentences.\nAdd spaces between symbols for better readability in sources.\nDo not start a sentence with a math symbol; rephrase to avoid it.\nNo fractions (\\frac) in inline math expressions.\nNo breaking inline math expressions into different lines in tex sources.\nNo labeling equations that are not referenced.\nReference labeled equations with \\eqref instead of (\\ref).\nKeep fonts consistent for the same notations (e.g., \\(n\\) not n; AIC not \\(AIC\\)).\nUse appropriate sizes for parentheses.\nWhen multiple parentheses are needed in mathematical expressions, use the following ordering unless the journal specifies otherwise \\([\\{(\\mbox{math here})\\}].\\)\nUse predefined math functions (e.g, \\(\\exp\\) not \\(exp\\); \\(\\Pr\\) not \\(P\\)).\nUse \\allowdisplaybreak to allow page breaks in aligned equations.\nUse \\dd for differentiation operator (available from package physics).\nNo breaking long equations arbitrarily in tex source; break them into short lines at appropriate places and add sufficient spaces to make the sources more readable.\nAlign at appropriate places in multiline equations.\n\n\n\n2.2.3 Tables\nIf you are manually typing a table source, think if you can generate the source. There are multiple R packages that can generate the tex source from a given dataset. See package xtable for example.\nTips on professional tables:\n\nUse tbp for floating locations; avoid h.\nMake it self-contained with an informative caption.\nCaptions should be located above the table unless the journal specifies otherwise.\nAvoid vertical lines.\nPut negative signs in math mode.\nUse better top, middle, and bottom rules from package booktabs.\nAllow hierarchy by cmidrule().\nDo not change font size for tables. Change table layout to fit instead of re-sizing it.\nRight adjust numbers with decimal places.\nUse consistent number of decimal places within a column or row of same types of measurements.\nAvoid having many leading 0’s in decimal entries.\n\nSee Small Guide to Making Nice Tables by Markus Puschel\n\n\n2.2.4 Figures\nUse vector graphs, not raster graphs (unless you have to, e.g., screenshots). Save the code that generates the figures so the figures can be improved easily.\nTips on figures:\n\nUse tbp for floating locations; avoid h.\nUse latex package graphicx.\nMake it self-contained with an informative caption.\nCaptions should be located below the figure unless the journal specifies otherwise.\nFor line plots with different groups, use different line pattern to distinguish them, not only color, so that readers can tell the difference if printed in black/white. Same for different dots (symbols) on plots.\nUse colorblind friendly colors (especially avoid red/green).\nKeep the right aspect ratio when necessary (e.g., basketball court; map; pp-plot).\nRemove extra margins.\nKeep the ratio when resizing (e.g., width = \\textwidth)\nName the figure files appropriately.\n\n\n\n2.2.5 References\nBibTeX is a reference management tool for formatting lists of references that can be used together with to generate a reference list. Non-referenced references are not to be cited. All referenced references are to be listed. This nice feature is made possible by the package natbib. We need to collect references in BibTeX format and save them in a bib database (.bib) file. The display styles of the references are controlled by bib style (.bst) files. Many journals have their own bib style files available for download. One can construct a customized bib style easily with the help of custom-bib.\nAn alternative to BibTeX and natbib is biblatex. Most journals, however, use BibTeX and natbib, so we focus on that here.\nA reference is cited in the manuscript through its key by \\citep{} for parenthetical citations or \\citet{} for textual citations, where the key is placed inside the curly brackets. The key is used to cite or cross-reference the bibliographic entry in a .tex document. Variations \\citep*{} and \\citet*{} prints all authors. Sometimes, \\citeauthor{} and \\citeyear{} can be useful when only author(s) or year is needed. The key of the cited references is put in the parentheses.\nFor \\citep{}, multiple keys separated by commas can be put in the same parentheses for citing multiple references. Two optional arguments are allowed to \\citep[][]{}. For example, \\citep[see, e.g.,][p. 26]{} could be useful when a specific page (or section/chapter) is being referenced as an example.\nIn general, to compile a tex file with bibtex references into a pdf document, one needs to run pdflatex first, then bibtex, and then pdflatex twice to get the references correct. A simpler solution is latexmk -pdf. In my practice, I always have a Makefile and use make to smartly automate the compiling process. See, for example, Anthony’s thesis repo.\nTips on preparing BibTeX databases:\n\nDevise a good naming convention for reference keys and stick to it.\nKeep the bib database sorted and formatted tidy. (No repeated entries.)\nUse Google Scholar to get the bibtex source of a reference, but be sure to quality control the google output for missing fields and errors.\nTitle: Keep styles consistent in case your bibstyle takes it as is.\nProtect capitalization of words with special meanings in curly braces. (e.g., {B}ayesian, {M}arkov Chain {M}onte {C}arlo)\nProtect capitalization of initial words after a colon in titles and journals.\nUse title style for jornal/book titles.\nFor book chapters or proceeding articles, use @incollection instead of @article, and fill the booktitle and editor fields.\nSeparate pages numbers with double dashes and no other spaces (e.g., pages = {110--118}).\nBooks need to have publisher and address fields.\nFor preprints, always check if they have been published recently.\nUse the note field to show information that should always be shown,\nAll references without page numbers or volume number should be checked.\nKeep bib key style consistent.\n\n\n\n2.2.6 Cross-referencing\nDefine a label for each object and refer to it by its label.\nTips on cross-referencing:\n\nDevise a good naming convention for labels and stick to it.\nUse different label prefixes for different types of objects (e.g, eq: for equations, sec: for sections, tab: for tables, fig: for figures, alg: for algorithms, etc.)\nLabels within the source(s) for a single document must be unique.\nPrevent referencing numbers from starting at a new line (e.g., use Table~\\ref{tab:simulation}; note the tilde).\nWatch warnings from compiling logs for undefined labels or multiply defined labels and fix them.\nUse package xr for cross-document referencing (and labels must be unique across documents).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using the Right Tools for Writing</span>"
+    ]
+  },
+  {
+    "objectID": "ch-tools.html#using-r-markdown-as-a-frontend",
+    "href": "ch-tools.html#using-r-markdown-as-a-frontend",
+    "title": "2  Using the Right Tools for Writing",
+    "section": "2.3 Using R Markdown as a Frontend",
+    "text": "2.3 Using R Markdown as a Frontend\nHere is a template from the UConn Data Science Lab.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using the Right Tools for Writing</span>"
+    ]
+  },
+  {
+    "objectID": "ch-tools.html#command-line-interface",
+    "href": "ch-tools.html#command-line-interface",
+    "title": "2  Using the Right Tools for Writing",
+    "section": "2.4 Command Line Interface",
+    "text": "2.4 Command Line Interface\nOn Linux or MacOS, simply open a terminal.\nOn Windows, several options can be considered.\n\nCygwin (with X): https://x.cygwin.com\nGit Bash: https://www.gitkraken.com/blog/what-is-git-bash\n\nThe new Windows OS provides a Windows Subsystem for Linux. As the name suggests, it aims to provide a Linux system on a Windows computer. It might be worth trying out.\nTo jump start, here is a tutorial: Ubuntu Linux for beginners.\nAt least, you need to know how to handle files and traverse across directories. The tab completion and introspection supports are very useful.\nHere are several commonly used shell commands:\n\ncd: change directory; .. means parent directory.\npwd: present working directory.\nls: list the content of a folder; -l long version; -a show hidden files; -t ordered by modification time.\nmkdir: create a new directory.\ncp: copy file/folder from a source to a target.\nmv: move file/folder from a source to a target.\nrm: remove a file a folder.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using the Right Tools for Writing</span>"
+    ]
+  },
+  {
+    "objectID": "getting-started.html",
+    "href": "getting-started.html",
+    "title": "3  Getting Started",
+    "section": "",
+    "text": "3.1 Full Cycle of a Statistical Research Project\nLike any research project, a statistical research project starts with an interesting idea, and goes through a full cycle of brainstorming, planning with the right design/methods, investigating with the simulation studies/data analyses, fixing and iterating as necessary, and summarizing through writing/revision.\nThere are resource online that could be helpful. Here are some examples.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#full-cycle-of-a-statistical-research-project",
+    "href": "getting-started.html#full-cycle-of-a-statistical-research-project",
+    "title": "3  Getting Started",
+    "section": "",
+    "text": "Find a topic of interest. The topic should interest you, and be something which you already know at least somewhat and/or can find out more. The topic should also be something that is within your capacity restricted by your skill sets and time. Check the literature to see what works are available on it or related topics. In short, the topic should be reasonably interesting and doable. You can get ideas for research by\n\nattending seminars;\nreading journals (e.g., Journal of Quantitative Analysis in Sprots; American Statistician), books, magazines (e.g., Chance; Significance), and newspapers;\nconsulting;\ncollaboration.\n\nA critical factor to consider when identifying a topic is data.\n\nIdea-driven approach: You could start from an idea and then check if there are data available that can be used to test out your idea. It could be frustrating when you cannot find data after searching around.\ndata-driven approach: You could start from some available data and formulate your ideas by closely studying the data. This approach needs creative thinking to do something new on a old data.\n\nInitial planning. After you have identified a topic, you need to narrow down on the specific research questions that you want to answer, what data will be needed/used, and what methods are appropriate.\n\nForm a hypothesis, design a study, conduct the study, make notes.\nCollect data and/or find some existing data.\nDecide on appropriate statistical methods.\nMake a tentative outline to guide writing.\n\nStatistical investigation.\n\nPerform data analysis.\nSummarize substantive findings.\nInvestigate the performance of proposed methods via simulations.\n\nIterate between planning and investigation.\nWrite, revise and proofread. Revising and writing are two separate processes.\n\nStart with an outline for each section which includes major headings, sub-headings and paragraphs covering different points.\n\nWhen starting, the goal is to get the main points and ideas captured in a document, so at this time, it does not matter if sentences are incomplete or if the grammar is incorrect.\nAre the statistical statements correct?\nAre the data displays informative?\nAre the conclusions based on sound evidence?\nAre the style and tone appropriate for the venue?\nIs the problem clearly stated?\nCheck organization — reorganize paragraphs and add transitions where necessary.\nWork on sentences — check spelling, punctuation, word choice, tense, etc.\nMake sure all researched information is documented (reproducibility).\nRework introduction and conclusion.\nRead out loud to check for flow.\nFind a friend to review.\n\n\n\n\nUCSD: Data Science: Guide for Independent Projects\nFreeCodeCamp: How to build a data science project from scratch",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#writing-a-research-proposal",
+    "href": "getting-started.html#writing-a-research-proposal",
+    "title": "3  Getting Started",
+    "section": "3.2 Writing a Research Proposal",
+    "text": "3.2 Writing a Research Proposal\nA research proposal is piece of writing that details exactly what you plan to do in a research project.\nThe following components are expected in your proposal.\n\nIntroduction: Introducing the topic and why you have chosen this topic (3–5 lines). Mention briefly the current related research and cite relevant works.\n\nWhy shold we care?\nWhat have been done?\nWhat are new?\n\nSpecific aims: Formulate a research question or hypothesis in the chosen topic. Describe briefly why you select such a question or hypothesis and its importance in the field (cite sources).\n\nWhy is it hard/interesting/unstudied?\nHow hard/interesting is it?\n\nData description: Describe your data set (for instance: sampling scheme, number of observations, number of variables, variables of interest, nature of the variables) and the source of your data set if it is not collected by yourself.\nResearch design/methods/schedule: Describe briefly (5-7 lines) your plan of action.\n\nWhy are the methods appropriate (with proper references) for the problem?\nWhat steps are required to use the methods?\nWhich of the steps will be particularly hard?\nWhat would you do if the hardest steps do not work as planned?\nHow would the methods help in investigating the task problem?\n\nDiscussion: potential problems and solutions.\n\nWhat do you expect to find and why do you feel so?\nAny ways your work can corroborate or challenge existing results or assumptions?\nWhat are the potential impacts of your work?\nWhat if the results of your investigation is not what you expected?\n\nConclusion (optional): Wrap it up by briefly summarizing your research proposal and reinforcing your research’s stated purpose.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html",
+    "href": "writing-specific-sections.html",
+    "title": "4  Writing Specific Sections",
+    "section": "",
+    "text": "4.1 Title\nThe title is the most read part of an article, and influences whether a reader is interested in reading the manuscript. Hairston and Keene (2003) suggest that the title of a research paper should accomplish four goals:\nThe title of a paper is usually determined when the paper is close to completion. To come up with a good title, list some key phrases that you would like to have, and be creative in forming a good title that consists of most of them. Here are some tips.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#title",
+    "href": "writing-specific-sections.html#title",
+    "title": "4  Writing Specific Sections",
+    "section": "",
+    "text": "predict the content of the research paper;\nbe interesting to the reader;\nreflect the tone of the writing;\ncontain important keywords (that makes it easier to be found from keywords search).\n\n\n\nBe informative by including these aspects: topic, method(s), data, and results.\nConsider adding a subtitle to give more specifics about the paper.\nUse appropriate critical keywords to increase the discoverability of the paper.\nFollow the requirements from the instructions or journals.\nKeep it as concise as possible.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#abstract",
+    "href": "writing-specific-sections.html#abstract",
+    "title": "4  Writing Specific Sections",
+    "section": "4.2 Abstract",
+    "text": "4.2 Abstract\nMarron (1999) recommended the following:\n\nAbstract material needs to be carefully chosen. A balance between the twin goals of brevity and maximal information content should again be carefully sought. There is room for more detail than in the title, but not enough room for all ideas covered in the paper. Make sure each “high point” is included. The paper will have a better chance in the review process if it is made clear what is done, and why it is important, since this will immediately capture the interest of the reviewer.\n\n\nAny recommendations for length here must be more case dependent. Longer papers will usually need longer abstracts. However, something between 4 and 10 sentences is reasonable for most situations.\n\n\nMathematical notation is rarely useful in the abstract. Sometimes notation is introduced in an abstract, and then not used at all! Even when notation is used in the abstract, the point can usually be conveyed more efficiently in words alone.\n\nTips:\n\nOpen with a sentence to establish the importance of the subject of the paper.\nIdentify a gap in the literature to set up the background of the paper.\nHighlight the novelty/contributions of the paper.\nFor application papers, allude to new discoveries and their impacts.\nFor method papers, outline the essence of the methodology, and evidence from theoretical and numerical studies supporting the methods.\nIt must make sense when read in isolation for those who only read the abstract, and must also provide a clear and accurate summary of the manuscript for readers who read the entire manuscript (Zeiger 2000).\n\nShould not include citations.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#keywords",
+    "href": "writing-specific-sections.html#keywords",
+    "title": "4  Writing Specific Sections",
+    "section": "4.3 Keywords",
+    "text": "4.3 Keywords\nKeywords are words in addition to those in the title that attract search queries. Including the most relevant keywords helps other researchers find your paper.\n\nNo need to repeat anything in the title already.\nList them in alphabetical order.\nContain words and phrases that suggest what the topic is about.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#introduction",
+    "href": "writing-specific-sections.html#introduction",
+    "title": "4  Writing Specific Sections",
+    "section": "4.4 Introduction",
+    "text": "4.4 Introduction\nThe introduction section is always the first section of a paper. Some journals may not call it introduction but require a section that serves the same purpose. The purpose of the introduction is to stimulate the reader’s interest and to provide background information which is pertinent to the study (Jenkins 1995). The introduction section guides the readers from a general subject area to the narrow topic of the paper. It should answer three questions:\n\nWhy does it matter?\nWhat has already been done?\nWhat is new?\n\nThat is, the introduction sections need to explain the importance of the topic of the paper, provide the background of the research work, and highlight the contributions of the work. At the end of the introduction, a roadmap, or an outline of the paper is useful in helping the readers navigate through the following sections.\nThe introduction is typically outlined at the very beginning of the writing process, but completed towards the end after the other sections have been written. Do NOT wait to perform the literature review until last, however! This should happen before the research is undertaken to ensure you are not duplicating something that has already been done!\nAn introduction often contains the following items.\n\nAn overview of the topic. Start with a general overview of your topic and narrow it to the specific subject you are addressing. Then, mention questions or concerns you have about the case. Explain why they are important and why it needs to be addressed right now.\nExisting works. The introduction is the place to review other conclusions on your topic. The literature review should be thorough, including both old and recent works. It should show that you are aware of prior research. It also introduces past findings to those who might not have that expertise.\nA gap needs to be identified from the importance of the topic and the current status of the literature, which is the rationale for your work. Why are existing methods not sufficient? What are elements of an attractive solution?\nContributions. This is a thesis statement, which summarizes the the contributions of your work to the existing literature, and answers the “what is new” question.\nA roadmap. A brief summary of what each section does in the paper. This concludes the introduction.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#data",
+    "href": "writing-specific-sections.html#data",
+    "title": "4  Writing Specific Sections",
+    "section": "4.5 Data",
+    "text": "4.5 Data\nThe data section should provide all the details that are relevant for the research project.\n\nWho collected the data (source)?\nHow was the data collected? Sampling frame? Sampling approach?\nWhat period or range does the data cover?\nWhy does the data help answer the research question?\nWhat exploratory analyses are done (descriptives, visualization, etc.)?",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#methods",
+    "href": "writing-specific-sections.html#methods",
+    "title": "4  Writing Specific Sections",
+    "section": "4.6 Methods",
+    "text": "4.6 Methods\nNotation is much easier to digest if the reader first understands the main idea at an intuitive level.\n\nEstablish notation.\nWhat are the observed data?\nWhat are the models?\nWhat are the parameters to be estimated?\nHow are the point estimators obtained?\nHow are the uncertainty (standard errors) of the point estimators assessed?\nHow are the variances of the point estimators estimated?\nHow are the null distribution of the testing statistics established?\nClearly state the assumptions and claims of theoretical results.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#simulation",
+    "href": "writing-specific-sections.html#simulation",
+    "title": "4  Writing Specific Sections",
+    "section": "4.7 Simulation",
+    "text": "4.7 Simulation\nADEMP (Morris et al. 2019):\n\nAims\nData generating mechanism\nEstimand/target of analysis\nMethods\nPerformance measures\n\nCoding and Execution\nAnalysis/Discussion: with tables and figures. May be included in a Results section.\n\nFor each table/figure, write down the bullet points to convey to the readers.\nGroup the bullet points in blocks and put the blocks in a logical order.\nWithin each block, put the bullet points in the right logical order.\nSome (shorter) blocks can be converted into proper paragraphs in the final paper, while other (longer) blocks may remain in bullet form.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#application",
+    "href": "writing-specific-sections.html#application",
+    "title": "4  Writing Specific Sections",
+    "section": "4.8 Application",
+    "text": "4.8 Application\n\nReport the statistical analyses in tables/figures.\nWhen summarizing from tables/figures, paint the big picture, rather than reiterating all of the little details.\nDiscussions to link the analyses back to the substantive topic (Miller 2015):\n\n\nHaving presented the individual pieces of evidence, an investigator must summarize how that evidence, taken together, support the conclusoin of the investigation. Statisticians should explain how the statistical evidence answers the question posed at the beginning of the paper, following standard expository writing guidelines to writing an analytic essay.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#discussion-and-conclusion",
+    "href": "writing-specific-sections.html#discussion-and-conclusion",
+    "title": "4  Writing Specific Sections",
+    "section": "4.9 Discussion and Conclusion",
+    "text": "4.9 Discussion and Conclusion\n\nA summary, again, of the contributions of the research.\nThe research question posed as the `need’ of the introduction must be answered here (Zeiger 2000).\nLimitations of the current study\nFuture directions.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#appendix",
+    "href": "writing-specific-sections.html#appendix",
+    "title": "4  Writing Specific Sections",
+    "section": "4.10 Appendix",
+    "text": "4.10 Appendix\n\nTechnical details (e.g., proofs, algorithms) that would otherwise break the flow of the main text.\nData source details.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#acknowledgements",
+    "href": "writing-specific-sections.html#acknowledgements",
+    "title": "4  Writing Specific Sections",
+    "section": "4.11 Acknowledgements",
+    "text": "4.11 Acknowledgements\nThis section is optional, but could be used to acknowledge certain individuals who have contributed to the research and/or success of the manuscript (e.g. peer reviewers).\nIn general, if the research upon which you are writing was funded, the funding agency and funding mechanism are typically included here unless otherwise specified.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#references",
+    "href": "writing-specific-sections.html#references",
+    "title": "4  Writing Specific Sections",
+    "section": "4.12 References",
+    "text": "4.12 References\n\nEvery reference cited in the paper should appear here.\nReferences not cited should not appear here.\nAll are automatically taken care of by BibTeX.\nStyles are controlled by bib style (.bst file).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#online-supplement",
+    "href": "writing-specific-sections.html#online-supplement",
+    "title": "4  Writing Specific Sections",
+    "section": "4.13 Online Supplement",
+    "text": "4.13 Online Supplement\n\nComputer code\nData\nAdditional simulation results",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#general-tips",
+    "href": "writing-specific-sections.html#general-tips",
+    "title": "4  Writing Specific Sections",
+    "section": "4.14 General Tips",
+    "text": "4.14 General Tips\nFrom Jenkins (1995):\n\nIn order to maintain continuity between the key sections (introduction, methods, results and discussion) it is helpful to consider the manuscript as telling a story.\nThe strong parts to the story-line are the introduction and the discussion, so the link between these sections must be clear.\n\nDevices such as paragraphing, headings, indentation, and enumeration help the reader see the major points that you want to make.\nAs a rule of thumb, if you type a full page (double spaced) without indenting for a new paragraph, you almost certainly have run one thought into another and have missed an opportunity to differentiate your ideas.\nAny tables and figures included in the manuscript must be mentioned (referenced) within the main text.\nIf journal/instructions do not specify otherwise, tables and figures should be placed near (ideally after) the related text, and on the top of the page.\nUse consistent notation throughout the manuscript, avoid defining any unnecessary notation, and avoid using the same notation to describe different things (variables, indices, etc.).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "writing-specific-sections.html#general-tips-use-of-english",
+    "href": "writing-specific-sections.html#general-tips-use-of-english",
+    "title": "4  Writing Specific Sections",
+    "section": "4.15 General Tips: Use of English",
+    "text": "4.15 General Tips: Use of English\nIt is relatively easy to read and understand English which is well written. As the quality of writing deteriorates, however, it becomes progressively more difficult for the reader to understand the author’s intended meaning.\nAn obvious problem occurs when the author fails to use properly constructed sentences. This can be easily corrected with revision and external review.\nA much more dangerous problem occurs when the author unconsciously assumes that the reader is able to follow his/her unwritten train of thought. This can also usually be caught with external review.\nMore tips on the use of English:\n\nUse of tenses: Use present tense for most of the manuscript; use past tense only when describing events that occurred in the past (data collection, an experiment that has already been conducted, how simulations were designed).\nBe consistent with tense usage within sections, paragraphs, etc.\nDo not use the word ‘significant’ other than in a statistical sense.\nThe word ‘data’ is often mistakenly treated as if it were a singular noun instead of as a plural noun. The word ‘data’ is, in fact, a plural noun (its singular form is ‘datum’).\n\n\n\n\n\nHairston, Maxine, and Michael L Keene. 2003. Successful Writing. 5th ed. W. W. Norton & Company.\n\n\nJenkins, Sue. 1995. “How to Write a Paper for a Scientific Journal.” Australian Journal of Physiotherapy 41(4): 285–89.\n\n\nMarron, J S. 1999. “Effective Writing in Mathematical Statistics.” Statistica Neerlandica 53 (1): 68–75.\n\n\nMiller, Jane E. 2015. The Chicago Guide to Writing about Numbers. University of Chicago Press.\n\n\nMorris, Tim P, Ian R White, and Michael J Crowther. 2019. “Using Simulation Studies to Evaluate Statistical Methods.” Statistics in Medicine 38 (11): 2074–102.\n\n\nZeiger, Mimi. 2000. Essentials of Writing Biomedical Research Papers. 2nd ed. McGraw-Hill.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Writing Specific Sections</span>"
+    ]
+  },
+  {
+    "objectID": "review-a-paper.html",
+    "href": "review-a-paper.html",
+    "title": "5  Review a Paper",
+    "section": "",
+    "text": "Peer review is the system used to assess the quality of a manuscript before it is published in a journal.\nIndependent researchers in the relevant research area assess submitted manuscripts for originality, validity and significance to help editors determine whether a manuscript should be published in their journal.\nReviewing is the other side of the same coin as writing. It is an important skill and service for the scientific community. A good writer anticipates comments from possible reviewers and addresses them in writing. A critical review helps make a manuscript much stronger.\nAccording to https://www.biomedcentral.com/getpublished/peer-review-process,\n\nPeer review is an integral part of scientific publishing that confirms the validity of the manuscript. Peer reviewers are experts who volunteer their time to help improve the manuscripts they review. By undergoing peer review, manuscripts should become:\nMore robust - peer reviewers may point out gaps in a paper that require more explanation or additional experiments.\nEasier to read - if parts of your paper are difficult to understand, reviewers can suggest changes.\nMore useful - peer reviewers also consider the importance of your paper to others in your field.\n\nIn this writing course, we are writing statistical projects. Here is a check list adapted from https://www.science.org/content/article/how-review-paper.\n\nAre the background literature and study rationale clearly articulated?\nDo the hypotheses follow logically from previous work?\nAre the statistical methods appropriate?\nAre the methods robust and well controlled?\nIs the statistical notation clearly defined?\nWere the statistical methods conducted correctly?\n\nAre the assumptions of the statistical methods clearly articulated?\nAre the assumptions of the statistical methods satisfied?\nIs the presentation of results clear and accessible?\nTo what extent does the Discussion place the findings in a wider context and achieve a balance between interpretation and useful speculation versus tedious waffling?\n\nTo write a reviewer’s report, here is a template.\n\nA summary of the what the paper is about and how you feel about its solidity.\nList the major concerns in detail about the paper eluded in the summary.\nGo through the specific points that are not clearly presented or need to be improved, in the order they appeared in the paper.\nFinally, a list of really minor stuff (misprints, notation abuse, etc.).\n\nTips:\n\nPrecisely identify the location of the concern (page number, line number, section number, etc.)\nBe as constructive as possible.\nAvoid rude or disparaging remarks.\nBack up major criticisms.\nMake the review useful for the editor as well as for the authors.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Review a Paper</span>"
+    ]
+  },
+  {
+    "objectID": "response-to-reviewers.html",
+    "href": "response-to-reviewers.html",
+    "title": "6  Response to Reviewers",
+    "section": "",
+    "text": "Peer-reviewed journals also give the author the opportunity to respond to the reviewer’s comments.\nThis ‘response to reviewers’ document is submitted alongside your manuscript, summarizing the changes that you made in response to the critiques.\nFollow these rules for writing responses to reviewers, adapted from Noble (2017):\nRule 1: Provide an overview, then quote the full set of reviews\nBegin the response letter with a broad-level summary of the changes, pointing out new broad-level content added in response to the most essential criticisms of the reviewers.\nThereafter, the response letter should contain the complete set of reviewer comments with your responses interleaved.\nRule 2: Be polite and respectful of reviewers\nEven if you are convinced that the reviewer lacks intellectual capacity, it is certainly not in your interest to convey this impression to the reviewer.\nKeep in mind that if the reviewer failed to understand something, the fault likely lies, at least in part, with you for not making the point clear enough.\nYour goal is to make the work clear and accessible to all readers, not just to experts.\nRule 3: Accept the blame\nIf the reviewer failed to understand something, apologize for not making it clear.\nEven if you are convinced that the text is already clear (i.e., the reviewer simply missed it), consider revising the text and quoting the revised text in your response.\nIn general, even if the requested change seems unnecessary, it is usually better to go ahead and revise with the goal of showing the reviewer that they were listened to and understood.\nRule 4: Make the response self-contained\nWhen you make changes to the text or to figures, quote the changes directly in the response. If possible, refer to the specific pages/sections/paragraphs were the change was made.\nRule 5: Respond to every point raised by the reviewer\nEven if you do not agree with a comment from a reviewer, you cannot ignore it and must respond to it.\nIf you disagree, provide evidence supporting your claim.\nRule 6: Use typography to help the reviewer navigate your response\nUse changes of typeface, color, and indenting to discriminate between 3 different elements: the review itself, your responses to the review, and changes that you have made to the manuscript.\nYou can explain these typographical conventions in the introduction to your response.\n\n\n\n\nNoble, William S. 2017. “Ten Simple Rules for Writing a Response to Reviewers.” PLoS Comput Biol 13(10): e1005730. https://doi.org/10.1371/journal.pcbi.1005730.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Response to Reviewers</span>"
+    ]
+  },
+  {
+    "objectID": "other-topics.html",
+    "href": "other-topics.html",
+    "title": "7  Other Topics",
+    "section": "",
+    "text": "7.1 Verb Tenses\nCaplan (2019) suggested choices.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Other Topics</span>"
+    ]
+  },
+  {
+    "objectID": "other-topics.html#verb-tenses",
+    "href": "other-topics.html#verb-tenses",
+    "title": "7  Other Topics",
+    "section": "",
+    "text": "Caplan, Nigel A. 2019. Grammar Choices for Graduate and Professional Writers. University of Michigan Press ELT.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Other Topics</span>"
+    ]
+  },
+  {
+    "objectID": "exercises.html",
+    "href": "exercises.html",
+    "title": "8  Exercises",
+    "section": "",
+    "text": "Git basics and GitHub setup Learn the Git basics and set up an account on GitHub if you do not already have one. Practice the tips on Git in the notes. By going through the following tasks, ensure your repo has at least 10 commits, each with an informative message. Regularly check the status of your repo using git status. The specific tasks are:\n\nClone the repo to an appropriate folder on your computer.\nOn your computer, add a file called learningGit.md to your repo; use Markdown syntax to fill it with the text of the documentation on Git/GitHub resources.\nPlay with git commit (save): add some a new section Personal   Notes to describe your own learning experience. Experiment with commits such as: add new lines; introduce some typos; correct the typo; etc. Make sure you have informative commit messages.\nUse git diff to view the difference between two commits and appreciate the linewidth recommendation.\n“Push” your changes to GitHub.\nMake a change to your file on GitHub and commit.\n“Pull” the changes to your local computer.\nCreate a “branch” (version), make a change, commit the change.\nOpen a “pull request” (propose changes to the main branch)\n“Merge” your branch to the main branch.\n\nGit will keep track of all your changes. Use the command line to do the exercises. My grader will check the commit history.\nType setting with LaTeX/BibTeX Follow the template linked to in Chapter 2 in my Statistical Writing notes to create a nice-looking PDF manuscript. The manuscript should contain all components of an academic paper:\n\ntitle, authors, affiliations, abstract, sections, appendix, and references;\nrefer to the sections in a roadmap paragraph at the end of Introduction;\ncite at least two references, one with textual citation and one parenthetical citation;\ninclude at least one table and referene to it;\ninclude at least one figure and reference to it;\ninclude the code that generated the figures/tables in the code folder;\ninclude at least two in-line math expressions;\ninclude at least two in-display equations, and at least one of them should be numbered, and reference to the numbered ones;\nfollow the specific tips in the stat-writing notes;\nfollow the instructions on using Git to keep your repo clean;\nput the generated pdf file in a release.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Caplan, D J, Y Li, W Wang, et al. 2019. “Dental Restoration\nLongevity Among Geriatric and Special Needs Patients.” JDR\nClinical & Translational Research 4 (1): 41–48. https://doi.org/10.1177/2380084418799083.\n\n\nCaplan, Nigel A. 2019. Grammar Choices for Graduate and Professional\nWriters. University of Michigan Press ELT.\n\n\nGopen, George D. 2004. Expectations: Teaching Writing\nfrom the Reader’s Perspective. Pearson.\n\n\nGopen, George D, and Judith A Swan. 1990. “The Science of\nScientific Writing.” American Scientist 78 (6): 550–58.\n\n\nHairston, Maxine, and Michael L Keene. 2003. Successful\nWriting. 5th ed. W. W. Norton & Company.\n\n\nHu, Chaoran, Mark Elbroch, Thomas Meyer, Vladimir Pozdnyakov, and Jun\nYan. 2021. “Moving-Resting Process with Measurement Error in\nAnimal Movement Modeling.” Methods in Ecology and\nEvolution 12 (11): 2221–33. https://doi.org/10.1111/2041-210X.13694.\n\n\nJenkins, Sue. 1995. “How to Write a Paper for a Scientific\nJournal.” Australian Journal of Physiotherapy 41(4):\n285–89.\n\n\nJiao, Jieying, Guanyu Hu, and Jun Yan. 2021. “A\nBayesian Marked Spatial Point Processes Model for\nBasketball Shot Chart.” Journal of Quantitative Analysis in\nSports 17 (2): 77–90. https://doi.org/10.1515/jqas-2019-0106.\n\n\nJiao, J., Z. Tang, M. Yue, P. Zhang, and J. Yan. 2022.\n“Cyberattack-Resilient Load Forecasting with Adaptive Robust\nRegression.” International Journal of Forecasting 38\n(3): 910–19. https://doi.org/10.1016/j.ijforecast.2021.06.009.\n\n\nLau, Abby Y. Z., and Jun Yan. 2022. “Bias Analysis of Generalized\nEstimating Equations Under Measurement Error and Practical Bias\nCorrection.” Stat 11 (1): e418. https://doi.org/10.1002/sta4.418.\n\n\nLebrun, Jean-Luc, and Justin Lebrun. 2021. Scientific Writing 3.0:\nA Reader and Writer’s Guide. World Scientific.\n\n\nLi, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. 2021. “Uncertainty\nin Optimal Fingerprinting Is Underestimated.” Environmental\nResearch Letters 16 (8): 084043. https://doi.org/10.1088/1748-9326/ac14ee.\n\n\nLi, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. 2023. “Regularized\nFingerprinting in Detection and Attribution of Climate Change with\nWeight Matrix Optimizing the Efficiency in Scaling Factor\nEstimation.” Annals of Applied Statistics 17 (1):\n225–39. https://doi.org/10.1214/22-AOAS1624.\n\n\nMarron, J S. 1999. “Effective Writing in Mathematical\nStatistics.” Statistica Neerlandica 53 (1): 68–75.\n\n\nMiller, Jane E. 2015. The Chicago Guide to Writing\nabout Numbers. University of Chicago Press.\n\n\nMorris, Tim P, Ian R White, and Michael J Crowther. 2019. “Using\nSimulation Studies to Evaluate Statistical Methods.”\nStatistics in Medicine 38 (11): 2074–102.\n\n\nNoble, William S. 2017. “Ten Simple Rules for Writing a Response\nto Reviewers.” PLoS Comput Biol 13(10): e1005730. https://doi.org/10.1371/journal.pcbi.1005730.\n\n\nOshima, Alex, and Ann Hogue. 2000. Writing Academic English.\nLongman.\n\n\nPrice, Michael, and Jun Yan. 2022. “The Effects of the\nNBA COVID Bubble on the NBA\nPlayoffs: A Case Study for Home-Court Advantage.”\nAmerican Journal of Undergraduate Research 18(4): 3–15. https://doi.org/10.33697/ajur.2022.051.\n\n\nXie, Yihui. 2016. Bookdown: Authoring Books and\nTechnical Documents with R Markdown. Chapman;\nHall/CRC.\n\n\nZeiger, Mimi. 2000. Essentials of Writing Biomedical Research\nPapers. 2nd ed. McGraw-Hill.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

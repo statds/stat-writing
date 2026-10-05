@@ -1,136 +1,37 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Writing Specific Sections | Statistical Writing</title>
-  <meta name="description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
 
-  <meta property="og:title" content="Chapter 4 Writing Specific Sections | Statistical Writing" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Writing Specific Sections | Statistical Writing" />
-  
-  <meta name="twitter:description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
-  
-
-<meta name="author" content="Elizabeth Schifano and Jun Yan" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<meta name="date" content="2026-07-03" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="getting-started.html"/>
-<link rel="next" href="review-a-paper.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
-<style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
+<title>4&nbsp; Writing Specific Sections – Statistical Writing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
 @media screen {
-div.sourceCode { overflow: auto; }
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -144,156 +45,235 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./review-a-paper.html" rel="next">
+<link href="./getting-started.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-95863af46656191e6a2cf1560d98dcd6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
 </head>
 
-<body>
+<body class="nav-sidebar floating quarto-light">
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Statistical Writing</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#applied-papers"><i class="fa fa-check"></i><b>1.1</b> Applied papers</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#methods-papers"><i class="fa fa-check"></i><b>1.2</b> Methods papers</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#scientific-writing"><i class="fa fa-check"></i><b>1.3</b> Scientific Writing</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="ch-tools.html"><a href="ch-tools.html"><i class="fa fa-check"></i><b>2</b> Using the Right Tools for Writing</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="ch-tools.html"><a href="ch-tools.html#git-for-version-control"><i class="fa fa-check"></i><b>2.1</b> Git for Version Control</a>
-<ul>
-<li class="chapter" data-level="2.1.1" data-path="ch-tools.html"><a href="ch-tools.html#set-up"><i class="fa fa-check"></i><b>2.1.1</b> Set Up</a></li>
-<li class="chapter" data-level="2.1.2" data-path="ch-tools.html"><a href="ch-tools.html#most-frequently-used-git-commands"><i class="fa fa-check"></i><b>2.1.2</b> Most Frequently Used Git Commands</a></li>
-<li class="chapter" data-level="2.1.3" data-path="ch-tools.html"><a href="ch-tools.html#tips-on-using-git"><i class="fa fa-check"></i><b>2.1.3</b> Tips on using Git:</a></li>
-<li class="chapter" data-level="2.1.4" data-path="ch-tools.html"><a href="ch-tools.html#pull-request"><i class="fa fa-check"></i><b>2.1.4</b> Pull Request</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="ch-tools.html"><a href="ch-tools.html#latex-for-typesetting"><i class="fa fa-check"></i><b>2.2</b> LaTeX for Typesetting</a>
-<ul>
-<li class="chapter" data-level="2.2.1" data-path="ch-tools.html"><a href="ch-tools.html#a-beginners-template"><i class="fa fa-check"></i><b>2.2.1</b> A beginner’s template</a></li>
-<li class="chapter" data-level="2.2.2" data-path="ch-tools.html"><a href="ch-tools.html#math-equations"><i class="fa fa-check"></i><b>2.2.2</b> Math equations</a></li>
-<li class="chapter" data-level="2.2.3" data-path="ch-tools.html"><a href="ch-tools.html#tables"><i class="fa fa-check"></i><b>2.2.3</b> Tables</a></li>
-<li class="chapter" data-level="2.2.4" data-path="ch-tools.html"><a href="ch-tools.html#figures"><i class="fa fa-check"></i><b>2.2.4</b> Figures</a></li>
-<li class="chapter" data-level="2.2.5" data-path="ch-tools.html"><a href="ch-tools.html#references"><i class="fa fa-check"></i><b>2.2.5</b> References</a></li>
-<li class="chapter" data-level="2.2.6" data-path="ch-tools.html"><a href="ch-tools.html#cross-referencing"><i class="fa fa-check"></i><b>2.2.6</b> Cross-referencing</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="ch-tools.html"><a href="ch-tools.html#using-r-markdown-as-a-frontend"><i class="fa fa-check"></i><b>2.3</b> Using R Markdown as a Frontend</a></li>
-<li class="chapter" data-level="2.4" data-path="ch-tools.html"><a href="ch-tools.html#command-line-interface"><i class="fa fa-check"></i><b>2.4</b> Command Line Interface</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>3</b> Getting Started</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="getting-started.html"><a href="getting-started.html#full-cycle-of-a-statistical-research-project"><i class="fa fa-check"></i><b>3.1</b> Full Cycle of a Statistical Research Project</a></li>
-<li class="chapter" data-level="3.2" data-path="getting-started.html"><a href="getting-started.html#writing-a-research-proposal"><i class="fa fa-check"></i><b>3.2</b> Writing a Research Proposal</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html"><i class="fa fa-check"></i><b>4</b> Writing Specific Sections</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#title"><i class="fa fa-check"></i><b>4.1</b> Title</a></li>
-<li class="chapter" data-level="4.2" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#abstract"><i class="fa fa-check"></i><b>4.2</b> Abstract</a></li>
-<li class="chapter" data-level="4.3" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#keywords"><i class="fa fa-check"></i><b>4.3</b> Keywords</a></li>
-<li class="chapter" data-level="4.4" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#introduction"><i class="fa fa-check"></i><b>4.4</b> Introduction</a></li>
-<li class="chapter" data-level="4.5" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#data"><i class="fa fa-check"></i><b>4.5</b> Data</a></li>
-<li class="chapter" data-level="4.6" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#methods"><i class="fa fa-check"></i><b>4.6</b> Methods</a></li>
-<li class="chapter" data-level="4.7" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#simulation"><i class="fa fa-check"></i><b>4.7</b> Simulation</a></li>
-<li class="chapter" data-level="4.8" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#application"><i class="fa fa-check"></i><b>4.8</b> Application</a></li>
-<li class="chapter" data-level="4.9" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#discussion-and-conclusion"><i class="fa fa-check"></i><b>4.9</b> Discussion and Conclusion</a></li>
-<li class="chapter" data-level="4.10" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#appendix"><i class="fa fa-check"></i><b>4.10</b> Appendix</a></li>
-<li class="chapter" data-level="4.11" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#acknowledgements"><i class="fa fa-check"></i><b>4.11</b> Acknowledgements</a></li>
-<li class="chapter" data-level="4.12" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#references-1"><i class="fa fa-check"></i><b>4.12</b> References</a></li>
-<li class="chapter" data-level="4.13" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#online-supplement"><i class="fa fa-check"></i><b>4.13</b> Online Supplement</a></li>
-<li class="chapter" data-level="4.14" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#general-tips"><i class="fa fa-check"></i><b>4.14</b> General Tips</a></li>
-<li class="chapter" data-level="4.15" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#general-tips-use-of-english"><i class="fa fa-check"></i><b>4.15</b> General Tips: Use of English</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="review-a-paper.html"><a href="review-a-paper.html"><i class="fa fa-check"></i><b>5</b> Review a Paper</a></li>
-<li class="chapter" data-level="6" data-path="response-to-reviewers.html"><a href="response-to-reviewers.html"><i class="fa fa-check"></i><b>6</b> Response to Reviewers</a></li>
-<li class="chapter" data-level="7" data-path="other-topics.html"><a href="other-topics.html"><i class="fa fa-check"></i><b>7</b> Other Topics</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="other-topics.html"><a href="other-topics.html#verb-tenses"><i class="fa fa-check"></i><b>7.1</b> Verb Tenses</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>8</b> Exercises</a></li>
-<li class="chapter" data-level="" data-path="references-2.html"><a href="references-2.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./writing-specific-sections.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Writing Specific Sections</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
     </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Writing</a>
-          </h1>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Statistical Writing</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/statds/stat-writing" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Using the Right Tools for Writing</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./getting-started.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting Started</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./writing-specific-sections.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Writing Specific Sections</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./review-a-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Review a Paper</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-reviewers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Response to Reviewers</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./other-topics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Other Topics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Exercises</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#title" id="toc-title" class="nav-link active" data-scroll-target="#title"><span class="header-section-number">4.1</span> Title</a></li>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract"><span class="header-section-number">4.2</span> Abstract</a></li>
+  <li><a href="#keywords" id="toc-keywords" class="nav-link" data-scroll-target="#keywords"><span class="header-section-number">4.3</span> Keywords</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">4.4</span> Introduction</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">4.5</span> Data</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">4.6</span> Methods</a></li>
+  <li><a href="#simulation" id="toc-simulation" class="nav-link" data-scroll-target="#simulation"><span class="header-section-number">4.7</span> Simulation</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">4.8</span> Application</a></li>
+  <li><a href="#discussion-and-conclusion" id="toc-discussion-and-conclusion" class="nav-link" data-scroll-target="#discussion-and-conclusion"><span class="header-section-number">4.9</span> Discussion and Conclusion</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">4.10</span> Appendix</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements"><span class="header-section-number">4.11</span> Acknowledgements</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.12</span> References</a></li>
+  <li><a href="#online-supplement" id="toc-online-supplement" class="nav-link" data-scroll-target="#online-supplement"><span class="header-section-number">4.13</span> Online Supplement</a></li>
+  <li><a href="#general-tips" id="toc-general-tips" class="nav-link" data-scroll-target="#general-tips"><span class="header-section-number">4.14</span> General Tips</a></li>
+  <li><a href="#general-tips-use-of-english" id="toc-general-tips-use-of-english" class="nav-link" data-scroll-target="#general-tips-use-of-english"><span class="header-section-number">4.15</span> General Tips: Use of English</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/statds/stat-writing/blob/main/writing-specific-sections.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Writing Specific Sections</span></h1>
+</div>
 
-            <section class="normal" id="section-">
-<div id="writing-specific-sections" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Writing Specific Sections<a href="writing-specific-sections.html#writing-specific-sections" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="title" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Title<a href="writing-specific-sections.html#title" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The title is the most read part of an article, and influences whether a reader
-is interested in reading the manuscript.
-<span class="citation">Hairston and Keene (<a href="#ref-hairston2003successful">2003</a>)</span> suggest
-that
-the title of a research paper should accomplish four goals:</p>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="title" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="title"><span class="header-section-number">4.1</span> Title</h2>
+<p>The title is the most read part of an article, and influences whether a reader is interested in reading the manuscript. <span class="citation" data-cites="hairston2003successful">Hairston and Keene (<a href="references.html#ref-hairston2003successful" role="doc-biblioref">2003</a>)</span> suggest that the title of a research paper should accomplish four goals:</p>
 <ul>
 <li>predict the content of the research paper;</li>
 <li>be interesting to the reader;</li>
 <li>reflect the tone of the writing;</li>
-<li>contain important keywords (that makes it easier to be found from keywords
-search).</li>
+<li>contain important keywords (that makes it easier to be found from keywords search).</li>
 </ul>
-<p>The title of a paper is usually determined when the paper is close to
-completion. To come up with a good title, list some key phrases that you would
-like to have, and be creative in forming a good title that consists of most of
-them. Here are some tips.</p>
+<p>The title of a paper is usually determined when the paper is close to completion. To come up with a good title, list some key phrases that you would like to have, and be creative in forming a good title that consists of most of them. Here are some tips.</p>
 <ul>
-<li>Be informative by including these aspects: topic, method(s), data, and
-results.</li>
+<li>Be informative by including these aspects: topic, method(s), data, and results.</li>
 <li>Consider adding a subtitle to give more specifics about the paper.</li>
-<li>Use appropriate critical keywords to increase the discoverability of the
-paper.</li>
+<li>Use appropriate critical keywords to increase the discoverability of the paper.</li>
 <li>Follow the requirements from the instructions or journals.</li>
 <li>Keep it as concise as possible.</li>
 </ul>
-</div>
-<div id="abstract" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Abstract<a href="writing-specific-sections.html#abstract" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><span class="citation">Marron (<a href="#ref-marron1999effective">1999</a>)</span> recommended the following:</p>
-<blockquote>
-<p>Abstract material needs to be carefully chosen. A balance between the
-twin goals of brevity and maximal information content should again be
-carefully sought. There is room for more detail than in the title, but not
-enough room for all ideas covered in the paper. Make sure each “high point”
-is included. The paper will have a better chance in the review process if it
-is made clear what is done, and why it is important, since this will
-immediately capture the interest of the reviewer.</p>
+</section>
+<section id="abstract" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="abstract"><span class="header-section-number">4.2</span> Abstract</h2>
+<p><span class="citation" data-cites="marron1999effective">Marron (<a href="references.html#ref-marron1999effective" role="doc-biblioref">1999</a>)</span> recommended the following:</p>
+<blockquote class="blockquote">
+<p>Abstract material needs to be carefully chosen. A balance between the twin goals of brevity and maximal information content should again be carefully sought. There is room for more detail than in the title, but not enough room for all ideas covered in the paper. Make sure each “high point” is included. The paper will have a better chance in the review process if it is made clear what is done, and why it is important, since this will immediately capture the interest of the reviewer.</p>
 </blockquote>
-<blockquote>
-<p>Any recommendations for length here must be more case dependent. Longer
-papers will usually need longer abstracts. However, something between 4
-and 10 sentences is reasonable for most situations.</p>
+<blockquote class="blockquote">
+<p>Any recommendations for length here must be more case dependent. Longer papers will usually need longer abstracts. However, something between 4 and 10 sentences is reasonable for most situations.</p>
 </blockquote>
-<blockquote>
-<p>Mathematical notation is rarely useful in the abstract. Sometimes notation is
-introduced in an abstract, and then not used at all! Even when notation is
-used in the abstract, the point can usually be conveyed more efficiently in
-words alone.</p>
+<blockquote class="blockquote">
+<p>Mathematical notation is rarely useful in the abstract. Sometimes notation is introduced in an abstract, and then not used at all! Even when notation is used in the abstract, the point can usually be conveyed more efficiently in words alone.</p>
 </blockquote>
 <p>Tips:</p>
 <ul>
@@ -301,77 +281,43 @@ words alone.</p>
 <li>Identify a gap in the literature to set up the background of the paper.</li>
 <li>Highlight the novelty/contributions of the paper.</li>
 <li>For application papers, allude to new discoveries and their impacts.</li>
-<li>For method papers, outline the essence of the methodology, and evidence from
-theoretical and numerical studies supporting the methods.</li>
-<li>It must make sense when read in isolation for those who only read the
-abstract, and must also provide a clear and accurate summary of the manuscript
-for readers who read the entire manuscript <span class="citation">(<a href="#ref-zeiger2000writing">Zeiger 2000</a>)</span>.<br />
+<li>For method papers, outline the essence of the methodology, and evidence from theoretical and numerical studies supporting the methods.</li>
+<li>It must make sense when read in isolation for those who only read the abstract, and must also provide a clear and accurate summary of the manuscript for readers who read the entire manuscript <span class="citation" data-cites="zeiger2000writing">(<a href="references.html#ref-zeiger2000writing" role="doc-biblioref">Zeiger 2000</a>)</span>.<br>
 </li>
 <li>Should not include citations.</li>
 </ul>
-</div>
-<div id="keywords" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Keywords<a href="writing-specific-sections.html#keywords" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Keywords are words in addition to those in the title that attract search
-queries. Including the most relevant keywords helps other researchers find
-your paper.</p>
+</section>
+<section id="keywords" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="keywords"><span class="header-section-number">4.3</span> Keywords</h2>
+<p>Keywords are words in addition to those in the title that attract search queries. Including the most relevant keywords helps other researchers find your paper.</p>
 <ul>
 <li>No need to repeat anything in the title already.</li>
 <li>List them in alphabetical order.</li>
 <li>Contain words and phrases that suggest what the topic is about.</li>
 </ul>
-</div>
-<div id="introduction" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Introduction<a href="writing-specific-sections.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The introduction section is always the first section of a paper. Some journals
-may not call it introduction but require a section that serves the same
-purpose. The purpose of the introduction is to stimulate the reader’s interest
-and to provide background information which is pertinent to the study
-<span class="citation">(<a href="#ref-jenkins1995write">Jenkins 1995</a>)</span>. The introduction section guides the readers from a general
-subject
-area to the narrow topic of the paper. It should answer three questions:</p>
+</section>
+<section id="introduction" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="introduction"><span class="header-section-number">4.4</span> Introduction</h2>
+<p>The introduction section is always the first section of a paper. Some journals may not call it introduction but require a section that serves the same purpose. The purpose of the introduction is to stimulate the reader’s interest and to provide background information which is pertinent to the study <span class="citation" data-cites="jenkins1995write">(<a href="references.html#ref-jenkins1995write" role="doc-biblioref">Jenkins 1995</a>)</span>. The introduction section guides the readers from a general subject area to the narrow topic of the paper. It should answer three questions:</p>
 <ul>
 <li>Why does it matter?</li>
 <li>What has already been done?</li>
 <li>What is new?</li>
 </ul>
-<p>That is, the introduction sections need to explain the importance of the topic
-of
-the paper, provide the background of the research work, and highlight the
-contributions of the work. At the end of the introduction, a roadmap, or an
-outline of the paper is useful in helping the readers navigate through the
-following sections.</p>
-<p>The introduction is typically outlined at the very beginning of the writing
-process, but completed towards the end after the other sections have been
-written. Do NOT wait to perform the literature review until
-last, however! This should happen <em>before</em> the research is undertaken to
-ensure you are not duplicating something that has already been done!</p>
+<p>That is, the introduction sections need to explain the importance of the topic of the paper, provide the background of the research work, and highlight the contributions of the work. At the end of the introduction, a roadmap, or an outline of the paper is useful in helping the readers navigate through the following sections.</p>
+<p>The introduction is typically outlined at the very beginning of the writing process, but completed towards the end after the other sections have been written. Do NOT wait to perform the literature review until last, however! This should happen <em>before</em> the research is undertaken to ensure you are not duplicating something that has already been done!</p>
 <p>An introduction often contains the following items.</p>
 <ul>
-<li>An overview of the topic. Start with a general overview of your topic and
-narrow it to the specific subject you are addressing. Then, mention
-questions or concerns you have about the case. Explain why they are important
-and why it needs to be addressed right now.</li>
-<li>Existing works. The introduction is the place to review other conclusions on
-your
-topic. The literature review should be thorough, including both old and recent
-works. It should show that you are aware of prior research. It also introduces
-past findings to those who might not have that expertise.</li>
-<li>A gap needs to be
-identified from the importance of the topic and the current status of the
-literature, which is the rationale for your work. Why are existing methods not
-sufficient? What are elements of an attractive solution?</li>
-<li>Contributions. This is a thesis statement, which summarizes the the
-contributions of your work to the existing literature, and answers the “what
-is new” question.</li>
-<li>A roadmap. A brief summary of what each section does in the paper. This
-concludes the introduction.</li>
+<li>An overview of the topic. Start with a general overview of your topic and narrow it to the specific subject you are addressing. Then, mention questions or concerns you have about the case. Explain why they are important and why it needs to be addressed right now.</li>
+<li>Existing works. The introduction is the place to review other conclusions on your topic. The literature review should be thorough, including both old and recent works. It should show that you are aware of prior research. It also introduces past findings to those who might not have that expertise.</li>
+<li>A gap needs to be identified from the importance of the topic and the current status of the literature, which is the rationale for your work. Why are existing methods not sufficient? What are elements of an attractive solution?</li>
+<li>Contributions. This is a thesis statement, which summarizes the the contributions of your work to the existing literature, and answers the “what is new” question.</li>
+<li>A roadmap. A brief summary of what each section does in the paper. This concludes the introduction.</li>
 </ul>
-</div>
-<div id="data" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Data<a href="writing-specific-sections.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The data section should provide all the details that are relevant for the
-research project.</p>
+</section>
+<section id="data" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="data"><span class="header-section-number">4.5</span> Data</h2>
+<p>The data section should provide all the details that are relevant for the research project.</p>
 <ul>
 <li>Who collected the data (source)?</li>
 <li>How was the data collected? Sampling frame? Sampling approach?</li>
@@ -379,11 +325,10 @@ research project.</p>
 <li>Why does the data help answer the research question?</li>
 <li>What exploratory analyses are done (descriptives, visualization, etc.)?</li>
 </ul>
-</div>
-<div id="methods" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> Methods<a href="writing-specific-sections.html#methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Notation is much easier to digest if the reader first understands the main
-idea at an intuitive level.</p>
+</section>
+<section id="methods" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="methods"><span class="header-section-number">4.6</span> Methods</h2>
+<p>Notation is much easier to digest if the reader first understands the main idea at an intuitive level.</p>
 <ul>
 <li>Establish notation.</li>
 <li>What are the observed data?</li>
@@ -395,10 +340,10 @@ idea at an intuitive level.</p>
 <li>How are the null distribution of the testing statistics established?</li>
 <li>Clearly state the assumptions and claims of theoretical results.</li>
 </ul>
-</div>
-<div id="simulation" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> Simulation<a href="writing-specific-sections.html#simulation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>ADEMP <span class="citation">(<a href="#ref-morris2019using">Morris et al. 2019</a>)</span>:</p>
+</section>
+<section id="simulation" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="simulation"><span class="header-section-number">4.7</span> Simulation</h2>
+<p>ADEMP <span class="citation" data-cites="morris2019using">(<a href="references.html#ref-morris2019using" role="doc-biblioref">Morris et al. 2019</a>)</span>:</p>
 <ul>
 <li>Aims</li>
 <li>Data generating mechanism</li>
@@ -407,219 +352,528 @@ idea at an intuitive level.</p>
 <li>Performance measures</li>
 </ul>
 <p>Coding and Execution</p>
-<p>Analysis/Discussion: with tables and figures. May be included in a Results
-section.</p>
+<p>Analysis/Discussion: with tables and figures. May be included in a Results section.</p>
 <ul>
 <li>For each table/figure, write down the bullet points to convey to the readers.</li>
 <li>Group the bullet points in blocks and put the blocks in a logical order.</li>
 <li>Within each block, put the bullet points in the right logical order.</li>
-<li>Some (shorter) blocks can be converted into proper paragraphs in the final
-paper, while other (longer) blocks may remain in bullet form.</li>
+<li>Some (shorter) blocks can be converted into proper paragraphs in the final paper, while other (longer) blocks may remain in bullet form.</li>
 </ul>
-</div>
-<div id="application" class="section level2 hasAnchor" number="4.8">
-<h2><span class="header-section-number">4.8</span> Application<a href="writing-specific-sections.html#application" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</section>
+<section id="application" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="application"><span class="header-section-number">4.8</span> Application</h2>
 <ul>
 <li>Report the statistical analyses in tables/figures.</li>
-<li>When summarizing from tables/figures, paint the big picture, rather than
-reiterating all of the little details.</li>
-<li>Discussions to link the analyses back to the substantive topic
-<span class="citation">(<a href="#ref-miller2015chicago">Miller 2015</a>)</span>:</li>
+<li>When summarizing from tables/figures, paint the big picture, rather than reiterating all of the little details.</li>
+<li>Discussions to link the analyses back to the substantive topic <span class="citation" data-cites="miller2015chicago">(<a href="references.html#ref-miller2015chicago" role="doc-biblioref">Miller 2015</a>)</span>:</li>
 </ul>
-<blockquote>
-<p>Having presented the individual pieces of evidence, an investigator must
-summarize how that evidence, taken together, support the conclusoin of the
-investigation. Statisticians should explain how the statistical evidence answers
-the question posed at the beginning of the paper, following standard
-expository writing guidelines to writing an analytic essay.</p>
+<blockquote class="blockquote">
+<p>Having presented the individual pieces of evidence, an investigator must summarize how that evidence, taken together, support the conclusoin of the investigation. Statisticians should explain how the statistical evidence answers the question posed at the beginning of the paper, following standard expository writing guidelines to writing an analytic essay.</p>
 </blockquote>
-</div>
-<div id="discussion-and-conclusion" class="section level2 hasAnchor" number="4.9">
-<h2><span class="header-section-number">4.9</span> Discussion and Conclusion<a href="writing-specific-sections.html#discussion-and-conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</section>
+<section id="discussion-and-conclusion" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="discussion-and-conclusion"><span class="header-section-number">4.9</span> Discussion and Conclusion</h2>
 <ul>
 <li>A summary, again, of the contributions of the research.</li>
-<li>The research question posed as the `need’ of the introduction must be
-answered here <span class="citation">(<a href="#ref-zeiger2000writing">Zeiger 2000</a>)</span>.</li>
+<li>The research question posed as the `need’ of the introduction must be answered here <span class="citation" data-cites="zeiger2000writing">(<a href="references.html#ref-zeiger2000writing" role="doc-biblioref">Zeiger 2000</a>)</span>.</li>
 <li>Limitations of the current study</li>
 <li>Future directions.</li>
 </ul>
-</div>
-<div id="appendix" class="section level2 hasAnchor" number="4.10">
-<h2><span class="header-section-number">4.10</span> Appendix<a href="writing-specific-sections.html#appendix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</section>
+<section id="appendix" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="appendix"><span class="header-section-number">4.10</span> Appendix</h2>
 <ul>
-<li>Technical details (e.g., proofs, algorithms) that would otherwise break the
-flow of the main text.</li>
+<li>Technical details (e.g., proofs, algorithms) that would otherwise break the flow of the main text.</li>
 <li>Data source details.</li>
 </ul>
-</div>
-<div id="acknowledgements" class="section level2 hasAnchor" number="4.11">
-<h2><span class="header-section-number">4.11</span> Acknowledgements<a href="writing-specific-sections.html#acknowledgements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This section is optional, but could be used to acknowledge certain individuals
-who have contributed to the research and/or success of the manuscript (e.g.
-peer reviewers).</p>
-<p>In general, if the research upon which you are writing was funded, the funding
-agency and funding mechanism are typically included here unless otherwise
-specified.</p>
-</div>
-<div id="references-1" class="section level2 hasAnchor" number="4.12">
-<h2><span class="header-section-number">4.12</span> References<a href="writing-specific-sections.html#references-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</section>
+<section id="acknowledgements" class="level2" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="acknowledgements"><span class="header-section-number">4.11</span> Acknowledgements</h2>
+<p>This section is optional, but could be used to acknowledge certain individuals who have contributed to the research and/or success of the manuscript (e.g. peer reviewers).</p>
+<p>In general, if the research upon which you are writing was funded, the funding agency and funding mechanism are typically included here unless otherwise specified.</p>
+</section>
+<section id="references" class="level2" data-number="4.12">
+<h2 data-number="4.12" class="anchored" data-anchor-id="references"><span class="header-section-number">4.12</span> References</h2>
 <ul>
 <li>Every reference cited in the paper should appear here.</li>
 <li>References not cited should not appear here.</li>
 <li>All are automatically taken care of by BibTeX.</li>
 <li>Styles are controlled by bib style (<code>.bst</code> file).</li>
 </ul>
-</div>
-<div id="online-supplement" class="section level2 hasAnchor" number="4.13">
-<h2><span class="header-section-number">4.13</span> Online Supplement<a href="writing-specific-sections.html#online-supplement" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</section>
+<section id="online-supplement" class="level2" data-number="4.13">
+<h2 data-number="4.13" class="anchored" data-anchor-id="online-supplement"><span class="header-section-number">4.13</span> Online Supplement</h2>
 <ul>
 <li>Computer code</li>
 <li>Data</li>
 <li>Additional simulation results</li>
 </ul>
-</div>
-<div id="general-tips" class="section level2 hasAnchor" number="4.14">
-<h2><span class="header-section-number">4.14</span> General Tips<a href="writing-specific-sections.html#general-tips" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>From <span class="citation">Jenkins (<a href="#ref-jenkins1995write">1995</a>)</span>:</p>
-<blockquote>
-<p>In order to maintain continuity between the key sections (introduction,
-methods, results and discussion) it is helpful to consider the manuscript as
-telling a story.</p>
-<p>The strong parts to the story-line are the introduction and the discussion, so
-the link between these sections must be clear.</p>
+</section>
+<section id="general-tips" class="level2" data-number="4.14">
+<h2 data-number="4.14" class="anchored" data-anchor-id="general-tips"><span class="header-section-number">4.14</span> General Tips</h2>
+<p>From <span class="citation" data-cites="jenkins1995write">Jenkins (<a href="references.html#ref-jenkins1995write" role="doc-biblioref">1995</a>)</span>:</p>
+<blockquote class="blockquote">
+<p>In order to maintain continuity between the key sections (introduction, methods, results and discussion) it is helpful to consider the manuscript as telling a story.</p>
+<p>The strong parts to the story-line are the introduction and the discussion, so the link between these sections must be clear.</p>
 </blockquote>
-<p>Devices such as paragraphing, headings, indentation, and enumeration
-help the reader see the major points that you want to make.</p>
-<p>As a rule of thumb, if you type a full page (double spaced) without
-indenting for a new paragraph, you almost certainly have run one thought
-into another and have missed an opportunity to differentiate your ideas.</p>
-<p>Any tables and figures included in the manuscript must be mentioned (referenced)
-within the main text.</p>
-<p>If journal/instructions do not specify otherwise, tables and figures should be
-placed near (ideally after) the related text, and on the top of the page.</p>
-<p>Use consistent notation throughout the manuscript, avoid defining any
-unnecessary notation, and avoid using the same notation to describe different
-things (variables, indices, etc.).</p>
-</div>
-<div id="general-tips-use-of-english" class="section level2 hasAnchor" number="4.15">
-<h2><span class="header-section-number">4.15</span> General Tips: Use of English<a href="writing-specific-sections.html#general-tips-use-of-english" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>It is relatively easy to read and understand English which is well written.
-As the quality of writing deteriorates, however, it becomes progressively more
-difficult for the reader to understand the author’s intended meaning.</p>
-<p>An obvious problem occurs when the author fails to use properly constructed
-sentences. This can be easily corrected with revision and external review.</p>
-<p>A much more dangerous problem occurs when the author unconsciously assumes that
-the reader is able to follow his/her unwritten train of thought. This can
-also usually be caught with external review.</p>
+<p>Devices such as paragraphing, headings, indentation, and enumeration help the reader see the major points that you want to make.</p>
+<p>As a rule of thumb, if you type a full page (double spaced) without indenting for a new paragraph, you almost certainly have run one thought into another and have missed an opportunity to differentiate your ideas.</p>
+<p>Any tables and figures included in the manuscript must be mentioned (referenced) within the main text.</p>
+<p>If journal/instructions do not specify otherwise, tables and figures should be placed near (ideally after) the related text, and on the top of the page.</p>
+<p>Use consistent notation throughout the manuscript, avoid defining any unnecessary notation, and avoid using the same notation to describe different things (variables, indices, etc.).</p>
+</section>
+<section id="general-tips-use-of-english" class="level2" data-number="4.15">
+<h2 data-number="4.15" class="anchored" data-anchor-id="general-tips-use-of-english"><span class="header-section-number">4.15</span> General Tips: Use of English</h2>
+<p>It is relatively easy to read and understand English which is well written. As the quality of writing deteriorates, however, it becomes progressively more difficult for the reader to understand the author’s intended meaning.</p>
+<p>An obvious problem occurs when the author fails to use properly constructed sentences. This can be easily corrected with revision and external review.</p>
+<p>A much more dangerous problem occurs when the author unconsciously assumes that the reader is able to follow his/her unwritten train of thought. This can also usually be caught with external review.</p>
 <p>More tips on the use of English:</p>
 <ul>
-<li><p>Use of tenses: Use present tense for most of the manuscript; use past tense
-only when describing events that occurred in the past (data collection, an
-experiment that has already been conducted, how simulations were designed).<br />
+<li><p>Use of tenses: Use present tense for most of the manuscript; use past tense only when describing events that occurred in the past (data collection, an experiment that has already been conducted, how simulations were designed).<br>
 Be consistent with tense usage within sections, paragraphs, etc.</p></li>
 <li><p>Do not use the word ‘significant’ other than in a statistical sense.</p></li>
-<li><p>The word ‘data’ is often mistakenly treated as if it were a singular noun
-instead of as a plural noun. The word ‘data’ is, in fact, a plural noun (its
-singular form is ‘datum’).</p></li>
+<li><p>The word ‘data’ is often mistakenly treated as if it were a singular noun instead of as a plural noun. The word ‘data’ is, in fact, a plural noun (its singular form is ‘datum’).</p></li>
 </ul>
 
-</div>
-</div>
-<h3>References<a href="references-2.html#references-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-hairston2003successful" class="csl-entry">
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-hairston2003successful" class="csl-entry" role="listitem">
 Hairston, Maxine, and Michael L Keene. 2003. <em>Successful Writing</em>. 5th ed. W. W. Norton &amp; Company.
 </div>
-<div id="ref-jenkins1995write" class="csl-entry">
+<div id="ref-jenkins1995write" class="csl-entry" role="listitem">
 Jenkins, Sue. 1995. <span>“How to Write a Paper for a Scientific Journal.”</span> <em>Australian Journal of Physiotherapy</em> 41(4): 285–89.
 </div>
-<div id="ref-marron1999effective" class="csl-entry">
+<div id="ref-marron1999effective" class="csl-entry" role="listitem">
 Marron, J S. 1999. <span>“Effective Writing in Mathematical Statistics.”</span> <em>Statistica Neerlandica</em> 53 (1): 68–75.
 </div>
-<div id="ref-miller2015chicago" class="csl-entry">
+<div id="ref-miller2015chicago" class="csl-entry" role="listitem">
 Miller, Jane E. 2015. <em>The <span>C</span>hicago Guide to Writing about Numbers</em>. University of Chicago Press.
 </div>
-<div id="ref-morris2019using" class="csl-entry">
+<div id="ref-morris2019using" class="csl-entry" role="listitem">
 Morris, Tim P, Ian R White, and Michael J Crowther. 2019. <span>“Using Simulation Studies to Evaluate Statistical Methods.”</span> <em>Statistics in Medicine</em> 38 (11): 2074–102.
 </div>
-<div id="ref-zeiger2000writing" class="csl-entry">
+<div id="ref-zeiger2000writing" class="csl-entry" role="listitem">
 Zeiger, Mimi. 2000. <em>Essentials of Writing Biomedical Research Papers</em>. 2nd ed. McGraw-Hill.
 </div>
 </div>
-            </section>
+</section>
 
-          </div>
-        </div>
-      </div>
-<a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="review-a-paper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./getting-started.html" class="pagination-link" aria-label="Getting Started">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting Started</span></span>
+      </a>          
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/04-specifics.Rmd",
-    "text": "Edit"
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": ["stat-writing.pdf", "stat-writing.epub"],
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "subsection"
-  }
-});
-});
-</script>
+  <div class="nav-page nav-page-next">
+      <a href="./review-a-paper.html" class="pagination-link" aria-label="Review a Paper">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Review a Paper</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-</body>
 
-</html>
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/statds/stat-writing/blob/main/writing-specific-sections.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

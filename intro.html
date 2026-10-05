@@ -1,136 +1,37 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Introduction | Statistical Writing</title>
-  <meta name="description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
 
-  <meta property="og:title" content="Chapter 1 Introduction | Statistical Writing" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Introduction | Statistical Writing" />
-  
-  <meta name="twitter:description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
-  
-
-<meta name="author" content="Elizabeth Schifano and Jun Yan" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<meta name="date" content="2026-07-03" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="index.html"/>
-<link rel="next" href="ch-tools.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
-<style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
+<title>1&nbsp; Introduction – Statistical Writing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
 @media screen {
-div.sourceCode { overflow: auto; }
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -144,133 +45,199 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ch-tools.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-95863af46656191e6a2cf1560d98dcd6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
 </head>
 
-<body>
+<body class="nav-sidebar floating quarto-light">
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Statistical Writing</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#applied-papers"><i class="fa fa-check"></i><b>1.1</b> Applied papers</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#methods-papers"><i class="fa fa-check"></i><b>1.2</b> Methods papers</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#scientific-writing"><i class="fa fa-check"></i><b>1.3</b> Scientific Writing</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="ch-tools.html"><a href="ch-tools.html"><i class="fa fa-check"></i><b>2</b> Using the Right Tools for Writing</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="ch-tools.html"><a href="ch-tools.html#git-for-version-control"><i class="fa fa-check"></i><b>2.1</b> Git for Version Control</a>
-<ul>
-<li class="chapter" data-level="2.1.1" data-path="ch-tools.html"><a href="ch-tools.html#set-up"><i class="fa fa-check"></i><b>2.1.1</b> Set Up</a></li>
-<li class="chapter" data-level="2.1.2" data-path="ch-tools.html"><a href="ch-tools.html#most-frequently-used-git-commands"><i class="fa fa-check"></i><b>2.1.2</b> Most Frequently Used Git Commands</a></li>
-<li class="chapter" data-level="2.1.3" data-path="ch-tools.html"><a href="ch-tools.html#tips-on-using-git"><i class="fa fa-check"></i><b>2.1.3</b> Tips on using Git:</a></li>
-<li class="chapter" data-level="2.1.4" data-path="ch-tools.html"><a href="ch-tools.html#pull-request"><i class="fa fa-check"></i><b>2.1.4</b> Pull Request</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="ch-tools.html"><a href="ch-tools.html#latex-for-typesetting"><i class="fa fa-check"></i><b>2.2</b> LaTeX for Typesetting</a>
-<ul>
-<li class="chapter" data-level="2.2.1" data-path="ch-tools.html"><a href="ch-tools.html#a-beginners-template"><i class="fa fa-check"></i><b>2.2.1</b> A beginner’s template</a></li>
-<li class="chapter" data-level="2.2.2" data-path="ch-tools.html"><a href="ch-tools.html#math-equations"><i class="fa fa-check"></i><b>2.2.2</b> Math equations</a></li>
-<li class="chapter" data-level="2.2.3" data-path="ch-tools.html"><a href="ch-tools.html#tables"><i class="fa fa-check"></i><b>2.2.3</b> Tables</a></li>
-<li class="chapter" data-level="2.2.4" data-path="ch-tools.html"><a href="ch-tools.html#figures"><i class="fa fa-check"></i><b>2.2.4</b> Figures</a></li>
-<li class="chapter" data-level="2.2.5" data-path="ch-tools.html"><a href="ch-tools.html#references"><i class="fa fa-check"></i><b>2.2.5</b> References</a></li>
-<li class="chapter" data-level="2.2.6" data-path="ch-tools.html"><a href="ch-tools.html#cross-referencing"><i class="fa fa-check"></i><b>2.2.6</b> Cross-referencing</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="ch-tools.html"><a href="ch-tools.html#using-r-markdown-as-a-frontend"><i class="fa fa-check"></i><b>2.3</b> Using R Markdown as a Frontend</a></li>
-<li class="chapter" data-level="2.4" data-path="ch-tools.html"><a href="ch-tools.html#command-line-interface"><i class="fa fa-check"></i><b>2.4</b> Command Line Interface</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>3</b> Getting Started</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="getting-started.html"><a href="getting-started.html#full-cycle-of-a-statistical-research-project"><i class="fa fa-check"></i><b>3.1</b> Full Cycle of a Statistical Research Project</a></li>
-<li class="chapter" data-level="3.2" data-path="getting-started.html"><a href="getting-started.html#writing-a-research-proposal"><i class="fa fa-check"></i><b>3.2</b> Writing a Research Proposal</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html"><i class="fa fa-check"></i><b>4</b> Writing Specific Sections</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#title"><i class="fa fa-check"></i><b>4.1</b> Title</a></li>
-<li class="chapter" data-level="4.2" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#abstract"><i class="fa fa-check"></i><b>4.2</b> Abstract</a></li>
-<li class="chapter" data-level="4.3" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#keywords"><i class="fa fa-check"></i><b>4.3</b> Keywords</a></li>
-<li class="chapter" data-level="4.4" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#introduction"><i class="fa fa-check"></i><b>4.4</b> Introduction</a></li>
-<li class="chapter" data-level="4.5" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#data"><i class="fa fa-check"></i><b>4.5</b> Data</a></li>
-<li class="chapter" data-level="4.6" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#methods"><i class="fa fa-check"></i><b>4.6</b> Methods</a></li>
-<li class="chapter" data-level="4.7" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#simulation"><i class="fa fa-check"></i><b>4.7</b> Simulation</a></li>
-<li class="chapter" data-level="4.8" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#application"><i class="fa fa-check"></i><b>4.8</b> Application</a></li>
-<li class="chapter" data-level="4.9" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#discussion-and-conclusion"><i class="fa fa-check"></i><b>4.9</b> Discussion and Conclusion</a></li>
-<li class="chapter" data-level="4.10" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#appendix"><i class="fa fa-check"></i><b>4.10</b> Appendix</a></li>
-<li class="chapter" data-level="4.11" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#acknowledgements"><i class="fa fa-check"></i><b>4.11</b> Acknowledgements</a></li>
-<li class="chapter" data-level="4.12" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#references-1"><i class="fa fa-check"></i><b>4.12</b> References</a></li>
-<li class="chapter" data-level="4.13" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#online-supplement"><i class="fa fa-check"></i><b>4.13</b> Online Supplement</a></li>
-<li class="chapter" data-level="4.14" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#general-tips"><i class="fa fa-check"></i><b>4.14</b> General Tips</a></li>
-<li class="chapter" data-level="4.15" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#general-tips-use-of-english"><i class="fa fa-check"></i><b>4.15</b> General Tips: Use of English</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="review-a-paper.html"><a href="review-a-paper.html"><i class="fa fa-check"></i><b>5</b> Review a Paper</a></li>
-<li class="chapter" data-level="6" data-path="response-to-reviewers.html"><a href="response-to-reviewers.html"><i class="fa fa-check"></i><b>6</b> Response to Reviewers</a></li>
-<li class="chapter" data-level="7" data-path="other-topics.html"><a href="other-topics.html"><i class="fa fa-check"></i><b>7</b> Other Topics</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="other-topics.html"><a href="other-topics.html#verb-tenses"><i class="fa fa-check"></i><b>7.1</b> Verb Tenses</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>8</b> Exercises</a></li>
-<li class="chapter" data-level="" data-path="references-2.html"><a href="references-2.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
     </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Writing</a>
-          </h1>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Statistical Writing</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/statds/stat-writing" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Using the Right Tools for Writing</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./getting-started.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting Started</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./writing-specific-sections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Writing Specific Sections</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./review-a-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Review a Paper</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-reviewers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Response to Reviewers</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./other-topics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Other Topics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Exercises</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#applied-papers" id="toc-applied-papers" class="nav-link active" data-scroll-target="#applied-papers"><span class="header-section-number">1.1</span> Applied papers</a></li>
+  <li><a href="#methods-papers" id="toc-methods-papers" class="nav-link" data-scroll-target="#methods-papers"><span class="header-section-number">1.2</span> Methods papers</a></li>
+  <li><a href="#scientific-writing" id="toc-scientific-writing" class="nav-link" data-scroll-target="#scientific-writing"><span class="header-section-number">1.3</span> Scientific Writing</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/statds/stat-writing/blob/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="intro" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></h1>
+</div>
 
-            <section class="normal" id="section-">
-<div id="intro" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>What does a statistical paper look like? As with all scientific papers, it
-should have some commonly expected structures which include components such as
-title, abstract, keywords, introduction, methods, results, discussion,
-acknowledgements, references, appendix, and supplement. Due to the
-specificity of the statistical discipline and application areas, however,
-statistical papers could look quite different one from another.</p>
-<p>There are different types of statistical papers. A theory paper would look
-similar to a paper in mathematics, with statement of the problem, presentation
-of some theorems, and technical proofs. Such papers are not covered here. We
-focus on two types of statistical papers: application papers and method papers.
-Application papers focus on a specific application problem in a certain domain
-where the research discoveries depend on applications of existing or novel
-statistical methods. Method papers, on the other hand, aim to provide a general
-methodological solution to a class of applied problems. Often, methods
-paper have a theoretical component, for example, the establishment of the
-asymptotic properties of a new estimator. An applied paper in statistics could
-be a method paper in the domain of the problem it solves.</p>
-<p>An author should always keep the target audience in mind when writing. There are
-many statistical journals on the wide spectrum from applied to theoretical
-papers. Each one has its own aims and scope, with different target
-readerships. Writings such as customary statistical reports that are not
-intended for journal publications also have target readerships. Regardless of
-the audience, any scientific paper should be convincing and concise. You need to
-show the readers that your work is important, valid, and useful. You don’t want
-to waste the time of any readers.</p>
-<div id="applied-papers" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Applied papers<a href="intro.html#applied-papers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>What does a statistical paper look like? As with all scientific papers, it should have some commonly expected structures which include components such as title, abstract, keywords, introduction, methods, results, discussion, acknowledgements, references, appendix, and supplement. Due to the specificity of the statistical discipline and application areas, however, statistical papers could look quite different one from another.</p>
+<p>There are different types of statistical papers. A theory paper would look similar to a paper in mathematics, with statement of the problem, presentation of some theorems, and technical proofs. Such papers are not covered here. We focus on two types of statistical papers: application papers and method papers. Application papers focus on a specific application problem in a certain domain where the research discoveries depend on applications of existing or novel statistical methods. Method papers, on the other hand, aim to provide a general methodological solution to a class of applied problems. Often, methods paper have a theoretical component, for example, the establishment of the asymptotic properties of a new estimator. An applied paper in statistics could be a method paper in the domain of the problem it solves.</p>
+<p>An author should always keep the target audience in mind when writing. There are many statistical journals on the wide spectrum from applied to theoretical papers. Each one has its own aims and scope, with different target readerships. Writings such as customary statistical reports that are not intended for journal publications also have target readerships. Regardless of the audience, any scientific paper should be convincing and concise. You need to show the readers that your work is important, valid, and useful. You don’t want to waste the time of any readers.</p>
+<section id="applied-papers" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="applied-papers"><span class="header-section-number">1.1</span> Applied papers</h2>
 <p>An applied paper has a widely accepted structure:</p>
 <ul>
 <li>Introduction</li>
@@ -279,21 +246,13 @@ to waste the time of any readers.</p>
 <li>Results</li>
 <li>Discussion</li>
 </ul>
-<p>An applied paper can be applying existing statistical methods to solve an
-applied problem. See, for example, <span class="citation">Price and Yan (<a href="#ref-price2022effects">2022</a>)</span>; <span class="citation">Caplan et al. (<a href="#ref-caplan2019dental">2019</a>)</span>.</p>
-<p>When sensitivity analysis is desired for the applications, one can have a
-section on simulation studies. See, for example, <span class="citation">Jiao et al. (<a href="#ref-jiao2022cyberattack">2022</a>)</span>;
-<span class="citation">Li et al. (<a href="#ref-li2021uncertainty">2021</a>)</span>.</p>
-<p>Some applied papers can involve novel methodology development that is motivated
-by an applied problem. In such cases, simulation studies become necessary, where
-you validate your methods with simulated data so you can check your estimator
-with the truth. Such check is not feasible when analyzing real data.
-See, for example, <span class="citation">Jiao et al. (<a href="#ref-jiao2021bayesian">2021</a>)</span>; <span class="citation">Hu et al. (<a href="#ref-hu2021moving">2021</a>)</span>.</p>
-</div>
-<div id="methods-papers" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Methods papers<a href="intro.html#methods-papers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A methods paper focuses on a novel method that is applicable to a general class
-of problems arising in different domains. A commonly seen structure is:</p>
+<p>An applied paper can be applying existing statistical methods to solve an applied problem. See, for example, <span class="citation" data-cites="price2022effects">Price and Yan (<a href="references.html#ref-price2022effects" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="caplan2019dental">Caplan et al. (<a href="references.html#ref-caplan2019dental" role="doc-biblioref">2019</a>)</span>.</p>
+<p>When sensitivity analysis is desired for the applications, one can have a section on simulation studies. See, for example, <span class="citation" data-cites="jiao2022cyberattack">Jiao et al. (<a href="references.html#ref-jiao2022cyberattack" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="li2021uncertainty">Li et al. (<a href="references.html#ref-li2021uncertainty" role="doc-biblioref">2021</a>)</span>.</p>
+<p>Some applied papers can involve novel methodology development that is motivated by an applied problem. In such cases, simulation studies become necessary, where you validate your methods with simulated data so you can check your estimator with the truth. Such check is not feasible when analyzing real data. See, for example, <span class="citation" data-cites="jiao2021bayesian">Jiao et al. (<a href="references.html#ref-jiao2021bayesian" role="doc-biblioref">2021</a>)</span>; <span class="citation" data-cites="hu2021moving">Hu et al. (<a href="references.html#ref-hu2021moving" role="doc-biblioref">2021</a>)</span>.</p>
+</section>
+<section id="methods-papers" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="methods-papers"><span class="header-section-number">1.2</span> Methods papers</h2>
+<p>A methods paper focuses on a novel method that is applicable to a general class of problems arising in different domains. A commonly seen structure is:</p>
 <ul>
 <li>Introduction</li>
 <li>Methods (e.g., estimation, hypothesis tests, diagnosis)</li>
@@ -302,23 +261,12 @@ of problems arising in different domains. A commonly seen structure is:</p>
 <li>Illustrations (with real applications)</li>
 <li>Discussion/Conclusions.</li>
 </ul>
-<p>The simulations section is often needed for methods papers. Any method has
-assumptions. Any reasonably good method should work as expected when the
-assumptions hold. It would be even better if it remains working when some of the
-assumptions are violated. Simulation studies can be designed to check whether
-the proposed estimators are unbiased and more efficient than competing
-estimators; whether the proposed tests retains their sizes and are more powerful
-than competing tests.</p>
-<p>Here are some examples: <span class="citation">Li et al. (<a href="#ref-li2023regularized">2023</a>)</span>; <span class="citation">Lau and Yan (<a href="#ref-lau2022bias">2022</a>)</span>.</p>
-</div>
-<div id="scientific-writing" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Scientific Writing<a href="intro.html#scientific-writing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Many resources on scientific writing are available. For example,
-<span class="citation">Gopen and Swan (<a href="#ref-gopen1990science">1990</a>)</span> was selected by its publisher, <em>American Scientist</em>,
-as one of its 36 “Classic Articles” from the first 100 years of its
-publishing history. Popular books are
-<span class="citation">Oshima and Hogue (<a href="#ref-oshima2000writing">2000</a>)</span>, <span class="citation">Gopen (<a href="#ref-gopen2004expectations">2004</a>)</span>, <span class="citation">Hairston and Keene (<a href="#ref-hairston2003successful">2003</a>)</span>,
-and <span class="citation">Lebrun and Lebrun (<a href="#ref-lebrun2021scientific">2021</a>)</span>.</p>
+<p>The simulations section is often needed for methods papers. Any method has assumptions. Any reasonably good method should work as expected when the assumptions hold. It would be even better if it remains working when some of the assumptions are violated. Simulation studies can be designed to check whether the proposed estimators are unbiased and more efficient than competing estimators; whether the proposed tests retains their sizes and are more powerful than competing tests.</p>
+<p>Here are some examples: <span class="citation" data-cites="li2023regularized">Li et al. (<a href="references.html#ref-li2023regularized" role="doc-biblioref">2023</a>)</span>; <span class="citation" data-cites="lau2022bias">Lau and Yan (<a href="references.html#ref-lau2022bias" role="doc-biblioref">2022</a>)</span>.</p>
+</section>
+<section id="scientific-writing" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="scientific-writing"><span class="header-section-number">1.3</span> Scientific Writing</h2>
+<p>Many resources on scientific writing are available. For example, <span class="citation" data-cites="gopen1990science">Gopen and Swan (<a href="references.html#ref-gopen1990science" role="doc-biblioref">1990</a>)</span> was selected by its publisher, <em>American Scientist</em>, as one of its 36 “Classic Articles” from the first 100 years of its publishing history. Popular books are <span class="citation" data-cites="oshima2000writing">Oshima and Hogue (<a href="references.html#ref-oshima2000writing" role="doc-biblioref">2000</a>)</span>, <span class="citation" data-cites="gopen2004expectations">Gopen (<a href="references.html#ref-gopen2004expectations" role="doc-biblioref">2004</a>)</span>, <span class="citation" data-cites="hairston2003successful">Hairston and Keene (<a href="references.html#ref-hairston2003successful" role="doc-biblioref">2003</a>)</span>, and <span class="citation" data-cites="lebrun2021scientific">Lebrun and Lebrun (<a href="references.html#ref-lebrun2021scientific" role="doc-biblioref">2021</a>)</span>.</p>
 <!-- You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods). -->
 <!-- Figures and tables with captions will be placed in `figure` and `table` environments, respectively. -->
 <!-- ```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'} -->
@@ -334,124 +282,466 @@ and <span class="citation">Lebrun and Lebrun (<a href="#ref-lebrun2021scientific
 <!-- ``` -->
 <!-- You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015]. -->
 
-</div>
-</div>
-<h3>References<a href="references-2.html#references-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-caplan2019dental" class="csl-entry">
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-caplan2019dental" class="csl-entry" role="listitem">
 Caplan, D J, Y Li, W Wang, et al. 2019. <span>“Dental Restoration Longevity Among Geriatric and Special Needs Patients.”</span> <em>JDR Clinical &amp; Translational Research</em> 4 (1): 41–48. <a href="https://doi.org/10.1177/2380084418799083">https://doi.org/10.1177/2380084418799083</a>.
 </div>
-<div id="ref-gopen2004expectations" class="csl-entry">
+<div id="ref-gopen2004expectations" class="csl-entry" role="listitem">
 Gopen, George D. 2004. <em>Expectations: <span>T</span>eaching Writing from the Reader’s Perspective</em>. Pearson.
 </div>
-<div id="ref-gopen1990science" class="csl-entry">
+<div id="ref-gopen1990science" class="csl-entry" role="listitem">
 Gopen, George D, and Judith A Swan. 1990. <span>“The Science of Scientific Writing.”</span> <em>American Scientist</em> 78 (6): 550–58.
 </div>
-<div id="ref-hairston2003successful" class="csl-entry">
+<div id="ref-hairston2003successful" class="csl-entry" role="listitem">
 Hairston, Maxine, and Michael L Keene. 2003. <em>Successful Writing</em>. 5th ed. W. W. Norton &amp; Company.
 </div>
-<div id="ref-hu2021moving" class="csl-entry">
+<div id="ref-hu2021moving" class="csl-entry" role="listitem">
 Hu, Chaoran, Mark Elbroch, Thomas Meyer, Vladimir Pozdnyakov, and Jun Yan. 2021. <span>“Moving-Resting Process with Measurement Error in Animal Movement Modeling.”</span> <em>Methods in Ecology and Evolution</em> 12 (11): 2221–33. <a href="https://doi.org/10.1111/2041-210X.13694">https://doi.org/10.1111/2041-210X.13694</a>.
 </div>
-<div id="ref-jiao2021bayesian" class="csl-entry">
+<div id="ref-jiao2021bayesian" class="csl-entry" role="listitem">
 Jiao, Jieying, Guanyu Hu, and Jun Yan. 2021. <span>“A <span>B</span>ayesian Marked Spatial Point Processes Model for Basketball Shot Chart.”</span> <em>Journal of Quantitative Analysis in Sports</em> 17 (2): 77–90. <a href="https://doi.org/10.1515/jqas-2019-0106">https://doi.org/10.1515/jqas-2019-0106</a>.
 </div>
-<div id="ref-jiao2022cyberattack" class="csl-entry">
+<div id="ref-jiao2022cyberattack" class="csl-entry" role="listitem">
 Jiao, J., Z. Tang, M. Yue, P. Zhang, and J. Yan. 2022. <span>“Cyberattack-Resilient Load Forecasting with Adaptive Robust Regression.”</span> <em>International Journal of Forecasting</em> 38 (3): 910–19. <a href="https://doi.org/10.1016/j.ijforecast.2021.06.009">https://doi.org/10.1016/j.ijforecast.2021.06.009</a>.
 </div>
-<div id="ref-lau2022bias" class="csl-entry">
+<div id="ref-lau2022bias" class="csl-entry" role="listitem">
 Lau, Abby Y. Z., and Jun Yan. 2022. <span>“Bias Analysis of Generalized Estimating Equations Under Measurement Error and Practical Bias Correction.”</span> <em>Stat</em> 11 (1): e418. <a href="https://doi.org/10.1002/sta4.418">https://doi.org/10.1002/sta4.418</a>.
 </div>
-<div id="ref-lebrun2021scientific" class="csl-entry">
+<div id="ref-lebrun2021scientific" class="csl-entry" role="listitem">
 Lebrun, Jean-Luc, and Justin Lebrun. 2021. <em>Scientific Writing 3.0: <span>A</span> Reader and Writer’s Guide</em>. World Scientific.
 </div>
-<div id="ref-li2021uncertainty" class="csl-entry">
+<div id="ref-li2021uncertainty" class="csl-entry" role="listitem">
 Li, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. 2021. <span>“Uncertainty in Optimal Fingerprinting Is Underestimated.”</span> <em>Environmental Research Letters</em> 16 (8): 084043. <a href="https://doi.org/10.1088/1748-9326/ac14ee">https://doi.org/10.1088/1748-9326/ac14ee</a>.
 </div>
-<div id="ref-li2023regularized" class="csl-entry">
+<div id="ref-li2023regularized" class="csl-entry" role="listitem">
 Li, Yan, Kun Chen, Jun Yan, and Xuebin Zhang. 2023. <span>“Regularized Fingerprinting in Detection and Attribution of Climate Change with Weight Matrix Optimizing the Efficiency in Scaling Factor Estimation.”</span> <em>Annals of Applied Statistics</em> 17 (1): 225–39. <a href="https://doi.org/10.1214/22-AOAS1624">https://doi.org/10.1214/22-AOAS1624</a>.
 </div>
-<div id="ref-oshima2000writing" class="csl-entry">
+<div id="ref-oshima2000writing" class="csl-entry" role="listitem">
 Oshima, Alex, and Ann Hogue. 2000. <em>Writing Academic English</em>. Longman.
 </div>
-<div id="ref-price2022effects" class="csl-entry">
+<div id="ref-price2022effects" class="csl-entry" role="listitem">
 Price, Michael, and Jun Yan. 2022. <span>“The Effects of the <span>NBA</span> <span>COVID</span> Bubble on the <span>NBA</span> Playoffs: <span>A</span> Case Study for Home-Court Advantage.”</span> <em>American Journal of Undergraduate Research</em> 18(4): 3–15. <a href="https://doi.org/10.33697/ajur.2022.051">https://doi.org/10.33697/ajur.2022.051</a>.
 </div>
 </div>
-            </section>
+</section>
 
-          </div>
-        </div>
-      </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ch-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/01-intro.Rmd",
-    "text": "Edit"
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": ["stat-writing.pdf", "stat-writing.epub"],
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "subsection"
-  }
-});
-});
-</script>
+  <div class="nav-page nav-page-next">
+      <a href="./ch-tools.html" class="pagination-link" aria-label="Using the Right Tools for Writing">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Using the Right Tools for Writing</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-</body>
 
-</html>
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/statds/stat-writing/blob/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

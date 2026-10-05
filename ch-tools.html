@@ -1,312 +1,288 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Using the Right Tools for Writing | Statistical Writing</title>
-  <meta name="description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
 
-  <meta property="og:title" content="Chapter 2 Using the Right Tools for Writing | Statistical Writing" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Using the Right Tools for Writing | Statistical Writing" />
-  
-  <meta name="twitter:description" content="This is a book developed using the bookdown package. The output format for this example is bookdown::gitbook." />
-  
-
-<meta name="author" content="Elizabeth Schifano and Jun Yan" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<meta name="date" content="2026-07-03" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="intro.html"/>
-<link rel="next" href="getting-started.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
-<style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
+<title>2&nbsp; Using the Right Tools for Writing – Statistical Writing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
 @media screen {
-div.sourceCode { overflow: auto; }
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./getting-started.html" rel="next">
+<link href="./intro.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-95863af46656191e6a2cf1560d98dcd6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
+}</script>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
-<body>
+<body class="nav-sidebar floating quarto-light">
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Statistical Writing</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#applied-papers"><i class="fa fa-check"></i><b>1.1</b> Applied papers</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#methods-papers"><i class="fa fa-check"></i><b>1.2</b> Methods papers</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#scientific-writing"><i class="fa fa-check"></i><b>1.3</b> Scientific Writing</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="ch-tools.html"><a href="ch-tools.html"><i class="fa fa-check"></i><b>2</b> Using the Right Tools for Writing</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="ch-tools.html"><a href="ch-tools.html#git-for-version-control"><i class="fa fa-check"></i><b>2.1</b> Git for Version Control</a>
-<ul>
-<li class="chapter" data-level="2.1.1" data-path="ch-tools.html"><a href="ch-tools.html#set-up"><i class="fa fa-check"></i><b>2.1.1</b> Set Up</a></li>
-<li class="chapter" data-level="2.1.2" data-path="ch-tools.html"><a href="ch-tools.html#most-frequently-used-git-commands"><i class="fa fa-check"></i><b>2.1.2</b> Most Frequently Used Git Commands</a></li>
-<li class="chapter" data-level="2.1.3" data-path="ch-tools.html"><a href="ch-tools.html#tips-on-using-git"><i class="fa fa-check"></i><b>2.1.3</b> Tips on using Git:</a></li>
-<li class="chapter" data-level="2.1.4" data-path="ch-tools.html"><a href="ch-tools.html#pull-request"><i class="fa fa-check"></i><b>2.1.4</b> Pull Request</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="ch-tools.html"><a href="ch-tools.html#latex-for-typesetting"><i class="fa fa-check"></i><b>2.2</b> LaTeX for Typesetting</a>
-<ul>
-<li class="chapter" data-level="2.2.1" data-path="ch-tools.html"><a href="ch-tools.html#a-beginners-template"><i class="fa fa-check"></i><b>2.2.1</b> A beginner’s template</a></li>
-<li class="chapter" data-level="2.2.2" data-path="ch-tools.html"><a href="ch-tools.html#math-equations"><i class="fa fa-check"></i><b>2.2.2</b> Math equations</a></li>
-<li class="chapter" data-level="2.2.3" data-path="ch-tools.html"><a href="ch-tools.html#tables"><i class="fa fa-check"></i><b>2.2.3</b> Tables</a></li>
-<li class="chapter" data-level="2.2.4" data-path="ch-tools.html"><a href="ch-tools.html#figures"><i class="fa fa-check"></i><b>2.2.4</b> Figures</a></li>
-<li class="chapter" data-level="2.2.5" data-path="ch-tools.html"><a href="ch-tools.html#references"><i class="fa fa-check"></i><b>2.2.5</b> References</a></li>
-<li class="chapter" data-level="2.2.6" data-path="ch-tools.html"><a href="ch-tools.html#cross-referencing"><i class="fa fa-check"></i><b>2.2.6</b> Cross-referencing</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="ch-tools.html"><a href="ch-tools.html#using-r-markdown-as-a-frontend"><i class="fa fa-check"></i><b>2.3</b> Using R Markdown as a Frontend</a></li>
-<li class="chapter" data-level="2.4" data-path="ch-tools.html"><a href="ch-tools.html#command-line-interface"><i class="fa fa-check"></i><b>2.4</b> Command Line Interface</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>3</b> Getting Started</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="getting-started.html"><a href="getting-started.html#full-cycle-of-a-statistical-research-project"><i class="fa fa-check"></i><b>3.1</b> Full Cycle of a Statistical Research Project</a></li>
-<li class="chapter" data-level="3.2" data-path="getting-started.html"><a href="getting-started.html#writing-a-research-proposal"><i class="fa fa-check"></i><b>3.2</b> Writing a Research Proposal</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html"><i class="fa fa-check"></i><b>4</b> Writing Specific Sections</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#title"><i class="fa fa-check"></i><b>4.1</b> Title</a></li>
-<li class="chapter" data-level="4.2" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#abstract"><i class="fa fa-check"></i><b>4.2</b> Abstract</a></li>
-<li class="chapter" data-level="4.3" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#keywords"><i class="fa fa-check"></i><b>4.3</b> Keywords</a></li>
-<li class="chapter" data-level="4.4" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#introduction"><i class="fa fa-check"></i><b>4.4</b> Introduction</a></li>
-<li class="chapter" data-level="4.5" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#data"><i class="fa fa-check"></i><b>4.5</b> Data</a></li>
-<li class="chapter" data-level="4.6" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#methods"><i class="fa fa-check"></i><b>4.6</b> Methods</a></li>
-<li class="chapter" data-level="4.7" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#simulation"><i class="fa fa-check"></i><b>4.7</b> Simulation</a></li>
-<li class="chapter" data-level="4.8" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#application"><i class="fa fa-check"></i><b>4.8</b> Application</a></li>
-<li class="chapter" data-level="4.9" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#discussion-and-conclusion"><i class="fa fa-check"></i><b>4.9</b> Discussion and Conclusion</a></li>
-<li class="chapter" data-level="4.10" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#appendix"><i class="fa fa-check"></i><b>4.10</b> Appendix</a></li>
-<li class="chapter" data-level="4.11" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#acknowledgements"><i class="fa fa-check"></i><b>4.11</b> Acknowledgements</a></li>
-<li class="chapter" data-level="4.12" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#references-1"><i class="fa fa-check"></i><b>4.12</b> References</a></li>
-<li class="chapter" data-level="4.13" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#online-supplement"><i class="fa fa-check"></i><b>4.13</b> Online Supplement</a></li>
-<li class="chapter" data-level="4.14" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#general-tips"><i class="fa fa-check"></i><b>4.14</b> General Tips</a></li>
-<li class="chapter" data-level="4.15" data-path="writing-specific-sections.html"><a href="writing-specific-sections.html#general-tips-use-of-english"><i class="fa fa-check"></i><b>4.15</b> General Tips: Use of English</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="review-a-paper.html"><a href="review-a-paper.html"><i class="fa fa-check"></i><b>5</b> Review a Paper</a></li>
-<li class="chapter" data-level="6" data-path="response-to-reviewers.html"><a href="response-to-reviewers.html"><i class="fa fa-check"></i><b>6</b> Response to Reviewers</a></li>
-<li class="chapter" data-level="7" data-path="other-topics.html"><a href="other-topics.html"><i class="fa fa-check"></i><b>7</b> Other Topics</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="other-topics.html"><a href="other-topics.html#verb-tenses"><i class="fa fa-check"></i><b>7.1</b> Verb Tenses</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>8</b> Exercises</a></li>
-<li class="chapter" data-level="" data-path="references-2.html"><a href="references-2.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch-tools.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Using the Right Tools for Writing</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
     </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Writing</a>
-          </h1>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Statistical Writing</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/statds/stat-writing" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ch-tools.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Using the Right Tools for Writing</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./getting-started.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting Started</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./writing-specific-sections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Writing Specific Sections</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./review-a-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Review a Paper</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./response-to-reviewers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Response to Reviewers</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./other-topics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Other Topics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Exercises</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#git-for-version-control" id="toc-git-for-version-control" class="nav-link active" data-scroll-target="#git-for-version-control"><span class="header-section-number">2.1</span> Git for Version Control</a>
+  <ul class="collapse">
+  <li><a href="#set-up" id="toc-set-up" class="nav-link" data-scroll-target="#set-up"><span class="header-section-number">2.1.1</span> Set Up</a></li>
+  <li><a href="#most-frequently-used-git-commands" id="toc-most-frequently-used-git-commands" class="nav-link" data-scroll-target="#most-frequently-used-git-commands"><span class="header-section-number">2.1.2</span> Most Frequently Used Git Commands</a></li>
+  <li><a href="#tips-on-using-git" id="toc-tips-on-using-git" class="nav-link" data-scroll-target="#tips-on-using-git"><span class="header-section-number">2.1.3</span> Tips on using Git:</a></li>
+  <li><a href="#pull-request" id="toc-pull-request" class="nav-link" data-scroll-target="#pull-request"><span class="header-section-number">2.1.4</span> Pull Request</a></li>
+  </ul></li>
+  <li><a href="#latex-for-typesetting" id="toc-latex-for-typesetting" class="nav-link" data-scroll-target="#latex-for-typesetting"><span class="header-section-number">2.2</span> LaTeX for Typesetting</a>
+  <ul class="collapse">
+  <li><a href="#a-beginners-template" id="toc-a-beginners-template" class="nav-link" data-scroll-target="#a-beginners-template"><span class="header-section-number">2.2.1</span> A beginner’s template</a></li>
+  <li><a href="#math-equations" id="toc-math-equations" class="nav-link" data-scroll-target="#math-equations"><span class="header-section-number">2.2.2</span> Math equations</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="header-section-number">2.2.3</span> Tables</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures"><span class="header-section-number">2.2.4</span> Figures</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">2.2.5</span> References</a></li>
+  <li><a href="#cross-referencing" id="toc-cross-referencing" class="nav-link" data-scroll-target="#cross-referencing"><span class="header-section-number">2.2.6</span> Cross-referencing</a></li>
+  </ul></li>
+  <li><a href="#using-r-markdown-as-a-frontend" id="toc-using-r-markdown-as-a-frontend" class="nav-link" data-scroll-target="#using-r-markdown-as-a-frontend"><span class="header-section-number">2.3</span> Using R Markdown as a Frontend</a></li>
+  <li><a href="#command-line-interface" id="toc-command-line-interface" class="nav-link" data-scroll-target="#command-line-interface"><span class="header-section-number">2.4</span> Command Line Interface</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/statds/stat-writing/blob/main/ch-tools.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-tools" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Using the Right Tools for Writing</span></span></h1>
+</div>
 
-            <section class="normal" id="section-">
-<div id="ch-tools" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Using the Right Tools for Writing<a href="ch-tools.html#ch-tools" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Many people use MS Word when it comes to writing.
-Not withholding the importance of the invention of MS Office,
-it is not the right tool to write statistical papers. Writing a statistical
-paper using MS Word would be as interesting as running a statistical data
-analysis using MS Excel. Simply put, MS Office is great for office staff to do
-routine office documentary tasks. For professional writing, one need to be aware
-of the professional tools and invest time to master them.</p>
-<p>The right, high-quality, professional typesetting system is LaTeX. LaTeX is a
-typesetting language that makes it easier and cleaner to write documents
-involving extensive mathematical content. It is the standard in Statistics,
-Mathematics, Physics, Chemistry and other disciplines that require many
-mathematical formulas.
-It separates the appearance of a document from its content. This allows authors
-to be able to focus on writing the content without having to worry about
-its appearance until the end. There are many different
-professionally looking appearances one can choose or design, allowing for easy
-adaptation to different formats and styles.
-The document has <code>.tex</code> extension, and can be
-edited by your favorite text editor. The final output of the document can have
-different formats, the most popular of which is <code>pdf</code>, which stands for portable
-document format. It can be opened on any platform (computer operating system).</p>
-<p>The source <code>.tex</code> file is a plain text file. Just like source code of any
-programming language, a plain text file allows version control, which makes
-tracking and managing the source easy and professional. The most popular version
-control tool today is <code>git</code>.</p>
-<div id="git-for-version-control" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Git for Version Control<a href="ch-tools.html#git-for-version-control" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Many tutorials are available in different formats. Here is a <a href="https://www.youtube.com/watch?v=RGOj5yH7evk">YouTube video
-``Git and GitHub for Beginners — Crash
-Course’’</a>
-<!-- https://www.youtube.com/watch?v=USjZcfj8yxE). -->
-The video also covers GitHub, a cloud service for Git. Other similar services
-are, for example, <a href="bitbucket.org">bitbucket</a> and <a href="gitlab.com">GitLab</a>. A cloud
-service gives you a cloud back up of your work and makes collaboration with
-co-workers easy.</p>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Many people use MS Word when it comes to writing. Not withholding the importance of the invention of MS Office, it is not the right tool to write statistical papers. Writing a statistical paper using MS Word would be as interesting as running a statistical data analysis using MS Excel. Simply put, MS Office is great for office staff to do routine office documentary tasks. For professional writing, one need to be aware of the professional tools and invest time to master them.</p>
+<p>The right, high-quality, professional typesetting system is LaTeX. LaTeX is a typesetting language that makes it easier and cleaner to write documents involving extensive mathematical content. It is the standard in Statistics, Mathematics, Physics, Chemistry and other disciplines that require many mathematical formulas. It separates the appearance of a document from its content. This allows authors to be able to focus on writing the content without having to worry about its appearance until the end. There are many different professionally looking appearances one can choose or design, allowing for easy adaptation to different formats and styles. The document has <code>.tex</code> extension, and can be edited by your favorite text editor. The final output of the document can have different formats, the most popular of which is <code>pdf</code>, which stands for portable document format. It can be opened on any platform (computer operating system).</p>
+<p>The source <code>.tex</code> file is a plain text file. Just like source code of any programming language, a plain text file allows version control, which makes tracking and managing the source easy and professional. The most popular version control tool today is <code>git</code>.</p>
+<section id="git-for-version-control" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="git-for-version-control"><span class="header-section-number">2.1</span> Git for Version Control</h2>
+<p>Many tutorials are available in different formats. Here is a <a href="https://www.youtube.com/watch?v=RGOj5yH7evk">YouTube video ``Git and GitHub for Beginners — Crash Course’’</a> <!-- https://www.youtube.com/watch?v=USjZcfj8yxE). --> The video also covers GitHub, a cloud service for Git. Other similar services are, for example, <a href="bitbucket.org">bitbucket</a> and <a href="gitlab.com">GitLab</a>. A cloud service gives you a cloud back up of your work and makes collaboration with co-workers easy.</p>
 <p>There are tools that make learning Git easy.</p>
 <ul>
-<li>Here is a collection of
-<a href="https://gitexercises.fracz.com">online Git exersices</a>
-that I used for Git training in other courses that I taught.</li>
-<li>Here is a game called <a href="https://ohmygit.org"><code>Oh My Git</code></a>, an open
-source game about learning Git!</li>
+<li>Here is a collection of <a href="https://gitexercises.fracz.com">online Git exersices</a> that I used for Git training in other courses that I taught.</li>
+<li>Here is a game called <a href="https://ohmygit.org"><code>Oh My Git</code></a>, an open source game about learning Git!</li>
 </ul>
-<div id="set-up" class="section level3 hasAnchor" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Set Up<a href="ch-tools.html#set-up" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<section id="set-up" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="set-up"><span class="header-section-number">2.1.1</span> Set Up</h3>
 <ul>
 <li>Download Git <a href="https://git-scm.com/downloads">here</a>.</li>
 <li>Make a GitHub Account <a href="https://www.github.com">here</a> if you don’t have one yet.</li>
-<li>Get started with your GitHub account by following the <a href="https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account">help
-page</a>.
+<li>Get started with your GitHub account by following the <a href="https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account">help page</a>.
 <ul>
-<li>One important step is the
-<a href="https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account#2-setting-up-git">set-up</a>.</li>
-<li>The connection between your local and GitHub repositories needs
-to be <a href="https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories">set up only
-once</a>.
-One easy way is with a personal access token, as illustrated
-in a <a href="https://www.youtube.com/watch?v=kHkQnuYzwoo">YouTube video</a>.</li>
+<li>One important step is the <a href="https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account#2-setting-up-git">set-up</a>.</li>
+<li>The connection between your local and GitHub repositories needs to be <a href="https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories">set up only once</a>. One easy way is with a personal access token, as illustrated in a <a href="https://www.youtube.com/watch?v=kHkQnuYzwoo">YouTube video</a>.</li>
 </ul></li>
 </ul>
-</div>
-<div id="most-frequently-used-git-commands" class="section level3 hasAnchor" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Most Frequently Used Git Commands<a href="ch-tools.html#most-frequently-used-git-commands" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</section>
+<section id="most-frequently-used-git-commands" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="most-frequently-used-git-commands"><span class="header-section-number">2.1.2</span> Most Frequently Used Git Commands</h3>
 <ul>
 <li><code>git clone</code>:
 <ul>
@@ -342,9 +318,9 @@ in a <a href="https://www.youtube.com/watch?v=kHkQnuYzwoo">YouTube video</a>.</l
 <li>Pushes commits made on local repository to the remote repository.</li>
 </ul></li>
 </ul>
-</div>
-<div id="tips-on-using-git" class="section level3 hasAnchor" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> Tips on using Git:<a href="ch-tools.html#tips-on-using-git" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</section>
+<section id="tips-on-using-git" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="tips-on-using-git"><span class="header-section-number">2.1.3</span> Tips on using Git:</h3>
 <ul>
 <li>Use the command line interface instead of the web interface (e.g., upload on GitHub)</li>
 <li>Make frequent small commits instead of rare large commits.</li>
@@ -358,54 +334,29 @@ in a <a href="https://www.youtube.com/watch?v=kHkQnuYzwoo">YouTube video</a>.</l
 <li>Creat a <code>.gitignore</code> file for better output from <code>git status</code>.</li>
 <li>Keep the linewidth of sources to under 80 for better <code>git diff</code> view.</li>
 </ul>
-</div>
-<div id="pull-request" class="section level3 hasAnchor" number="2.1.4">
-<h3><span class="header-section-number">2.1.4</span> Pull Request<a href="ch-tools.html#pull-request" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To contribute to an open source project (e.g., our classnotes), use pull
-requests. <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">Pull requests</a>
-“let you tell others about changes you’ve pushed to a branch in a repository on
-GitHub. Once a pull request is opened, you can discuss and review the potential
-changes with collaborators and add follow-up commits before your changes are
-merged into the base branch.”</p>
+</section>
+<section id="pull-request" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="pull-request"><span class="header-section-number">2.1.4</span> Pull Request</h3>
+<p>To contribute to an open source project (e.g., our classnotes), use pull requests. <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">Pull requests</a> “let you tell others about changes you’ve pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.”</p>
 <p>Watch this YouTube video: <a href="https://youtu.be/8lGpZkjnkt4">GitHub pull requests in 100 seconds</a>.</p>
-</div>
-</div>
-<div id="latex-for-typesetting" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> LaTeX for Typesetting<a href="ch-tools.html#latex-for-typesetting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A source file has extension name <code>.tex</code>. It is a plain text file that can
-be edited by any text editor. It can be tracked easily for differences between
-any two versions. Different document classes are predefined such as <code>letter</code>,
-<code>article</code>, <code>report</code>, <code>beamer</code> (for presentations), and <code>book</code>. Customized
-document classes can be defined once
-you know more about LaTeX. We focus on <code>article</code> here.</p>
-<p>The instructions in this section are practiced in a
-<a href="https://github.com/jun-yan/writing-demo">demo repo</a>.</p>
-<p><a href="https://www.linkedin.com/in/anthony-zeimbekakis/">Anthony Zeimekakis</a>
-was an undergraduate student who worked with us on a thesis. The
-tex sources, data, and code are in a <a href="https://github.com/azeimbekakis/KS-Test-Thesis">GitHub
-repo</a>, which can be
-used as a template too. This paper was published in <a href="https://doi.org/10.1080/00031305.2024.2356095">American
-Statistician</a>, two
-years after Anthony graduated. Interested students beaware that this
-is a serious commitment.</p>
-<div id="a-beginners-template" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> A beginner’s template<a href="ch-tools.html#a-beginners-template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For the product to look like a paper, we need to have title, author, abstract,
-sections, and references. Let us start from a very basic template in the
-<a href="https://github.com/jun-yan/writing-demo">demo repo</a>. Clone it to an appropriate
-location on your own computer. Go to the <code>manuscript</code> folder and compile the pdf
-product with the following:</p>
+</section>
+</section>
+<section id="latex-for-typesetting" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="latex-for-typesetting"><span class="header-section-number">2.2</span> LaTeX for Typesetting</h2>
+<p>A source file has extension name <code>.tex</code>. It is a plain text file that can be edited by any text editor. It can be tracked easily for differences between any two versions. Different document classes are predefined such as <code>letter</code>, <code>article</code>, <code>report</code>, <code>beamer</code> (for presentations), and <code>book</code>. Customized document classes can be defined once you know more about LaTeX. We focus on <code>article</code> here.</p>
+<p>The instructions in this section are practiced in a <a href="https://github.com/jun-yan/writing-demo">demo repo</a>.</p>
+<p><a href="https://www.linkedin.com/in/anthony-zeimbekakis/">Anthony Zeimekakis</a> was an undergraduate student who worked with us on a thesis. The tex sources, data, and code are in a <a href="https://github.com/azeimbekakis/KS-Test-Thesis">GitHub repo</a>, which can be used as a template too. This paper was published in <a href="https://doi.org/10.1080/00031305.2024.2356095">American Statistician</a>, two years after Anthony graduated. Interested students beaware that this is a serious commitment.</p>
+<section id="a-beginners-template" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="a-beginners-template"><span class="header-section-number">2.2.1</span> A beginner’s template</h3>
+<p>For the product to look like a paper, we need to have title, author, abstract, sections, and references. Let us start from a very basic template in the <a href="https://github.com/jun-yan/writing-demo">demo repo</a>. Clone it to an appropriate location on your own computer. Go to the <code>manuscript</code> folder and compile the pdf product with the following:</p>
 <pre><code>pdflatex statspaper
 bibtex statspaper
 pdflatex statspaper
 pdflatex statspaper</code></pre>
-<p>It is the <code>bibtex</code> step that incorporates the references from the bib files. Two
-rounds of <code>pdflatex</code> are necessary for  to get all the cross-referencing
-settled.</p>
+<p>It is the <code>bibtex</code> step that incorporates the references from the bib files. Two rounds of <code>pdflatex</code> are necessary for &nbsp;to get all the cross-referencing settled.</p>
 <p>The whole process could be automated by:</p>
 <pre><code>latexmk -pdf statspaper</code></pre>
-<p>Advanded users may take a look at the <code>Makefile</code>, in which different targets can
-be set up and the needed opertations for each target is automated.</p>
+<p>Advanded users may take a look at the <code>Makefile</code>, in which different targets can be set up and the needed opertations for each target is automated.</p>
 <p>Tips on getting started with .</p>
 <ul>
 <li>Read the compiling log and fix the errors/warnings.</li>
@@ -413,15 +364,16 @@ be set up and the needed opertations for each target is automated.</p>
 <li>Limit the preamble to include only what is necessary.</li>
 <li>Set up document margins with the <code>geometry</code> package.</li>
 <li>No manually controlling spaces.</li>
-<li>Familiarize yourself with <a href="https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols">LaTeX symbol
-tables</a>.</li>
+<li>Familiarize yourself with <a href="https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols">LaTeX symbol tables</a>.</li>
 <li>Keep line widths under 80 characters in source files.</li>
 <li>Separate paragraphs in source files by double blank lines.</li>
 <li>Define acronyms at their first occurrences and only once.</li>
 </ul>
-</div>
-<div id="math-equations" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Math equations<a href="ch-tools.html#math-equations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</section>
+<section id="math-equations" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="math-equations"><span class="header-section-number">2.2.2</span> Math equations</h3>
+<!-- Canonical rule catalogue shared with the companion skill:
+latex-typesetting/references/rules.md. -->
 <p>For serious math typesetting, use packages <code>amsmath</code>, <code>amsthm</code>, and others.</p>
 <p>Tips on using math:</p>
 <ul>
@@ -432,247 +384,536 @@ tables</a>.</li>
 <li>No breaking inline math expressions into different lines in tex sources.</li>
 <li>No labeling equations that are not referenced.</li>
 <li>Reference labeled equations with <code>\eqref</code> instead of <code>(\ref)</code>.</li>
-<li>Keep fonts consistent for the same notations (e.g., <span class="math inline">\(n\)</span> not n;
-AIC not <span class="math inline">\(AIC\)</span>).</li>
+<li>Keep fonts consistent for the same notations (e.g., <span class="math inline">\(n\)</span> not n; AIC not <span class="math inline">\(AIC\)</span>).</li>
 <li>Use appropriate sizes for parentheses.</li>
-<li>When multiple parentheses are needed in mathematical expressions, use the
-following ordering unless the journal specifies otherwise <span class="math inline">\([\{(\mbox{math here})\}].\)</span></li>
+<li>When multiple parentheses are needed in mathematical expressions, use the following ordering unless the journal specifies otherwise <span class="math inline">\([\{(\mbox{math here})\}].\)</span></li>
 <li>Use predefined math functions (e.g, <span class="math inline">\(\exp\)</span> not <span class="math inline">\(exp\)</span>; <span class="math inline">\(\Pr\)</span> not <span class="math inline">\(P\)</span>).</li>
 <li>Use <code>\allowdisplaybreak</code> to allow page breaks in aligned equations.</li>
 <li>Use <code>\dd</code> for differentiation operator (available from package <code>physics</code>).</li>
-<li>No breaking long equations arbitrarily in tex source; break them into short
-lines at appropriate places and add sufficient spaces to make the sources more
-readable.</li>
+<li>No breaking long equations arbitrarily in tex source; break them into short lines at appropriate places and add sufficient spaces to make the sources more readable.</li>
 <li>Align at appropriate places in multiline equations.</li>
 </ul>
-</div>
-<div id="tables" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Tables<a href="ch-tools.html#tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If you are manually typing a table source, think if you can generate the
-source. There are multiple R packages that can generate the tex source from a
-given dataset. See package <code>xtable</code> for example.</p>
+</section>
+<section id="tables" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="tables"><span class="header-section-number">2.2.3</span> Tables</h3>
+<p>If you are manually typing a table source, think if you can generate the source. There are multiple R packages that can generate the tex source from a given dataset. See package <code>xtable</code> for example.</p>
 <p>Tips on professional tables:</p>
 <ul>
 <li>Use <code>tbp</code> for floating locations; avoid <code>h</code>.</li>
 <li>Make it self-contained with an informative caption.</li>
-<li>Captions should be located above the table unless the journal specifies
-otherwise.</li>
+<li>Captions should be located above the table unless the journal specifies otherwise.</li>
 <li>Avoid vertical lines.</li>
 <li>Put negative signs in math mode.</li>
 <li>Use better top, middle, and bottom rules from package <code>booktabs</code>.</li>
 <li>Allow hierarchy by <code>cmidrule()</code>.</li>
-<li>Do not change font size for tables. Change table layout to fit instead of
-re-sizing it.</li>
+<li>Do not change font size for tables. Change table layout to fit instead of re-sizing it.</li>
 <li>Right adjust numbers with decimal places.</li>
-<li>Use consistent number of decimal places within a column or row of same types
-of measurements.</li>
+<li>Use consistent number of decimal places within a column or row of same types of measurements.</li>
 <li>Avoid having many leading 0’s in decimal entries.</li>
 </ul>
-<p>See <a href="https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf">Small Guide to Making Nice Tables by Markus
-Puschel</a></p>
-</div>
-<div id="figures" class="section level3 hasAnchor" number="2.2.4">
-<h3><span class="header-section-number">2.2.4</span> Figures<a href="ch-tools.html#figures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Use vector graphs, not raster graphs (unless you have to, e.g.,
-screenshots). Save the code that generates the figures so the figures can be
-improved easily.</p>
+<p>See <a href="https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf">Small Guide to Making Nice Tables by Markus Puschel</a></p>
+</section>
+<section id="figures" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="figures"><span class="header-section-number">2.2.4</span> Figures</h3>
+<p>Use vector graphs, not raster graphs (unless you have to, e.g., screenshots). Save the code that generates the figures so the figures can be improved easily.</p>
 <p>Tips on figures:</p>
 <ul>
 <li>Use <code>tbp</code> for floating locations; avoid <code>h</code>.</li>
 <li>Use latex package <code>graphicx</code>.</li>
 <li>Make it self-contained with an informative caption.</li>
-<li>Captions should be located below the figure unless the journal specifies
-otherwise.</li>
-<li>For line plots with different groups, use different line pattern to
-distinguish them, not only color, so that readers can tell the difference if
-printed in black/white. Same for different dots (symbols) on plots.</li>
+<li>Captions should be located below the figure unless the journal specifies otherwise.</li>
+<li>For line plots with different groups, use different line pattern to distinguish them, not only color, so that readers can tell the difference if printed in black/white. Same for different dots (symbols) on plots.</li>
 <li>Use colorblind friendly colors (especially avoid red/green).</li>
-<li>Keep the right aspect ratio when necessary (e.g., basketball court; map;
-pp-plot).</li>
+<li>Keep the right aspect ratio when necessary (e.g., basketball court; map; pp-plot).</li>
 <li>Remove extra margins.</li>
 <li>Keep the ratio when resizing (e.g., <code>width = \textwidth</code>)</li>
 <li>Name the figure files appropriately.</li>
 </ul>
-</div>
-<div id="references" class="section level3 hasAnchor" number="2.2.5">
-<h3><span class="header-section-number">2.2.5</span> References<a href="ch-tools.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>BibTeX is a reference management tool for formatting lists of references that
-can be used together with to generate a reference list.
-Non-referenced
-references are not to be cited. All referenced references are to be listed. This
-nice feature is made possible by the package <code>natbib</code>. We need to collect
-references in BibTeX format and save them in a bib database (<code>.bib</code>) file. The
-display styles of the references are controlled by bib style (<code>.bst</code>)
-files. Many journals have their own bib style files available for download. One
-can construct a customized bib style easily with the help of <code>custom-bib</code>.</p>
-<p>An alternative to BibTeX and <code>natbib</code> is <code>biblatex</code>. Most journals, however, use
-BibTeX and <code>natbib</code>, so we focus on that here.</p>
-<p>A reference is cited in the manuscript through its key by <code>\citep{}</code> for
-parenthetical citations or <code>\citet{}</code> for textual citations, where the key is
-placed inside the curly brackets. The key is used to cite or cross-reference the
-bibliographic entry in a <code>.tex</code> document. Variations
-<code>\citep*{}</code> and <code>\citet*{}</code> prints all authors. Sometimes, <code>\citeauthor{}</code>
-and <code>\citeyear{}</code> can be useful when only author(s) or year is needed.
-The key of the cited references is put in the parentheses.</p>
-<p>For <code>\citep{}</code>, multiple keys separated by commas can be put in the same
-parentheses for citing
-multiple references. Two optional arguments are allowed to <code>\citep[][]{}</code>.
-For example, <code>\citep[see, e.g.,][p. 26]{}</code> could be useful when a specific page
-(or section/chapter) is being referenced as an example.</p>
-<p>In general, to compile a tex file with bibtex references into a pdf document,
-one needs to run <code>pdflatex</code> first, then <code>bibtex</code>, and then <code>pdflatex</code> twice to
-get the references correct. A simpler solution is <code>latexmk -pdf</code>. In my
-practice, I always have a <code>Makefile</code> and use <code>make</code> to smartly automate the
-compiling process. See, for example, Anthony’s thesis repo.</p>
+</section>
+<section id="references" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="references"><span class="header-section-number">2.2.5</span> References</h3>
+<p>BibTeX is a reference management tool for formatting lists of references that can be used together with to generate a reference list. Non-referenced references are not to be cited. All referenced references are to be listed. This nice feature is made possible by the package <code>natbib</code>. We need to collect references in BibTeX format and save them in a bib database (<code>.bib</code>) file. The display styles of the references are controlled by bib style (<code>.bst</code>) files. Many journals have their own bib style files available for download. One can construct a customized bib style easily with the help of <code>custom-bib</code>.</p>
+<p>An alternative to BibTeX and <code>natbib</code> is <code>biblatex</code>. Most journals, however, use BibTeX and <code>natbib</code>, so we focus on that here.</p>
+<p>A reference is cited in the manuscript through its key by <code>\citep{}</code> for parenthetical citations or <code>\citet{}</code> for textual citations, where the key is placed inside the curly brackets. The key is used to cite or cross-reference the bibliographic entry in a <code>.tex</code> document. Variations <code>\citep*{}</code> and <code>\citet*{}</code> prints all authors. Sometimes, <code>\citeauthor{}</code> and <code>\citeyear{}</code> can be useful when only author(s) or year is needed. The key of the cited references is put in the parentheses.</p>
+<p>For <code>\citep{}</code>, multiple keys separated by commas can be put in the same parentheses for citing multiple references. Two optional arguments are allowed to <code>\citep[][]{}</code>. For example, <code>\citep[see, e.g.,][p. 26]{}</code> could be useful when a specific page (or section/chapter) is being referenced as an example.</p>
+<p>In general, to compile a tex file with bibtex references into a pdf document, one needs to run <code>pdflatex</code> first, then <code>bibtex</code>, and then <code>pdflatex</code> twice to get the references correct. A simpler solution is <code>latexmk -pdf</code>. In my practice, I always have a <code>Makefile</code> and use <code>make</code> to smartly automate the compiling process. See, for example, Anthony’s thesis repo.</p>
 <p>Tips on preparing BibTeX databases:</p>
 <ul>
 <li>Devise a good naming convention for reference keys and stick to it.</li>
 <li>Keep the bib database sorted and formatted tidy. (No repeated entries.)</li>
-<li>Use Google Scholar to get the bibtex source of a reference, but be sure to
-<strong>quality control</strong> the google output for missing fields and errors.</li>
+<li>Use Google Scholar to get the bibtex source of a reference, but be sure to <strong>quality control</strong> the google output for missing fields and errors.</li>
 <li>Title: Keep styles consistent in case your bibstyle takes it as is.</li>
-<li>Protect capitalization of words with special meanings in curly braces.
-(e.g., <code>{B}ayesian</code>, <code>{M}arkov Chain {M}onte {C}arlo</code>)</li>
+<li>Protect capitalization of words with special meanings in curly braces. (e.g., <code>{B}ayesian</code>, <code>{M}arkov Chain {M}onte {C}arlo</code>)</li>
 <li>Protect capitalization of initial words after a colon in titles and journals.</li>
 <li>Use title style for jornal/book titles.</li>
-<li>For book chapters or proceeding articles, use <code>@incollection</code> instead of
-<code>@article</code>, and fill the <code>booktitle</code> and <code>editor</code> fields.</li>
-<li>Separate pages numbers with double dashes and no other spaces (e.g.,
-<code>pages = {110--118}</code>).</li>
+<li>For book chapters or proceeding articles, use <code>@incollection</code> instead of <code>@article</code>, and fill the <code>booktitle</code> and <code>editor</code> fields.</li>
+<li>Separate pages numbers with double dashes and no other spaces (e.g., <code>pages = {110--118}</code>).</li>
 <li>Books need to have publisher and address fields.</li>
 <li>For preprints, always check if they have been published recently.</li>
 <li>Use the <code>note</code> field to show information that should always be shown,</li>
 <li>All references without page numbers or volume number should be checked.</li>
 <li>Keep bib key style consistent.</li>
 </ul>
-</div>
-<div id="cross-referencing" class="section level3 hasAnchor" number="2.2.6">
-<h3><span class="header-section-number">2.2.6</span> Cross-referencing<a href="ch-tools.html#cross-referencing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</section>
+<section id="cross-referencing" class="level3" data-number="2.2.6">
+<h3 data-number="2.2.6" class="anchored" data-anchor-id="cross-referencing"><span class="header-section-number">2.2.6</span> Cross-referencing</h3>
 <p>Define a label for each object and refer to it by its label.</p>
 <p>Tips on cross-referencing:</p>
 <ul>
 <li>Devise a good naming convention for labels and stick to it.</li>
-<li>Use different label prefixes for different types of objects (e.g, <code>eq:</code> for
-equations, <code>sec:</code> for sections, <code>tab:</code> for tables, <code>fig:</code> for figures, <code>alg:</code>
-for algorithms, etc.)</li>
+<li>Use different label prefixes for different types of objects (e.g, <code>eq:</code> for equations, <code>sec:</code> for sections, <code>tab:</code> for tables, <code>fig:</code> for figures, <code>alg:</code> for algorithms, etc.)</li>
 <li>Labels within the source(s) for a single document must be unique.</li>
-<li>Prevent referencing numbers from starting at a new line (e.g., use
-<code>Table~\ref{tab:simulation}</code>; note the tilde).</li>
-<li>Watch warnings from compiling logs for undefined labels or multiply defined
-labels and fix them.</li>
-<li>Use package <code>xr</code> for cross-document referencing (and labels must be unique
-across documents).</li>
+<li>Prevent referencing numbers from starting at a new line (e.g., use <code>Table~\ref{tab:simulation}</code>; note the tilde).</li>
+<li>Watch warnings from compiling logs for undefined labels or multiply defined labels and fix them.</li>
+<li>Use package <code>xr</code> for cross-document referencing (and labels must be unique across documents).</li>
 </ul>
-</div>
-</div>
-<div id="using-r-markdown-as-a-frontend" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Using R Markdown as a Frontend<a href="ch-tools.html#using-r-markdown-as-a-frontend" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</section>
+</section>
+<section id="using-r-markdown-as-a-frontend" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="using-r-markdown-as-a-frontend"><span class="header-section-number">2.3</span> Using R Markdown as a Frontend</h2>
 <p>Here is <a href="https://statds.org/templates.html">a template from the UConn Data Science Lab</a>.</p>
-</div>
-<div id="command-line-interface" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Command Line Interface<a href="ch-tools.html#command-line-interface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</section>
+<section id="command-line-interface" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="command-line-interface"><span class="header-section-number">2.4</span> Command Line Interface</h2>
 <p>On Linux or MacOS, simply open a terminal.</p>
 <p>On Windows, several options can be considered.</p>
 <ul>
 <li>Cygwin (with X): <a href="https://x.cygwin.com" class="uri">https://x.cygwin.com</a></li>
 <li>Git Bash: <a href="https://www.gitkraken.com/blog/what-is-git-bash" class="uri">https://www.gitkraken.com/blog/what-is-git-bash</a></li>
 </ul>
-<p>The new Windows OS provides a <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for
-Linux</a>. As the name
-suggests, it aims to provide a Linux system on a Windows computer. It might be
-worth trying out.</p>
-<p>To jump start, here is a tutorial:
-<a href="https://ubuntu.com/tutorials/command-line-for-beginners">Ubuntu Linux for beginners</a>.</p>
-<p>At least, you need to know how to handle files and traverse across
-directories. The tab completion and introspection supports are very useful.</p>
+<p>The new Windows OS provides a <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux</a>. As the name suggests, it aims to provide a Linux system on a Windows computer. It might be worth trying out.</p>
+<p>To jump start, here is a tutorial: <a href="https://ubuntu.com/tutorials/command-line-for-beginners">Ubuntu Linux for beginners</a>.</p>
+<p>At least, you need to know how to handle files and traverse across directories. The tab completion and introspection supports are very useful.</p>
 <p>Here are several commonly used shell commands:</p>
 <ul>
 <li><code>cd</code>: change directory; <code>..</code> means parent directory.</li>
 <li><code>pwd</code>: present working directory.</li>
-<li><code>ls</code>: list the content of a folder; <code>-l</code> long version;
-<code>-a</code> show hidden files; <code>-t</code> ordered by modification time.</li>
+<li><code>ls</code>: list the content of a folder; <code>-l</code> long version; <code>-a</code> show hidden files; <code>-t</code> ordered by modification time.</li>
 <li><code>mkdir</code>: create a new directory.</li>
 <li><code>cp</code>: copy file/folder from a source to a target.</li>
 <li><code>mv</code>: move file/folder from a source to a target.</li>
 <li><code>rm</code>: remove a file a folder.</li>
 </ul>
 
-</div>
-</div>
-            </section>
 
-          </div>
-        </div>
-      </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="getting-started.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      </a>          
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/02-tools.Rmd",
-    "text": "Edit"
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": ["stat-writing.pdf", "stat-writing.epub"],
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "subsection"
-  }
-});
-});
-</script>
+  <div class="nav-page nav-page-next">
+      <a href="./getting-started.html" class="pagination-link" aria-label="Getting Started">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting Started</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-</body>
 
-</html>
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/statds/stat-writing/blob/main/ch-tools.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
