@@ -184,6 +184,9 @@ Tips on getting started with \LaTeX.
 
 ### Math equations
 
+<!-- Canonical rule catalogue shared with the companion skill:
+latex-typesetting/references/rules.md. -->
+
 For serious math typesetting, use packages `amsmath`, `amsthm`, and others.
 
 Tips on using math:
@@ -374,5 +377,3 @@ Here are several commonly used shell commands:
 + `cp`: copy file/folder from a source to a target.
 + `mv`: move file/folder from a source to a target.
 + `rm`: remove a file a folder.
-
-
