@@ -1,0 +1,50 @@
+% Fixture only: intentionally mixed practice. It is not a production template.
+\documentclass{article}
+\usepackage{amsmath,booktabs,graphicx,natbib,float}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\begin{document}
+
+The statistic is
+\begin{equation}
+\frac{\bar X-\mu_0}{S/\sqrt{n}}
+\label{stat}
+\end{equation}
+and we compare it with $P(A)$ and $exp(x)$. It is described in Table 2.
+
+\begin{table}[h]
+\centering
+\caption{Results}
+\label{tab:res}
+\begin{tabular}{|l|c|c|}
+\hline
+Method & Bias & RMSE \\ \hline
+A & -0.02 & 0.300 \\ \hline
+B & 0.00004 & 0.28 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth,height=0.3\textwidth]{plot.png}
+\caption{plot}
+\label{fig1}
+\end{figure}
+
+See Figure \ref{fig1}. \citep{key2020} introduced this method.
+
+% Already compliant exception: journal mandates captions below tables and [H].
+% Retain these choices when the instruction is verified.
+\begin{table}[H]
+\centering
+\begin{tabular}{lr}
+\toprule
+Method & RMSE \\
+\midrule
+A & 0.30 \\
+\bottomrule
+\end{tabular}
+\caption{Journal-mandated caption below table.}
+\label{tab:mandated}
+\end{table}
+
+\end{document}

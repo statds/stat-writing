@@ -29,8 +29,9 @@
    the exercises. My grader will check the commit history.
 
 1. **Type setting with LaTeX/BibTeX**
-  Follow the template linked to in Chapter \@ref(ch-tools) my stat-writing
-  notes to create a  nice-looking pdf manuscript. The manuscript
+  Follow the template linked to in the [tools chapter](tools.qmd#sec-tools) in
+  my Statistical Writing
+  notes to create a nice-looking PDF manuscript. The manuscript
   should contain all components of an academic paper:
     1. title, authors, affiliations, abstract, sections, appendix, and
       references;

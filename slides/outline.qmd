@@ -1,0 +1,59 @@
+---
+title: "Academic Writing in Statistics and Data Science"
+subtitle: "Quick skills with quick effects"
+author: "Jun Yan"
+institute: "Department of Statistics, University of Connecticut"
+date: ""
+aspectratio: 169
+bibliography: ../book.bib
+csl: apa.csl
+format:
+  beamer:
+    theme: boxes
+    slide-level: 2
+    navigation: horizontal
+    header-includes: |
+      \setbeamertemplate{navigation symbols}{}
+      \setbeamertemplate{footline}[page number]
+      \usefonttheme[onlymath]{serif}
+      \usepackage{amsmath, amssymb, booktabs}
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Motivation
+
++ Degree requirements; Promotion; Documentation.
+
++ More?
+
++ Started from collections of tips for my Ph.D. students.
+
++ Taaught undergratuate writing with a book nanuscript in mind.
+
++ Writing for life: everything I do, write a paper.
+
+## Disclaimers
+
++ Good writing cannot save a bad idea, but could make it harder to
+  reject.
+  
++ Poor writing can damage great ideas.
+
++ Writing is a learnable skill; Practice makes perfection.
+
++ Every specific tip means one less mistake or poor style
+
++ AI era: you need to know how to evaluate AI writings and form your
+  own styles.
+
+## Outline
+
++ Latex skills.
+   - Good luck if you use MS Word; you need it.
+
++ Writing a paper.
+
++ Revising and respond to reviewers' comments.

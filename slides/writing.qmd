@@ -1,0 +1,434 @@
+---
+title: "A Principled Workflow for Academic Writing"
+subtitle: "From idea organization to polished statistical manuscript"
+author: "Jun Yan"
+institute: "Department of Statistics, University of Connecticut"
+date: ""
+aspectratio: 169
+bibliography: ../book.bib
+csl: apa.csl
+format:
+  beamer:
+    theme: boxes
+    slide-level: 2
+    navigation: horizontal
+    header-includes: |
+      \setbeamertemplate{navigation symbols}{}
+      \setbeamertemplate{footline}[page number]
+      \usefonttheme[onlymath]{serif}
+      \usepackage{amsmath, amssymb, booktabs}
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Goal for This Hour
+
+Move from "I have results" to "I have a manuscript readers can follow."
+
+We will focus on:
+
+- manuscript structure
+- section expectations
+- paragraph-level development
+- disciplined citation use
+- tense choices by section
+
+## Plan for the Hour
+
+| Time | Activity |
+|---:|---|
+| 0--10 | Research lifecycle and paper types |
+| 10--25 | What each section must accomplish |
+| 25--40 | Paragraphs, topic sentences, and citations |
+| 40--52 | Tense and style discipline |
+| 52--60 | Workflow checklist and discussion |
+
+## A Full Lifecycle View
+
+A statistical research project cycles through:
+
+1. idea generation
+2. literature check
+3. planning and design
+4. analysis or simulation
+5. iteration
+6. writing, revision, proofreading
+
+Writing is not the last clerical step. It is part of thinking.
+
+## Start with a Doable Question
+
+A workable topic is:
+
+- interesting
+- connected to prior literature
+- feasible with your time and skills
+- supported by data or a simulation design
+- narrow enough to answer
+
+Early writing task: state the question in one sentence.
+
+Idea-driven projects start with a question; data-driven projects start with
+available data. Both require literature positioning. Old data do not
+automatically imply old ideas.
+
+## Write Before You Write
+
+Before drafting prose, write an outline with:
+
+- section headings
+- subsection headings
+- paragraph claims
+- planned tables and figures
+- key references
+
+The unit of planning is not the section. It is the paragraph.
+
+## Two Main Statistical Paper Types
+
+Application paper:
+
+- solves or illuminates a domain problem
+- may use existing or tailored methods
+- judged by scientific relevance and credible analysis
+
+Methods paper:
+
+- proposes a general method
+- usually needs theory, simulations, and real-data illustration
+- judged by novelty, validity, and usefulness
+
+## Common Structures
+
+Application paper:
+
+- Introduction
+- Data description
+- Methods
+- Results
+- Discussion
+
+The central promise: the statistical evidence answers a substantive question.
+
+Methods paper:
+
+- Introduction, method, properties
+- simulations, application, discussion
+
+The central promise: the method solves a class of problems better than existing
+choices.
+
+## Interaction: Identify the Paper Type
+
+For a manuscript you know, decide:
+
+- Is it primarily application or methods?
+- What is the central claim?
+- Which section carries the most burden?
+- What evidence would convince a skeptical reader?
+
+If the paper type is unclear, the manuscript probably lacks focus.
+
+## Title, Abstract, Keywords
+
+Title:
+
+- predicts content
+- contains important keywords
+- is concise and discoverable [@hairston2003successful]
+
+Abstract:
+
+- includes the high points
+- explains what was done and why it matters
+- usually avoids mathematical notation [@marron1999effective]
+
+Keywords should not merely repeat the title.
+
+## Introduction: Three Questions
+
+The introduction should answer:
+
+1. Why does it matter?
+2. What has already been done?
+3. What is new?
+
+It guides readers from a broad area to the paper's specific contribution
+[@jenkins1995write].
+
+## Introduction: A Useful Sequence
+
+Common progression:
+
+1. topic and importance
+2. current literature
+3. gap or limitation
+4. contribution
+5. roadmap
+
+Do the literature review early. Do not wait until the paper is nearly finished.
+
+## Data and Methods Sections {.smaller}
+
+Data: give enough detail to judge relevance and credibility.
+
+- data source
+- collection process
+- sampling frame
+- time period
+- variables of interest
+- why the data answer the question
+
+Methods: start with intuition before notation, then specify:
+
+- observed data
+- model
+- parameters or estimands
+- estimators or algorithms
+- uncertainty assessment
+- assumptions
+- theoretical claims, if any
+
+## Simulation Section: ADEMP
+
+For simulation studies, use ADEMP [@morris2019using]:
+
+- Aims
+- Data-generating mechanism
+- Estimand or target
+- Methods
+- Performance measures
+
+The simulation must answer a methodological question, not just produce more
+tables.
+
+## Results and Discussion {.smaller}
+
+Results and applications:
+
+- state the main pattern first
+- avoid narrating every cell
+- connect results to the research question
+- separate evidence from interpretation
+
+Statistical evidence must be synthesized into an argument [@miller2015chicago].
+
+Discussion and conclusion:
+
+- return to the research question
+- summarize contributions
+- explain implications
+- acknowledge limitations
+- identify future directions
+
+The need posed in the introduction should be answered here [@zeiger2000writing].
+
+## Paragraphs Are Units of Thought
+
+A paragraph should have:
+
+- one controlling idea
+- a topic sentence
+- evidence or explanation
+- a clear connection to the next paragraph
+
+If a double-spaced page has no paragraph break, several thoughts probably ran
+together.
+
+## Strong Topic Sentences
+
+Weak:
+
+> There are several things to notice in Table 2.
+
+Stronger:
+
+> The proposed estimator has smaller bias than the competitors when censoring is
+> heavy.
+
+The topic sentence should tell readers what to do with the paragraph.
+
+## Paragraph Development Pattern
+
+A useful pattern:
+
+1. claim
+2. evidence
+3. interpretation
+4. transition
+
+Example:
+
+- claim: proposed method is more stable
+- evidence: simulation table or figure
+- interpretation: why this matters
+- transition: limitation or next comparison
+
+## Reader Expectations
+
+Readers do not simply decode sentences. They form expectations.
+
+Help them by placing:
+
+- old information before new information
+- topic before comment
+- important stress near the end of a sentence
+
+This principle is central in reader-oriented scientific writing
+[@gopen1990science; @gopen2004expectations].
+
+## Interaction: Paragraph Diagnosis
+
+For one paragraph in your draft or a sample paper:
+
+- underline the topic sentence
+- circle the evidence
+- mark the interpretation
+- identify the transition
+
+If any piece is missing, revise the paragraph before editing sentences.
+
+## What Citations Should Do {.smaller}
+
+Citations should:
+
+- locate the paper in the literature
+- support factual claims
+- acknowledge methods or data sources
+- distinguish prior work from your contribution
+- guide readers to useful context
+
+Do not use citations as a substitute for explanation.
+
+Use textual citation when the author matters:
+
+> Smith (2020) proposed a diagnostic for ...
+
+Use parenthetical citation when the claim matters:
+
+> Several diagnostics have been proposed for this setting (Smith, 2020).
+
+Group citations by idea, not by dumping every related paper into one
+parenthesis.
+
+## Literature Review Is Argument
+
+A literature review should not be a chronological list.
+
+Organize by:
+
+- problem
+- approach
+- limitation
+- relation to your contribution
+
+Each cited work should help answer: why this paper, why now?
+
+## Tense Choices by Section {.smaller}
+
+Basic rule [@caplan2019grammar]:
+
+- past for what happened or what you did
+- present for general truths and what the paper shows
+- future for planned extensions
+
+| Section | Typical Tense |
+|---|---|
+| Introduction | present for known facts; past for specific studies |
+| Methods | present for method definitions; past for implementation |
+| Data | past for collection; present for dataset description |
+| Results | past for analyses; present for displayed patterns |
+| Discussion | present for conclusions; future for directions |
+
+Consistency matters within paragraphs.
+
+## Examples of Tense Discipline
+
+Past:
+
+> We fit the model using 10,000 bootstrap samples.
+
+Present:
+
+> Figure 2 shows that the estimator is stable.
+
+Future:
+
+> Future work will examine high-dimensional extensions.
+
+Do not shift tense accidentally within the same claim.
+
+## Style Checks That Catch Many Problems
+
+During revision:
+
+- identify the verb in every long sentence
+- check that "data" is plural when used formally
+- define acronyms once
+- avoid "significant" unless statistically meaningful
+- read aloud for flow
+- ask a colleague to mark unclear transitions
+
+## Writing and Revising Are Different
+
+Drafting goal:
+
+- capture ideas
+- make the argument visible
+- tolerate rough sentences
+
+Revision goal:
+
+- test organization
+- sharpen claims
+- check evidence
+- improve sentences
+- polish style and tense
+
+Do not try to perfect sentences while still discovering the argument.
+
+## Revision Order
+
+Revise from large to small:
+
+1. research question and contribution
+2. section structure
+3. paragraph claims
+4. tables and figures
+5. citations
+6. sentences
+7. grammar, tense, punctuation
+
+Sentence polishing too early wastes effort.
+
+## One-Hour Workflow Checklist
+
+For a current manuscript:
+
+1. classify the paper type
+2. write the central claim in one sentence
+3. outline section purposes
+4. write paragraph topic sentences
+5. attach evidence to each paragraph
+6. audit citations
+7. check tense by section
+
+## Closing Principle
+
+A polished manuscript is not produced by polishing alone.
+
+It comes from a disciplined workflow:
+
+- clear question
+- appropriate paper structure
+- section-level promises
+- paragraph-level claims
+- evidence connected to interpretation
+- careful revision
+
+## Selected References {.allowframebreaks}
+
+::: {#refs}
+:::

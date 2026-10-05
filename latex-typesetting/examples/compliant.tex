@@ -1,0 +1,32 @@
+% Demonstration only: assumes the manuscript preamble defines \dd and loads
+% amsmath, booktabs, graphicx, and natbib as needed.
+The estimator is defined by
+\begin{equation}
+  \hat\theta_n = \arg\min_{\theta} L_n(\theta),
+  \label{eq:estimator}
+\end{equation}
+and is discussed in Equation~\eqref{eq:estimator}. \citet{key2020} study a
+related estimator.
+
+\begin{table}[tbp]
+\centering
+\caption{Bias and root mean squared error by method and sample size.}
+\label{tab:simulation}
+\begin{tabular}{lrr}
+\toprule
+Method & Bias & RMSE \\
+\midrule
+A & $-0.02$ & 0.30 \\
+B & $0.01$ & 0.28 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Results are shown in Table~\ref{tab:simulation} and
+Figure~\ref{fig:rmse}.
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/rmse-by-n.pdf}
+\caption{Root mean squared error across sample sizes.}
+\label{fig:rmse}
+\end{figure}
