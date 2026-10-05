@@ -17,3 +17,5 @@ _book/
 /cache/
 *.utf8.md
 *.knit.md
+
+/.quarto/
