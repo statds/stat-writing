@@ -11,7 +11,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - ch-tools.qmd
+    - tools.qmd
     - getting-started.qmd
     - writing-specific-sections.qmd
     - review-a-paper.qmd
@@ -27,4 +27,5 @@ link-citations: true
 
 format:
   html:
+    theme: cosmo
     toc: true

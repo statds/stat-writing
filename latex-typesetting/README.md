@@ -24,7 +24,7 @@ target. Check available commands and project instructions before building.
 
 Maintain each rule once in `references/rules.md`, including its stable ID,
 source, practice, rationale status, before/after, exceptions, and verification.
-When adding guidance, consult `ch-tools.qmd`, its teaching-note counterpart,
+When adding guidance, consult `tools.qmd`, its teaching-note counterpart,
 and current journal/user requirements. Preserve conflicting source guidance as
 a conflict until the author resolves it. Keep the skill instructions concise
 and point to the catalogue. Update the fixture and walkthrough when behavior
