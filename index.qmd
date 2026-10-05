@@ -1,0 +1,19 @@
+# Preface {.unnumbered}
+
+This book aims to train students in statistics and data science on academic
+writing with professional tools such as LaTeX, BibTeX, R, and Git. It is based
+on our own writing experience of over 100 scholarly papers. Many of the
+tips have been taught to our Ph.D. students again and again. We hope this book
+saves us from that repetitive efforts.
+
+
+The source of the book is at
+<https://github.com/statds/stat-writing>.
+
+
+The first edition of these notes used the **bookdown** R package
+[@xie2016bookdown]. This edition is authored in Quarto; see
+<https://quarto.org/> for installation and documentation.
+
+Each chapter is a `.qmd` file that begins with a first-level heading (`#`).
+Render the HTML book from the project directory with `quarto render`.

@@ -1,0 +1,64 @@
+# Response to Reviewers
+
+Peer-reviewed journals also give the author the opportunity to respond to the 
+reviewer's comments.
+
+This 'response to reviewers' document is submitted alongside your manuscript, 
+summarizing the changes that you made in response to the critiques.
+
+Follow these rules for writing responses to reviewers, adapted from
+@noble2017rules:
+
+*Rule 1:* Provide an overview, then quote the full set of reviews
+
+Begin the response letter with a broad-level summary of the changes, pointing 
+out new broad-level content added in response to the most essential criticisms 
+of the reviewers. 
+
+Thereafter, the response letter should contain the complete set of reviewer
+comments with your responses interleaved.
+
+*Rule 2:* Be polite and respectful of reviewers
+
+Even if you are convinced that the reviewer lacks intellectual capacity, it is
+certainly not in your interest to convey this impression to the reviewer. 
+
+Keep in mind that if the reviewer failed to understand something, the fault
+likely lies, at least in part, with you for not making the point clear enough. 
+
+Your goal is to make the work clear and accessible to all readers, not just to
+experts.
+
+*Rule 3:* Accept the blame
+
+If the reviewer failed to understand something, apologize for not making it clear.
+
+Even if you are convinced that the text is already clear (i.e., the reviewer
+simply missed it), consider revising the text and quoting the revised text in
+your response. 
+
+In general, even if the requested change seems unnecessary, it is usually better
+to go ahead and revise with the goal of showing the reviewer that they were
+listened to and understood.
+
+*Rule 4:* Make the response self-contained
+
+When you make changes to the text or to figures, quote the changes directly in
+the response. If possible, refer to the specific pages/sections/paragraphs were 
+the change was made.  
+
+*Rule 5:* Respond to every point raised by the reviewer
+
+Even if you do not agree with a comment from a reviewer, you cannot ignore it 
+and must respond to it. 
+
+If you disagree, provide evidence supporting your claim.  
+
+*Rule 6:* Use typography to help the reviewer navigate your response
+
+Use changes of typeface, color, and indenting to discriminate between 3 
+different elements: the review itself, your responses to the review, and changes 
+that you have made to the manuscript. 
+
+You can explain these typographical conventions in the introduction to your 
+response.

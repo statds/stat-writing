@@ -1,0 +1,30 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Statistical Writing"
+  author: "Elizabeth Schifano and Jun Yan"
+  date: today
+  repo-url: https://github.com/statds/stat-writing
+  repo-actions: [source]
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - ch-tools.qmd
+    - getting-started.qmd
+    - writing-specific-sections.qmd
+    - review-a-paper.qmd
+    - response-to-reviewers.qmd
+    - other-topics.qmd
+    - exercises.qmd
+    - references.qmd
+
+bibliography:
+  - book.bib
+  - jyan.bib
+link-citations: true
+
+format:
+  html:
+    toc: true
